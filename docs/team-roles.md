@@ -6,7 +6,7 @@
 
 负责 GitHub 仓库、输入输出格式、总体程序、模块对接、任务状态机、设备通信、每周集成测试和结题材料。
 
-负责模块：`src/integration/`
+负责模块：`src/handwriting_robot_layer2_ljy_integration/`
 
 ```text
 项目配置 → 用户档案调用 → 页面任务组织 → SVG/G-code 导出 → 设备任务管理
@@ -20,7 +20,7 @@
 
 一期交付：500～1000 个样本字符的用户字库；输入文字输出字符图片或 SVG；缺字提示；标准笔顺字形的风格变形；同字至少 2～3 种变化。
 
-负责模块：`src/handwriting/`
+负责模块：`src/handwriting_robot_layer2_wl_handwriting/`
 
 不得直接控制设备，只输出统一 `stroke` 数据。
 
@@ -30,7 +30,7 @@
 
 一期交付：电路图、坐标曲线、光路图或装置图；至少三类图形稳定转换为单线轨迹。
 
-负责模块：`src/vectorization/`
+负责模块：`src/handwriting_robot_layer2_nrx_vectorization/`
 
 这是核心技术模块，创新点和专利材料以可复现实验结果为依据。
 
@@ -40,7 +40,7 @@
 
 一期验收流程：选择用户 → 选择模板 → 输入文字 → 导入图 → 预览 → 输出轨迹 → 开始书写。
 
-负责模块：`src/ui/`
+负责模块：`src/handwriting_robot_layer2_cx_ui/`
 
 界面调用集成层，不在界面内复制设备通信逻辑。
 
@@ -48,7 +48,7 @@
 
 负责写字机采购安装、摄像头、A4 定位板、可换笔架、笔和速度测试、坐标标定、写后拍照、误差计算、测试数据集、演示视频、软著截图和实验记录。
 
-负责模块：`src/device/`、`tests/fixtures/`、`docs/test-records/`
+负责模块：`src/handwriting_robot_layer2_bxy_device/`、`tests/fixtures/`、`docs/test-records/`
 
 一期交付：坐标映射、A4 夹纸机构、摄像头程序、误差报告、5 支笔 × 3 种速度参数表和完整演示素材。
 
@@ -56,10 +56,10 @@
 
 | 模块 | 负责人 | 输入 | 输出 |
 |---|---|---|---|
-| `handwriting` | 成员2 | 文字、用户档案 | `StrokeDocument` |
-| `vectorization` | 成员3 | PDF/图片 | `StrokeDocument` |
-| `ui` | 成员4 | 用户操作 | 页面任务 |
-| `integration` | 成员1 | 页面任务、模块结果 | 有序设备任务 |
-| `device` | 成员5/成员1 | 有序 strokes | 设备状态、测试数据 |
+| `..._wl_handwriting` | 成员2 | 文字、用户档案 | `StrokeDocument` |
+| `..._nrx_vectorization` | 成员3 | PDF/图片 | `StrokeDocument` |
+| `..._cx_ui` | 成员4 | 用户操作 | 页面任务 |
+| `..._ljy_integration` | 成员1 | 页面任务、模块结果 | 有序设备任务 |
+| `..._bxy_device` | 成员5/成员1 | 有序 strokes | 设备状态、测试数据 |
 
 任何跨模块修改都要在 Pull Request 中说明影响范围；禁止成员2直接控制机器，禁止成员3复制一套独立界面。

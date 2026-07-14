@@ -2,11 +2,11 @@
 
 ## 分支
 
-- 成员1：`feat/integration-*`
-- 成员2：`feat/handwriting-*`
-- 成员3：`feat/vectorization-*`
-- 成员4：`feat/ui-*`
-- 成员5：`feat/device-*`
+- 成员1（ljy）：`feat/ljy-integration-*`
+- 成员2（wl）：`feat/wl-handwriting-*`
+- 成员3（nrx）：`feat/nrx-vectorization-*`
+- 成员4（cx）：`feat/cx-ui-*`
+- 成员5（bxy）：`feat/bxy-device-*`
 
 ## 每个模块的最低结构
 

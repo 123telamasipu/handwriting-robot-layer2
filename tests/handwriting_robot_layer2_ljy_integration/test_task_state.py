@@ -1,4 +1,4 @@
-from src.integration.task_state import can_transition, transition
+from src.handwriting_robot_layer2_ljy_integration.task_state import can_transition, transition
 
 
 def test_task_state_transitions():

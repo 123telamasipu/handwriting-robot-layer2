@@ -1,0 +1,27 @@
+name: 功能任务
+description: 新功能、模块对接或工程任务
+title: "[功能] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标
+      description: 说明要解决的问题和期望结果。
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      description: 使用可检查的条目描述完成条件。
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 依赖与影响模块
+  - type: input
+    id: owner
+    attributes:
+      label: 建议负责人

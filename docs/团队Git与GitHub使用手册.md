@@ -27,15 +27,53 @@ cd handwriting-robot-layer2
 git remote -v
 ```
 
-## 三、每天开始工作
+## 三、每天开始工作：完整操作顺序
+
+### 3.1 开始前：确认环境和自己的任务
+
+1. 打开终端，进入项目目录：`cd D:\handwriting-robot-layer2`。
+2. 确认电脑联网、GitHub 登录正常，并确认自己今天要完成的 Issue 或任务。
+3. 查看当前状态：`git status`。如果有未提交的修改，先保存或联系成员1，不要直接覆盖。
+
+### 3.2 开始前：同步最新项目
 
 ```bash
 git switch main
 git pull origin main
+```
+
+这两条命令的作用是：切换到稳定主分支，并把其他成员已经合并的最新内容拉到本地。每次开始工作都要做，避免基于旧版本开发。
+
+### 3.3 开始开发：创建自己的分支
+
+```bash
 git switch -c feat/成员缩写-功能名称
 ```
 
-例如：`feat/wl-handwriting-scan`、`feat/nrx-line-detection`。
+例如：`feat/wl-handwriting-scan`、`feat/nrx-line-detection`。分支创建成功后，今天的代码只在这个分支中修改，不直接写 `main`。
+
+### 3.4 开发过程中：边做边检查
+
+只修改自己负责的目录，定期执行 `git status` 和 `git diff`，确认没有误改其他成员文件。接口、目录或数据格式需要变化时，先在 Issue 中说明。
+
+### 3.5 完成后：本地测试和整理日志
+
+完成代码后先运行对应测试，再更新自己模块的 `日志.md`，填写日期、完成内容、测试结果、问题和下一步计划。确认没有密码、Token、隐私资料、大视频和临时文件。
+
+### 3.6 最后上传：提交并推送分支
+
+```bash
+git status
+git add 需要提交的文件
+git commit -m "feat: 简短说明改动"
+git push -u origin feat/成员缩写-功能名称
+```
+
+`git add` 只添加自己检查过的文件；`commit` 是在本地保存一个版本；`push` 才是把分支上传到自己的 GitHub Fork。上传后检查 GitHub 页面是否能看到该分支和最新提交。
+
+### 3.7 上传后：创建 Pull Request
+
+在自己的 Fork 页面点击 **Compare & pull request**，填写完成内容、测试方法、测试结果、影响范围和剩余问题，指定成员1（ljy）审核。成员1审核通过并合并后，其他成员才能在下一次 `git pull origin main` 中获得你的代码。
 
 ## 四、修改和检查
 

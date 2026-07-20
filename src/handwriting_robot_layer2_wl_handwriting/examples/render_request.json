@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1",
+  "user_id": "demo_user",
+  "text": "你好",
+  "page": {
+    "width_mm": 210.0,
+    "height_mm": 297.0
+  },
+  "origin_mm": [10.0, 10.0],
+  "options": {
+    "char_width_mm": 8.0,
+    "char_height_mm": 8.0,
+    "char_spacing_mm": 1.2,
+    "random_seed": 42,
+    "scale_jitter": 0.03,
+    "slant_jitter": 0.025,
+    "position_jitter_mm": 0.15
+  }
+}

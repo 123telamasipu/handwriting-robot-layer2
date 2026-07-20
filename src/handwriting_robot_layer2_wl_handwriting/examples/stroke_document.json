@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1",
+  "type": "stroke_document",
+  "source": "handwriting",
+  "user_id": "demo_user",
+  "page": {
+    "width_mm": 210.0,
+    "height_mm": 297.0
+  },
+  "strokes": [
+    {
+      "points": [[10.0, 10.0], [14.0, 14.0]],
+      "pen_down": true,
+      "order": 1
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "phase1_hanzi": 1008,
+  "frequency_hanzi": 1000,
+  "domain_extra_hanzi": 8,
+  "non_hanzi_unique": 132,
+  "phase1_total_unique": 1140,
+  "top1000_reference_hanzi": 1000,
+  "duplicates": 0,
+  "domain_extra_characters": "仪姓曲析械阻频骤"
+}

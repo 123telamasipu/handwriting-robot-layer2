@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "writer_id": "demo_user",
+  "writer_name": "脱敏演示用户",
+  "character": "你",
+  "variant": 1,
+  "status": "complete",
+  "client": {
+    "application": "mobile_web",
+    "user_agent": "example-client",
+    "viewport": {
+      "width_px": 390,
+      "height_px": 844,
+      "device_pixel_ratio": 3
+    },
+    "pointer_types": ["touch"]
+  },
+  "strokes": [
+    {
+      "points": [
+        {
+          "x": 0.22,
+          "y": 0.18,
+          "t_ms": 0,
+          "pressure": 0.5,
+          "x_tilt": 0.0,
+          "y_tilt": 0.0,
+          "rotation": 0.0,
+          "tangential_pressure": 0.0,
+          "source": "touch"
+        },
+        {
+          "x": 0.18,
+          "y": 0.55,
+          "t_ms": 42,
+          "pressure": 0.5,
+          "x_tilt": 0.0,
+          "y_tilt": 0.0,
+          "rotation": 0.0,
+          "tangential_pressure": 0.0,
+          "source": "touch"
+        }
+      ]
+    }
+  ]
+}

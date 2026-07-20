@@ -1,0 +1,1141 @@
+﻿order,character,unicode,category,tier,frequency_rank,pinyin,stroke_count,source
+1,的,U+7684,hanzi_frequency,phase1,1,de,8,Jun Da frequency list; filtered by General Standard Level 1
+2,一,U+4E00,hanzi_frequency,phase1,2,yī,1,Jun Da frequency list; filtered by General Standard Level 1
+3,是,U+662F,hanzi_frequency,phase1,3,shì,9,Jun Da frequency list; filtered by General Standard Level 1
+4,不,U+4E0D,hanzi_frequency,phase1,4,bù,4,Jun Da frequency list; filtered by General Standard Level 1
+5,了,U+4E86,hanzi_frequency,phase1,5,le,2,Jun Da frequency list; filtered by General Standard Level 1
+6,在,U+5728,hanzi_frequency,phase1,6,zài,6,Jun Da frequency list; filtered by General Standard Level 1
+7,人,U+4EBA,hanzi_frequency,phase1,7,rén,2,Jun Da frequency list; filtered by General Standard Level 1
+8,有,U+6709,hanzi_frequency,phase1,8,yǒu,6,Jun Da frequency list; filtered by General Standard Level 1
+9,我,U+6211,hanzi_frequency,phase1,9,wǒ,7,Jun Da frequency list; filtered by General Standard Level 1
+10,他,U+4ED6,hanzi_frequency,phase1,10,tā,5,Jun Da frequency list; filtered by General Standard Level 1
+11,这,U+8FD9,hanzi_frequency,phase1,11,zhè,7,Jun Da frequency list; filtered by General Standard Level 1
+12,个,U+4E2A,hanzi_frequency,phase1,12,gè,3,Jun Da frequency list; filtered by General Standard Level 1
+13,们,U+4EEC,hanzi_frequency,phase1,13,men,5,Jun Da frequency list; filtered by General Standard Level 1
+14,中,U+4E2D,hanzi_frequency,phase1,14,zhōng,4,Jun Da frequency list; filtered by General Standard Level 1
+15,来,U+6765,hanzi_frequency,phase1,15,lái,7,Jun Da frequency list; filtered by General Standard Level 1
+16,上,U+4E0A,hanzi_frequency,phase1,16,shàng,3,Jun Da frequency list; filtered by General Standard Level 1
+17,大,U+5927,hanzi_frequency,phase1,17,dà,3,Jun Da frequency list; filtered by General Standard Level 1
+18,为,U+4E3A,hanzi_frequency,phase1,18,wèi,4,Jun Da frequency list; filtered by General Standard Level 1
+19,和,U+548C,hanzi_frequency,phase1,19,hé,8,Jun Da frequency list; filtered by General Standard Level 1
+20,国,U+56FD,hanzi_frequency,phase1,20,guó,8,Jun Da frequency list; filtered by General Standard Level 1
+21,地,U+5730,hanzi_frequency,phase1,21,de,6,Jun Da frequency list; filtered by General Standard Level 1
+22,到,U+5230,hanzi_frequency,phase1,22,dào,8,Jun Da frequency list; filtered by General Standard Level 1
+23,以,U+4EE5,hanzi_frequency,phase1,23,yǐ,4,Jun Da frequency list; filtered by General Standard Level 1
+24,说,U+8BF4,hanzi_frequency,phase1,24,shuō,9,Jun Da frequency list; filtered by General Standard Level 1
+25,时,U+65F6,hanzi_frequency,phase1,25,shí,7,Jun Da frequency list; filtered by General Standard Level 1
+26,要,U+8981,hanzi_frequency,phase1,26,yào,9,Jun Da frequency list; filtered by General Standard Level 1
+27,就,U+5C31,hanzi_frequency,phase1,27,jiù,12,Jun Da frequency list; filtered by General Standard Level 1
+28,出,U+51FA,hanzi_frequency,phase1,28,chū,5,Jun Da frequency list; filtered by General Standard Level 1
+29,会,U+4F1A,hanzi_frequency,phase1,29,huì,6,Jun Da frequency list; filtered by General Standard Level 1
+30,可,U+53EF,hanzi_frequency,phase1,30,kě,5,Jun Da frequency list; filtered by General Standard Level 1
+31,也,U+4E5F,hanzi_frequency,phase1,31,yě,3,Jun Da frequency list; filtered by General Standard Level 1
+32,你,U+4F60,hanzi_frequency,phase1,32,nǐ,7,Jun Da frequency list; filtered by General Standard Level 1
+33,对,U+5BF9,hanzi_frequency,phase1,33,duì,5,Jun Da frequency list; filtered by General Standard Level 1
+34,生,U+751F,hanzi_frequency,phase1,34,shēng,5,Jun Da frequency list; filtered by General Standard Level 1
+35,能,U+80FD,hanzi_frequency,phase1,35,néng,10,Jun Da frequency list; filtered by General Standard Level 1
+36,而,U+800C,hanzi_frequency,phase1,36,ér,6,Jun Da frequency list; filtered by General Standard Level 1
+37,子,U+5B50,hanzi_frequency,phase1,37,zi,3,Jun Da frequency list; filtered by General Standard Level 1
+38,那,U+90A3,hanzi_frequency,phase1,38,nà,6,Jun Da frequency list; filtered by General Standard Level 1
+39,得,U+5F97,hanzi_frequency,phase1,39,dé,11,Jun Da frequency list; filtered by General Standard Level 1
+40,于,U+4E8E,hanzi_frequency,phase1,40,yú,3,Jun Da frequency list; filtered by General Standard Level 1
+41,着,U+7740,hanzi_frequency,phase1,41,zhe,11,Jun Da frequency list; filtered by General Standard Level 1
+42,下,U+4E0B,hanzi_frequency,phase1,42,xià,3,Jun Da frequency list; filtered by General Standard Level 1
+43,自,U+81EA,hanzi_frequency,phase1,43,zì,6,Jun Da frequency list; filtered by General Standard Level 1
+44,之,U+4E4B,hanzi_frequency,phase1,44,zhī,3,Jun Da frequency list; filtered by General Standard Level 1
+45,年,U+5E74,hanzi_frequency,phase1,45,nián,6,Jun Da frequency list; filtered by General Standard Level 1
+46,过,U+8FC7,hanzi_frequency,phase1,46,guò,6,Jun Da frequency list; filtered by General Standard Level 1
+47,发,U+53D1,hanzi_frequency,phase1,47,fā,5,Jun Da frequency list; filtered by General Standard Level 1
+48,后,U+540E,hanzi_frequency,phase1,48,hòu,6,Jun Da frequency list; filtered by General Standard Level 1
+49,作,U+4F5C,hanzi_frequency,phase1,49,zuò,7,Jun Da frequency list; filtered by General Standard Level 1
+50,里,U+91CC,hanzi_frequency,phase1,50,lǐ,7,Jun Da frequency list; filtered by General Standard Level 1
+51,用,U+7528,hanzi_frequency,phase1,51,yòng,5,Jun Da frequency list; filtered by General Standard Level 1
+52,道,U+9053,hanzi_frequency,phase1,52,dào,12,Jun Da frequency list; filtered by General Standard Level 1
+53,行,U+884C,hanzi_frequency,phase1,53,xíng,6,Jun Da frequency list; filtered by General Standard Level 1
+54,所,U+6240,hanzi_frequency,phase1,54,suǒ,8,Jun Da frequency list; filtered by General Standard Level 1
+55,然,U+7136,hanzi_frequency,phase1,55,rán,12,Jun Da frequency list; filtered by General Standard Level 1
+56,家,U+5BB6,hanzi_frequency,phase1,56,jiā,10,Jun Da frequency list; filtered by General Standard Level 1
+57,种,U+79CD,hanzi_frequency,phase1,57,zhǒng,9,Jun Da frequency list; filtered by General Standard Level 1
+58,事,U+4E8B,hanzi_frequency,phase1,58,shì,8,Jun Da frequency list; filtered by General Standard Level 1
+59,成,U+6210,hanzi_frequency,phase1,59,chéng,6,Jun Da frequency list; filtered by General Standard Level 1
+60,方,U+65B9,hanzi_frequency,phase1,60,fāng,4,Jun Da frequency list; filtered by General Standard Level 1
+61,多,U+591A,hanzi_frequency,phase1,61,duō,6,Jun Da frequency list; filtered by General Standard Level 1
+62,经,U+7ECF,hanzi_frequency,phase1,62,jīng,8,Jun Da frequency list; filtered by General Standard Level 1
+63,么,U+4E48,hanzi_frequency,phase1,63,me,3,Jun Da frequency list; filtered by General Standard Level 1
+64,去,U+53BB,hanzi_frequency,phase1,64,qù,5,Jun Da frequency list; filtered by General Standard Level 1
+65,法,U+6CD5,hanzi_frequency,phase1,65,fǎ,8,Jun Da frequency list; filtered by General Standard Level 1
+66,学,U+5B66,hanzi_frequency,phase1,66,xué,8,Jun Da frequency list; filtered by General Standard Level 1
+67,如,U+5982,hanzi_frequency,phase1,67,rú,6,Jun Da frequency list; filtered by General Standard Level 1
+68,都,U+90FD,hanzi_frequency,phase1,68,dōu,10,Jun Da frequency list; filtered by General Standard Level 1
+69,同,U+540C,hanzi_frequency,phase1,69,tóng,6,Jun Da frequency list; filtered by General Standard Level 1
+70,现,U+73B0,hanzi_frequency,phase1,70,xiàn,8,Jun Da frequency list; filtered by General Standard Level 1
+71,当,U+5F53,hanzi_frequency,phase1,71,dāng,6,Jun Da frequency list; filtered by General Standard Level 1
+72,没,U+6CA1,hanzi_frequency,phase1,72,méi,7,Jun Da frequency list; filtered by General Standard Level 1
+73,动,U+52A8,hanzi_frequency,phase1,73,dòng,6,Jun Da frequency list; filtered by General Standard Level 1
+74,面,U+9762,hanzi_frequency,phase1,74,miàn,9,Jun Da frequency list; filtered by General Standard Level 1
+75,起,U+8D77,hanzi_frequency,phase1,75,qǐ,10,Jun Da frequency list; filtered by General Standard Level 1
+76,看,U+770B,hanzi_frequency,phase1,76,kàn,9,Jun Da frequency list; filtered by General Standard Level 1
+77,定,U+5B9A,hanzi_frequency,phase1,77,dìng,8,Jun Da frequency list; filtered by General Standard Level 1
+78,天,U+5929,hanzi_frequency,phase1,78,tiān,4,Jun Da frequency list; filtered by General Standard Level 1
+79,分,U+5206,hanzi_frequency,phase1,79,fēn,4,Jun Da frequency list; filtered by General Standard Level 1
+80,还,U+8FD8,hanzi_frequency,phase1,80,hái,7,Jun Da frequency list; filtered by General Standard Level 1
+81,进,U+8FDB,hanzi_frequency,phase1,81,jìn,7,Jun Da frequency list; filtered by General Standard Level 1
+82,好,U+597D,hanzi_frequency,phase1,82,hǎo,6,Jun Da frequency list; filtered by General Standard Level 1
+83,小,U+5C0F,hanzi_frequency,phase1,83,xiǎo,3,Jun Da frequency list; filtered by General Standard Level 1
+84,部,U+90E8,hanzi_frequency,phase1,84,bù,10,Jun Da frequency list; filtered by General Standard Level 1
+85,其,U+5176,hanzi_frequency,phase1,85,qí,8,Jun Da frequency list; filtered by General Standard Level 1
+86,些,U+4E9B,hanzi_frequency,phase1,86,xiē,8,Jun Da frequency list; filtered by General Standard Level 1
+87,主,U+4E3B,hanzi_frequency,phase1,87,zhǔ,5,Jun Da frequency list; filtered by General Standard Level 1
+88,样,U+6837,hanzi_frequency,phase1,88,yàng,10,Jun Da frequency list; filtered by General Standard Level 1
+89,理,U+7406,hanzi_frequency,phase1,89,lǐ,11,Jun Da frequency list; filtered by General Standard Level 1
+90,心,U+5FC3,hanzi_frequency,phase1,90,xīn,4,Jun Da frequency list; filtered by General Standard Level 1
+91,她,U+5979,hanzi_frequency,phase1,91,tā,6,Jun Da frequency list; filtered by General Standard Level 1
+92,本,U+672C,hanzi_frequency,phase1,92,běn,5,Jun Da frequency list; filtered by General Standard Level 1
+93,前,U+524D,hanzi_frequency,phase1,93,qián,9,Jun Da frequency list; filtered by General Standard Level 1
+94,开,U+5F00,hanzi_frequency,phase1,94,kāi,4,Jun Da frequency list; filtered by General Standard Level 1
+95,但,U+4F46,hanzi_frequency,phase1,95,dàn,7,Jun Da frequency list; filtered by General Standard Level 1
+96,因,U+56E0,hanzi_frequency,phase1,96,yīn,6,Jun Da frequency list; filtered by General Standard Level 1
+97,只,U+53EA,hanzi_frequency,phase1,97,zhǐ,5,Jun Da frequency list; filtered by General Standard Level 1
+98,从,U+4ECE,hanzi_frequency,phase1,98,cóng,4,Jun Da frequency list; filtered by General Standard Level 1
+99,想,U+60F3,hanzi_frequency,phase1,99,xiǎng,13,Jun Da frequency list; filtered by General Standard Level 1
+100,实,U+5B9E,hanzi_frequency,phase1,100,shí,8,Jun Da frequency list; filtered by General Standard Level 1
+101,日,U+65E5,hanzi_frequency,phase1,101,rì,4,Jun Da frequency list; filtered by General Standard Level 1
+102,军,U+519B,hanzi_frequency,phase1,102,jūn,6,Jun Da frequency list; filtered by General Standard Level 1
+103,者,U+8005,hanzi_frequency,phase1,103,zhě,8,Jun Da frequency list; filtered by General Standard Level 1
+104,意,U+610F,hanzi_frequency,phase1,104,yì,13,Jun Da frequency list; filtered by General Standard Level 1
+105,无,U+65E0,hanzi_frequency,phase1,105,wú,4,Jun Da frequency list; filtered by General Standard Level 1
+106,力,U+529B,hanzi_frequency,phase1,106,lì,2,Jun Da frequency list; filtered by General Standard Level 1
+107,它,U+5B83,hanzi_frequency,phase1,107,tā,5,Jun Da frequency list; filtered by General Standard Level 1
+108,与,U+4E0E,hanzi_frequency,phase1,108,yǔ,3,Jun Da frequency list; filtered by General Standard Level 1
+109,长,U+957F,hanzi_frequency,phase1,109,zhǎng,4,Jun Da frequency list; filtered by General Standard Level 1
+110,把,U+628A,hanzi_frequency,phase1,110,bǎ,7,Jun Da frequency list; filtered by General Standard Level 1
+111,机,U+673A,hanzi_frequency,phase1,111,jī,6,Jun Da frequency list; filtered by General Standard Level 1
+112,十,U+5341,hanzi_frequency,phase1,112,shí,2,Jun Da frequency list; filtered by General Standard Level 1
+113,民,U+6C11,hanzi_frequency,phase1,113,mín,5,Jun Da frequency list; filtered by General Standard Level 1
+114,第,U+7B2C,hanzi_frequency,phase1,114,dì,11,Jun Da frequency list; filtered by General Standard Level 1
+115,公,U+516C,hanzi_frequency,phase1,115,gōng,4,Jun Da frequency list; filtered by General Standard Level 1
+116,此,U+6B64,hanzi_frequency,phase1,116,cǐ,6,Jun Da frequency list; filtered by General Standard Level 1
+117,已,U+5DF2,hanzi_frequency,phase1,117,yǐ,3,Jun Da frequency list; filtered by General Standard Level 1
+118,工,U+5DE5,hanzi_frequency,phase1,118,gōng,3,Jun Da frequency list; filtered by General Standard Level 1
+119,使,U+4F7F,hanzi_frequency,phase1,119,shǐ,8,Jun Da frequency list; filtered by General Standard Level 1
+120,情,U+60C5,hanzi_frequency,phase1,120,qíng,11,Jun Da frequency list; filtered by General Standard Level 1
+121,明,U+660E,hanzi_frequency,phase1,121,míng,8,Jun Da frequency list; filtered by General Standard Level 1
+122,性,U+6027,hanzi_frequency,phase1,122,xìng,8,Jun Da frequency list; filtered by General Standard Level 1
+123,知,U+77E5,hanzi_frequency,phase1,123,zhī,8,Jun Da frequency list; filtered by General Standard Level 1
+124,全,U+5168,hanzi_frequency,phase1,124,quán,6,Jun Da frequency list; filtered by General Standard Level 1
+125,三,U+4E09,hanzi_frequency,phase1,125,sān,3,Jun Da frequency list; filtered by General Standard Level 1
+126,又,U+53C8,hanzi_frequency,phase1,126,yòu,2,Jun Da frequency list; filtered by General Standard Level 1
+127,关,U+5173,hanzi_frequency,phase1,127,guān,6,Jun Da frequency list; filtered by General Standard Level 1
+128,点,U+70B9,hanzi_frequency,phase1,128,diǎn,9,Jun Da frequency list; filtered by General Standard Level 1
+129,正,U+6B63,hanzi_frequency,phase1,129,zhèng,5,Jun Da frequency list; filtered by General Standard Level 1
+130,业,U+4E1A,hanzi_frequency,phase1,130,yè,5,Jun Da frequency list; filtered by General Standard Level 1
+131,外,U+5916,hanzi_frequency,phase1,131,wài,5,Jun Da frequency list; filtered by General Standard Level 1
+132,将,U+5C06,hanzi_frequency,phase1,132,jiāng,9,Jun Da frequency list; filtered by General Standard Level 1
+133,两,U+4E24,hanzi_frequency,phase1,133,liǎng,7,Jun Da frequency list; filtered by General Standard Level 1
+134,高,U+9AD8,hanzi_frequency,phase1,134,gāo,10,Jun Da frequency list; filtered by General Standard Level 1
+135,间,U+95F4,hanzi_frequency,phase1,135,jiān,7,Jun Da frequency list; filtered by General Standard Level 1
+136,由,U+7531,hanzi_frequency,phase1,136,yóu,5,Jun Da frequency list; filtered by General Standard Level 1
+137,问,U+95EE,hanzi_frequency,phase1,137,wèn,6,Jun Da frequency list; filtered by General Standard Level 1
+138,很,U+5F88,hanzi_frequency,phase1,138,hěn,9,Jun Da frequency list; filtered by General Standard Level 1
+139,最,U+6700,hanzi_frequency,phase1,139,zuì,12,Jun Da frequency list; filtered by General Standard Level 1
+140,重,U+91CD,hanzi_frequency,phase1,140,zhòng,9,Jun Da frequency list; filtered by General Standard Level 1
+141,并,U+5E76,hanzi_frequency,phase1,141,bìng,6,Jun Da frequency list; filtered by General Standard Level 1
+142,物,U+7269,hanzi_frequency,phase1,142,wù,8,Jun Da frequency list; filtered by General Standard Level 1
+143,手,U+624B,hanzi_frequency,phase1,143,shǒu,4,Jun Da frequency list; filtered by General Standard Level 1
+144,应,U+5E94,hanzi_frequency,phase1,144,yīng,7,Jun Da frequency list; filtered by General Standard Level 1
+145,战,U+6218,hanzi_frequency,phase1,145,zhàn,9,Jun Da frequency list; filtered by General Standard Level 1
+146,向,U+5411,hanzi_frequency,phase1,146,xiàng,6,Jun Da frequency list; filtered by General Standard Level 1
+147,头,U+5934,hanzi_frequency,phase1,147,tóu,5,Jun Da frequency list; filtered by General Standard Level 1
+148,文,U+6587,hanzi_frequency,phase1,148,wén,4,Jun Da frequency list; filtered by General Standard Level 1
+149,体,U+4F53,hanzi_frequency,phase1,149,tǐ,7,Jun Da frequency list; filtered by General Standard Level 1
+150,政,U+653F,hanzi_frequency,phase1,150,zhèng,9,Jun Da frequency list; filtered by General Standard Level 1
+151,美,U+7F8E,hanzi_frequency,phase1,151,měi,9,Jun Da frequency list; filtered by General Standard Level 1
+152,相,U+76F8,hanzi_frequency,phase1,152,xiāng,9,Jun Da frequency list; filtered by General Standard Level 1
+153,见,U+89C1,hanzi_frequency,phase1,153,jiàn,4,Jun Da frequency list; filtered by General Standard Level 1
+154,被,U+88AB,hanzi_frequency,phase1,154,bèi,10,Jun Da frequency list; filtered by General Standard Level 1
+155,利,U+5229,hanzi_frequency,phase1,155,lì,7,Jun Da frequency list; filtered by General Standard Level 1
+156,什,U+4EC0,hanzi_frequency,phase1,156,shén,4,Jun Da frequency list; filtered by General Standard Level 1
+157,二,U+4E8C,hanzi_frequency,phase1,157,èr,2,Jun Da frequency list; filtered by General Standard Level 1
+158,等,U+7B49,hanzi_frequency,phase1,158,děng,12,Jun Da frequency list; filtered by General Standard Level 1
+159,产,U+4EA7,hanzi_frequency,phase1,159,chǎn,6,Jun Da frequency list; filtered by General Standard Level 1
+160,或,U+6216,hanzi_frequency,phase1,160,huò,8,Jun Da frequency list; filtered by General Standard Level 1
+161,新,U+65B0,hanzi_frequency,phase1,161,xīn,13,Jun Da frequency list; filtered by General Standard Level 1
+162,己,U+5DF1,hanzi_frequency,phase1,162,jǐ,3,Jun Da frequency list; filtered by General Standard Level 1
+163,制,U+5236,hanzi_frequency,phase1,163,zhì,8,Jun Da frequency list; filtered by General Standard Level 1
+164,身,U+8EAB,hanzi_frequency,phase1,164,shēn,7,Jun Da frequency list; filtered by General Standard Level 1
+165,果,U+679C,hanzi_frequency,phase1,165,guǒ,8,Jun Da frequency list; filtered by General Standard Level 1
+166,加,U+52A0,hanzi_frequency,phase1,166,jiā,5,Jun Da frequency list; filtered by General Standard Level 1
+167,西,U+897F,hanzi_frequency,phase1,167,xī,6,Jun Da frequency list; filtered by General Standard Level 1
+168,斯,U+65AF,hanzi_frequency,phase1,168,sī,12,Jun Da frequency list; filtered by General Standard Level 1
+169,月,U+6708,hanzi_frequency,phase1,169,yuè,4,Jun Da frequency list; filtered by General Standard Level 1
+170,话,U+8BDD,hanzi_frequency,phase1,170,huà,8,Jun Da frequency list; filtered by General Standard Level 1
+171,合,U+5408,hanzi_frequency,phase1,171,hé,6,Jun Da frequency list; filtered by General Standard Level 1
+172,回,U+56DE,hanzi_frequency,phase1,172,huí,6,Jun Da frequency list; filtered by General Standard Level 1
+173,特,U+7279,hanzi_frequency,phase1,173,tè,10,Jun Da frequency list; filtered by General Standard Level 1
+174,代,U+4EE3,hanzi_frequency,phase1,174,dài,5,Jun Da frequency list; filtered by General Standard Level 1
+175,内,U+5185,hanzi_frequency,phase1,175,nèi,4,Jun Da frequency list; filtered by General Standard Level 1
+176,信,U+4FE1,hanzi_frequency,phase1,176,xìn,9,Jun Da frequency list; filtered by General Standard Level 1
+177,表,U+8868,hanzi_frequency,phase1,177,biǎo,8,Jun Da frequency list; filtered by General Standard Level 1
+178,化,U+5316,hanzi_frequency,phase1,178,huà,4,Jun Da frequency list; filtered by General Standard Level 1
+179,老,U+8001,hanzi_frequency,phase1,179,lǎo,6,Jun Da frequency list; filtered by General Standard Level 1
+180,给,U+7ED9,hanzi_frequency,phase1,180,gěi,9,Jun Da frequency list; filtered by General Standard Level 1
+181,世,U+4E16,hanzi_frequency,phase1,181,shì,5,Jun Da frequency list; filtered by General Standard Level 1
+182,位,U+4F4D,hanzi_frequency,phase1,182,wèi,7,Jun Da frequency list; filtered by General Standard Level 1
+183,次,U+6B21,hanzi_frequency,phase1,183,cì,6,Jun Da frequency list; filtered by General Standard Level 1
+184,度,U+5EA6,hanzi_frequency,phase1,184,dù,9,Jun Da frequency list; filtered by General Standard Level 1
+185,门,U+95E8,hanzi_frequency,phase1,185,mén,3,Jun Da frequency list; filtered by General Standard Level 1
+186,任,U+4EFB,hanzi_frequency,phase1,186,rèn,6,Jun Da frequency list; filtered by General Standard Level 1
+187,常,U+5E38,hanzi_frequency,phase1,187,cháng,11,Jun Da frequency list; filtered by General Standard Level 1
+188,先,U+5148,hanzi_frequency,phase1,188,xiān,6,Jun Da frequency list; filtered by General Standard Level 1
+189,海,U+6D77,hanzi_frequency,phase1,189,hǎi,10,Jun Da frequency list; filtered by General Standard Level 1
+190,通,U+901A,hanzi_frequency,phase1,190,tōng,10,Jun Da frequency list; filtered by General Standard Level 1
+191,教,U+6559,hanzi_frequency,phase1,191,jiào,11,Jun Da frequency list; filtered by General Standard Level 1
+192,儿,U+513F,hanzi_frequency,phase1,192,ér,2,Jun Da frequency list; filtered by General Standard Level 1
+193,原,U+539F,hanzi_frequency,phase1,193,yuán,10,Jun Da frequency list; filtered by General Standard Level 1
+194,东,U+4E1C,hanzi_frequency,phase1,194,dōng,5,Jun Da frequency list; filtered by General Standard Level 1
+195,声,U+58F0,hanzi_frequency,phase1,195,shēng,7,Jun Da frequency list; filtered by General Standard Level 1
+196,提,U+63D0,hanzi_frequency,phase1,196,tí,12,Jun Da frequency list; filtered by General Standard Level 1
+197,立,U+7ACB,hanzi_frequency,phase1,197,lì,5,Jun Da frequency list; filtered by General Standard Level 1
+198,及,U+53CA,hanzi_frequency,phase1,198,jí,3,Jun Da frequency list; filtered by General Standard Level 1
+199,比,U+6BD4,hanzi_frequency,phase1,199,bǐ,4,Jun Da frequency list; filtered by General Standard Level 1
+200,员,U+5458,hanzi_frequency,phase1,200,yuán,7,Jun Da frequency list; filtered by General Standard Level 1
+201,解,U+89E3,hanzi_frequency,phase1,201,jiě,13,Jun Da frequency list; filtered by General Standard Level 1
+202,水,U+6C34,hanzi_frequency,phase1,202,shuǐ,4,Jun Da frequency list; filtered by General Standard Level 1
+203,名,U+540D,hanzi_frequency,phase1,203,míng,6,Jun Da frequency list; filtered by General Standard Level 1
+204,真,U+771F,hanzi_frequency,phase1,204,zhēn,10,Jun Da frequency list; filtered by General Standard Level 1
+205,论,U+8BBA,hanzi_frequency,phase1,205,lùn,6,Jun Da frequency list; filtered by General Standard Level 1
+206,处,U+5904,hanzi_frequency,phase1,206,chù,5,Jun Da frequency list; filtered by General Standard Level 1
+207,走,U+8D70,hanzi_frequency,phase1,207,zǒu,7,Jun Da frequency list; filtered by General Standard Level 1
+208,义,U+4E49,hanzi_frequency,phase1,208,yì,3,Jun Da frequency list; filtered by General Standard Level 1
+209,各,U+5404,hanzi_frequency,phase1,209,gè,6,Jun Da frequency list; filtered by General Standard Level 1
+210,入,U+5165,hanzi_frequency,phase1,210,rù,2,Jun Da frequency list; filtered by General Standard Level 1
+211,几,U+51E0,hanzi_frequency,phase1,211,jǐ,2,Jun Da frequency list; filtered by General Standard Level 1
+212,口,U+53E3,hanzi_frequency,phase1,212,kǒu,3,Jun Da frequency list; filtered by General Standard Level 1
+213,认,U+8BA4,hanzi_frequency,phase1,213,rèn,4,Jun Da frequency list; filtered by General Standard Level 1
+214,条,U+6761,hanzi_frequency,phase1,214,tiáo,7,Jun Da frequency list; filtered by General Standard Level 1
+215,平,U+5E73,hanzi_frequency,phase1,215,píng,5,Jun Da frequency list; filtered by General Standard Level 1
+216,系,U+7CFB,hanzi_frequency,phase1,216,xì,7,Jun Da frequency list; filtered by General Standard Level 1
+217,气,U+6C14,hanzi_frequency,phase1,217,qì,4,Jun Da frequency list; filtered by General Standard Level 1
+218,题,U+9898,hanzi_frequency,phase1,218,tí,15,Jun Da frequency list; filtered by General Standard Level 1
+219,活,U+6D3B,hanzi_frequency,phase1,219,huó,9,Jun Da frequency list; filtered by General Standard Level 1
+220,尔,U+5C14,hanzi_frequency,phase1,220,ěr,5,Jun Da frequency list; filtered by General Standard Level 1
+221,更,U+66F4,hanzi_frequency,phase1,221,gèng,7,Jun Da frequency list; filtered by General Standard Level 1
+222,别,U+522B,hanzi_frequency,phase1,222,bié,7,Jun Da frequency list; filtered by General Standard Level 1
+223,打,U+6253,hanzi_frequency,phase1,223,dǎ,5,Jun Da frequency list; filtered by General Standard Level 1
+224,女,U+5973,hanzi_frequency,phase1,224,nǚ,3,Jun Da frequency list; filtered by General Standard Level 1
+225,变,U+53D8,hanzi_frequency,phase1,225,biàn,8,Jun Da frequency list; filtered by General Standard Level 1
+226,四,U+56DB,hanzi_frequency,phase1,226,sì,5,Jun Da frequency list; filtered by General Standard Level 1
+227,神,U+795E,hanzi_frequency,phase1,227,shén,9,Jun Da frequency list; filtered by General Standard Level 1
+228,总,U+603B,hanzi_frequency,phase1,228,zǒng,9,Jun Da frequency list; filtered by General Standard Level 1
+229,何,U+4F55,hanzi_frequency,phase1,229,hé,7,Jun Da frequency list; filtered by General Standard Level 1
+230,电,U+7535,hanzi_frequency,phase1,230,diàn,5,Jun Da frequency list; filtered by General Standard Level 1
+231,数,U+6570,hanzi_frequency,phase1,231,shù,13,Jun Da frequency list; filtered by General Standard Level 1
+232,安,U+5B89,hanzi_frequency,phase1,232,ān,6,Jun Da frequency list; filtered by General Standard Level 1
+233,少,U+5C11,hanzi_frequency,phase1,233,shǎo,4,Jun Da frequency list; filtered by General Standard Level 1
+234,报,U+62A5,hanzi_frequency,phase1,234,bào,7,Jun Da frequency list; filtered by General Standard Level 1
+235,才,U+624D,hanzi_frequency,phase1,235,cái,3,Jun Da frequency list; filtered by General Standard Level 1
+236,结,U+7ED3,hanzi_frequency,phase1,236,jié,9,Jun Da frequency list; filtered by General Standard Level 1
+237,反,U+53CD,hanzi_frequency,phase1,237,fǎn,4,Jun Da frequency list; filtered by General Standard Level 1
+238,受,U+53D7,hanzi_frequency,phase1,238,shòu,8,Jun Da frequency list; filtered by General Standard Level 1
+239,目,U+76EE,hanzi_frequency,phase1,239,mù,5,Jun Da frequency list; filtered by General Standard Level 1
+240,太,U+592A,hanzi_frequency,phase1,240,tài,4,Jun Da frequency list; filtered by General Standard Level 1
+241,量,U+91CF,hanzi_frequency,phase1,241,liàng,12,Jun Da frequency list; filtered by General Standard Level 1
+242,再,U+518D,hanzi_frequency,phase1,242,zài,6,Jun Da frequency list; filtered by General Standard Level 1
+243,感,U+611F,hanzi_frequency,phase1,243,gǎn,13,Jun Da frequency list; filtered by General Standard Level 1
+244,建,U+5EFA,hanzi_frequency,phase1,244,jiàn,8,Jun Da frequency list; filtered by General Standard Level 1
+245,务,U+52A1,hanzi_frequency,phase1,245,wù,5,Jun Da frequency list; filtered by General Standard Level 1
+246,做,U+505A,hanzi_frequency,phase1,246,zuò,11,Jun Da frequency list; filtered by General Standard Level 1
+247,接,U+63A5,hanzi_frequency,phase1,247,jiē,11,Jun Da frequency list; filtered by General Standard Level 1
+248,必,U+5FC5,hanzi_frequency,phase1,248,bì,5,Jun Da frequency list; filtered by General Standard Level 1
+249,场,U+573A,hanzi_frequency,phase1,249,chǎng,6,Jun Da frequency list; filtered by General Standard Level 1
+250,件,U+4EF6,hanzi_frequency,phase1,250,jiàn,6,Jun Da frequency list; filtered by General Standard Level 1
+251,计,U+8BA1,hanzi_frequency,phase1,251,jì,4,Jun Da frequency list; filtered by General Standard Level 1
+252,管,U+7BA1,hanzi_frequency,phase1,252,guǎn,14,Jun Da frequency list; filtered by General Standard Level 1
+253,期,U+671F,hanzi_frequency,phase1,253,qī,12,Jun Da frequency list; filtered by General Standard Level 1
+254,市,U+5E02,hanzi_frequency,phase1,254,shì,5,Jun Da frequency list; filtered by General Standard Level 1
+255,直,U+76F4,hanzi_frequency,phase1,255,zhí,8,Jun Da frequency list; filtered by General Standard Level 1
+256,德,U+5FB7,hanzi_frequency,phase1,256,dé,15,Jun Da frequency list; filtered by General Standard Level 1
+257,资,U+8D44,hanzi_frequency,phase1,257,zī,10,Jun Da frequency list; filtered by General Standard Level 1
+258,命,U+547D,hanzi_frequency,phase1,258,mìng,8,Jun Da frequency list; filtered by General Standard Level 1
+259,山,U+5C71,hanzi_frequency,phase1,259,shān,3,Jun Da frequency list; filtered by General Standard Level 1
+260,金,U+91D1,hanzi_frequency,phase1,260,jīn,8,Jun Da frequency list; filtered by General Standard Level 1
+261,指,U+6307,hanzi_frequency,phase1,261,zhǐ,9,Jun Da frequency list; filtered by General Standard Level 1
+262,克,U+514B,hanzi_frequency,phase1,262,kè,7,Jun Da frequency list; filtered by General Standard Level 1
+263,许,U+8BB8,hanzi_frequency,phase1,263,xǔ,6,Jun Da frequency list; filtered by General Standard Level 1
+264,统,U+7EDF,hanzi_frequency,phase1,264,tǒng,9,Jun Da frequency list; filtered by General Standard Level 1
+265,区,U+533A,hanzi_frequency,phase1,265,qū,4,Jun Da frequency list; filtered by General Standard Level 1
+266,保,U+4FDD,hanzi_frequency,phase1,266,bǎo,9,Jun Da frequency list; filtered by General Standard Level 1
+267,至,U+81F3,hanzi_frequency,phase1,267,zhì,6,Jun Da frequency list; filtered by General Standard Level 1
+268,队,U+961F,hanzi_frequency,phase1,268,duì,4,Jun Da frequency list; filtered by General Standard Level 1
+269,形,U+5F62,hanzi_frequency,phase1,269,xíng,7,Jun Da frequency list; filtered by General Standard Level 1
+270,社,U+793E,hanzi_frequency,phase1,270,shè,7,Jun Da frequency list; filtered by General Standard Level 1
+271,便,U+4FBF,hanzi_frequency,phase1,271,biàn,9,Jun Da frequency list; filtered by General Standard Level 1
+272,空,U+7A7A,hanzi_frequency,phase1,272,kōng,8,Jun Da frequency list; filtered by General Standard Level 1
+273,决,U+51B3,hanzi_frequency,phase1,273,jué,6,Jun Da frequency list; filtered by General Standard Level 1
+274,治,U+6CBB,hanzi_frequency,phase1,274,zhì,8,Jun Da frequency list; filtered by General Standard Level 1
+275,展,U+5C55,hanzi_frequency,phase1,275,zhǎn,10,Jun Da frequency list; filtered by General Standard Level 1
+276,马,U+9A6C,hanzi_frequency,phase1,276,mǎ,3,Jun Da frequency list; filtered by General Standard Level 1
+277,科,U+79D1,hanzi_frequency,phase1,277,kē,9,Jun Da frequency list; filtered by General Standard Level 1
+278,司,U+53F8,hanzi_frequency,phase1,278,sī,5,Jun Da frequency list; filtered by General Standard Level 1
+279,五,U+4E94,hanzi_frequency,phase1,279,wǔ,4,Jun Da frequency list; filtered by General Standard Level 1
+280,基,U+57FA,hanzi_frequency,phase1,280,jī,11,Jun Da frequency list; filtered by General Standard Level 1
+281,眼,U+773C,hanzi_frequency,phase1,281,yǎn,11,Jun Da frequency list; filtered by General Standard Level 1
+282,书,U+4E66,hanzi_frequency,phase1,282,shū,4,Jun Da frequency list; filtered by General Standard Level 1
+283,非,U+975E,hanzi_frequency,phase1,283,fēi,8,Jun Da frequency list; filtered by General Standard Level 1
+284,则,U+5219,hanzi_frequency,phase1,284,zé,6,Jun Da frequency list; filtered by General Standard Level 1
+285,听,U+542C,hanzi_frequency,phase1,285,tīng,7,Jun Da frequency list; filtered by General Standard Level 1
+286,白,U+767D,hanzi_frequency,phase1,286,bái,5,Jun Da frequency list; filtered by General Standard Level 1
+287,却,U+5374,hanzi_frequency,phase1,287,què,7,Jun Da frequency list; filtered by General Standard Level 1
+288,界,U+754C,hanzi_frequency,phase1,288,jiè,9,Jun Da frequency list; filtered by General Standard Level 1
+289,达,U+8FBE,hanzi_frequency,phase1,289,dá,6,Jun Da frequency list; filtered by General Standard Level 1
+290,光,U+5149,hanzi_frequency,phase1,290,guāng,6,Jun Da frequency list; filtered by General Standard Level 1
+291,放,U+653E,hanzi_frequency,phase1,291,fàng,8,Jun Da frequency list; filtered by General Standard Level 1
+292,强,U+5F3A,hanzi_frequency,phase1,292,qiáng,12,Jun Da frequency list; filtered by General Standard Level 1
+293,即,U+5373,hanzi_frequency,phase1,293,jí,7,Jun Da frequency list; filtered by General Standard Level 1
+294,像,U+50CF,hanzi_frequency,phase1,294,xiàng,13,Jun Da frequency list; filtered by General Standard Level 1
+295,难,U+96BE,hanzi_frequency,phase1,295,nán,10,Jun Da frequency list; filtered by General Standard Level 1
+296,且,U+4E14,hanzi_frequency,phase1,296,qiě,5,Jun Da frequency list; filtered by General Standard Level 1
+297,权,U+6743,hanzi_frequency,phase1,297,quán,6,Jun Da frequency list; filtered by General Standard Level 1
+298,思,U+601D,hanzi_frequency,phase1,298,sī,9,Jun Da frequency list; filtered by General Standard Level 1
+299,王,U+738B,hanzi_frequency,phase1,299,wáng,4,Jun Da frequency list; filtered by General Standard Level 1
+300,象,U+8C61,hanzi_frequency,phase1,300,xiàng,11,Jun Da frequency list; filtered by General Standard Level 1
+301,完,U+5B8C,hanzi_frequency,phase1,301,wán,7,Jun Da frequency list; filtered by General Standard Level 1
+302,设,U+8BBE,hanzi_frequency,phase1,302,shè,6,Jun Da frequency list; filtered by General Standard Level 1
+303,式,U+5F0F,hanzi_frequency,phase1,303,shì,6,Jun Da frequency list; filtered by General Standard Level 1
+304,色,U+8272,hanzi_frequency,phase1,304,sè,6,Jun Da frequency list; filtered by General Standard Level 1
+305,路,U+8DEF,hanzi_frequency,phase1,305,lù,13,Jun Da frequency list; filtered by General Standard Level 1
+306,记,U+8BB0,hanzi_frequency,phase1,306,jì,5,Jun Da frequency list; filtered by General Standard Level 1
+307,南,U+5357,hanzi_frequency,phase1,307,nán,9,Jun Da frequency list; filtered by General Standard Level 1
+308,品,U+54C1,hanzi_frequency,phase1,308,pǐn,9,Jun Da frequency list; filtered by General Standard Level 1
+309,住,U+4F4F,hanzi_frequency,phase1,309,zhù,7,Jun Da frequency list; filtered by General Standard Level 1
+310,告,U+544A,hanzi_frequency,phase1,310,gào,7,Jun Da frequency list; filtered by General Standard Level 1
+311,类,U+7C7B,hanzi_frequency,phase1,311,lèi,9,Jun Da frequency list; filtered by General Standard Level 1
+312,求,U+6C42,hanzi_frequency,phase1,312,qiú,7,Jun Da frequency list; filtered by General Standard Level 1
+313,据,U+636E,hanzi_frequency,phase1,313,jù,11,Jun Da frequency list; filtered by General Standard Level 1
+314,程,U+7A0B,hanzi_frequency,phase1,314,chéng,12,Jun Da frequency list; filtered by General Standard Level 1
+315,北,U+5317,hanzi_frequency,phase1,315,běi,5,Jun Da frequency list; filtered by General Standard Level 1
+316,边,U+8FB9,hanzi_frequency,phase1,316,biān,5,Jun Da frequency list; filtered by General Standard Level 1
+317,死,U+6B7B,hanzi_frequency,phase1,317,sǐ,6,Jun Da frequency list; filtered by General Standard Level 1
+318,张,U+5F20,hanzi_frequency,phase1,318,zhāng,7,Jun Da frequency list; filtered by General Standard Level 1
+319,该,U+8BE5,hanzi_frequency,phase1,319,gāi,8,Jun Da frequency list; filtered by General Standard Level 1
+320,交,U+4EA4,hanzi_frequency,phase1,320,jiāo,6,Jun Da frequency list; filtered by General Standard Level 1
+321,规,U+89C4,hanzi_frequency,phase1,321,guī,8,Jun Da frequency list; filtered by General Standard Level 1
+322,万,U+4E07,hanzi_frequency,phase1,322,wàn,3,Jun Da frequency list; filtered by General Standard Level 1
+323,取,U+53D6,hanzi_frequency,phase1,323,qǔ,8,Jun Da frequency list; filtered by General Standard Level 1
+324,拉,U+62C9,hanzi_frequency,phase1,324,lā,8,Jun Da frequency list; filtered by General Standard Level 1
+325,格,U+683C,hanzi_frequency,phase1,325,gé,10,Jun Da frequency list; filtered by General Standard Level 1
+326,望,U+671B,hanzi_frequency,phase1,326,wàng,11,Jun Da frequency list; filtered by General Standard Level 1
+327,觉,U+89C9,hanzi_frequency,phase1,327,jué,9,Jun Da frequency list; filtered by General Standard Level 1
+328,术,U+672F,hanzi_frequency,phase1,328,shù,5,Jun Da frequency list; filtered by General Standard Level 1
+329,领,U+9886,hanzi_frequency,phase1,329,lǐng,11,Jun Da frequency list; filtered by General Standard Level 1
+330,共,U+5171,hanzi_frequency,phase1,330,gòng,6,Jun Da frequency list; filtered by General Standard Level 1
+331,确,U+786E,hanzi_frequency,phase1,331,què,12,Jun Da frequency list; filtered by General Standard Level 1
+332,传,U+4F20,hanzi_frequency,phase1,332,chuán,6,Jun Da frequency list; filtered by General Standard Level 1
+333,师,U+5E08,hanzi_frequency,phase1,333,shī,6,Jun Da frequency list; filtered by General Standard Level 1
+334,观,U+89C2,hanzi_frequency,phase1,334,guān,6,Jun Da frequency list; filtered by General Standard Level 1
+335,清,U+6E05,hanzi_frequency,phase1,335,qīng,11,Jun Da frequency list; filtered by General Standard Level 1
+336,今,U+4ECA,hanzi_frequency,phase1,336,jīn,4,Jun Da frequency list; filtered by General Standard Level 1
+337,切,U+5207,hanzi_frequency,phase1,337,qiè,4,Jun Da frequency list; filtered by General Standard Level 1
+338,院,U+9662,hanzi_frequency,phase1,338,yuàn,9,Jun Da frequency list; filtered by General Standard Level 1
+339,让,U+8BA9,hanzi_frequency,phase1,339,ràng,5,Jun Da frequency list; filtered by General Standard Level 1
+340,识,U+8BC6,hanzi_frequency,phase1,340,shí,7,Jun Da frequency list; filtered by General Standard Level 1
+341,候,U+5019,hanzi_frequency,phase1,341,hòu,10,Jun Da frequency list; filtered by General Standard Level 1
+342,带,U+5E26,hanzi_frequency,phase1,342,dài,9,Jun Da frequency list; filtered by General Standard Level 1
+343,导,U+5BFC,hanzi_frequency,phase1,343,dǎo,6,Jun Da frequency list; filtered by General Standard Level 1
+344,争,U+4E89,hanzi_frequency,phase1,344,zhēng,6,Jun Da frequency list; filtered by General Standard Level 1
+345,运,U+8FD0,hanzi_frequency,phase1,345,yùn,7,Jun Da frequency list; filtered by General Standard Level 1
+346,笑,U+7B11,hanzi_frequency,phase1,346,xiào,10,Jun Da frequency list; filtered by General Standard Level 1
+347,飞,U+98DE,hanzi_frequency,phase1,347,fēi,3,Jun Da frequency list; filtered by General Standard Level 1
+348,风,U+98CE,hanzi_frequency,phase1,348,fēng,4,Jun Da frequency list; filtered by General Standard Level 1
+349,步,U+6B65,hanzi_frequency,phase1,349,bù,7,Jun Da frequency list; filtered by General Standard Level 1
+350,改,U+6539,hanzi_frequency,phase1,350,gǎi,7,Jun Da frequency list; filtered by General Standard Level 1
+351,收,U+6536,hanzi_frequency,phase1,351,shōu,6,Jun Da frequency list; filtered by General Standard Level 1
+352,根,U+6839,hanzi_frequency,phase1,352,gēn,10,Jun Da frequency list; filtered by General Standard Level 1
+353,干,U+5E72,hanzi_frequency,phase1,353,gàn,3,Jun Da frequency list; filtered by General Standard Level 1
+354,造,U+9020,hanzi_frequency,phase1,354,zào,10,Jun Da frequency list; filtered by General Standard Level 1
+355,言,U+8A00,hanzi_frequency,phase1,355,yán,7,Jun Da frequency list; filtered by General Standard Level 1
+356,联,U+8054,hanzi_frequency,phase1,356,lián,12,Jun Da frequency list; filtered by General Standard Level 1
+357,持,U+6301,hanzi_frequency,phase1,357,chí,9,Jun Da frequency list; filtered by General Standard Level 1
+358,组,U+7EC4,hanzi_frequency,phase1,358,zǔ,8,Jun Da frequency list; filtered by General Standard Level 1
+359,每,U+6BCF,hanzi_frequency,phase1,359,měi,7,Jun Da frequency list; filtered by General Standard Level 1
+360,济,U+6D4E,hanzi_frequency,phase1,360,jì,9,Jun Da frequency list; filtered by General Standard Level 1
+361,车,U+8F66,hanzi_frequency,phase1,361,chē,4,Jun Da frequency list; filtered by General Standard Level 1
+362,亲,U+4EB2,hanzi_frequency,phase1,362,qīn,9,Jun Da frequency list; filtered by General Standard Level 1
+363,极,U+6781,hanzi_frequency,phase1,363,jí,7,Jun Da frequency list; filtered by General Standard Level 1
+364,林,U+6797,hanzi_frequency,phase1,364,lín,8,Jun Da frequency list; filtered by General Standard Level 1
+365,服,U+670D,hanzi_frequency,phase1,365,fú,8,Jun Da frequency list; filtered by General Standard Level 1
+366,快,U+5FEB,hanzi_frequency,phase1,366,kuài,7,Jun Da frequency list; filtered by General Standard Level 1
+367,办,U+529E,hanzi_frequency,phase1,367,bàn,4,Jun Da frequency list; filtered by General Standard Level 1
+368,议,U+8BAE,hanzi_frequency,phase1,368,yì,5,Jun Da frequency list; filtered by General Standard Level 1
+369,往,U+5F80,hanzi_frequency,phase1,369,wǎng,8,Jun Da frequency list; filtered by General Standard Level 1
+370,元,U+5143,hanzi_frequency,phase1,370,yuán,4,Jun Da frequency list; filtered by General Standard Level 1
+371,英,U+82F1,hanzi_frequency,phase1,371,yīng,8,Jun Da frequency list; filtered by General Standard Level 1
+372,士,U+58EB,hanzi_frequency,phase1,372,shì,3,Jun Da frequency list; filtered by General Standard Level 1
+373,证,U+8BC1,hanzi_frequency,phase1,373,zhèng,7,Jun Da frequency list; filtered by General Standard Level 1
+374,近,U+8FD1,hanzi_frequency,phase1,374,jìn,7,Jun Da frequency list; filtered by General Standard Level 1
+375,失,U+5931,hanzi_frequency,phase1,375,shī,5,Jun Da frequency list; filtered by General Standard Level 1
+376,转,U+8F6C,hanzi_frequency,phase1,376,zhuǎn,8,Jun Da frequency list; filtered by General Standard Level 1
+377,夫,U+592B,hanzi_frequency,phase1,377,fū,4,Jun Da frequency list; filtered by General Standard Level 1
+378,令,U+4EE4,hanzi_frequency,phase1,378,lìng,5,Jun Da frequency list; filtered by General Standard Level 1
+379,准,U+51C6,hanzi_frequency,phase1,379,zhǔn,10,Jun Da frequency list; filtered by General Standard Level 1
+380,布,U+5E03,hanzi_frequency,phase1,380,bù,5,Jun Da frequency list; filtered by General Standard Level 1
+381,始,U+59CB,hanzi_frequency,phase1,381,shǐ,8,Jun Da frequency list; filtered by General Standard Level 1
+382,怎,U+600E,hanzi_frequency,phase1,382,zěn,9,Jun Da frequency list; filtered by General Standard Level 1
+383,呢,U+5462,hanzi_frequency,phase1,383,ne,8,Jun Da frequency list; filtered by General Standard Level 1
+384,存,U+5B58,hanzi_frequency,phase1,384,cún,6,Jun Da frequency list; filtered by General Standard Level 1
+385,未,U+672A,hanzi_frequency,phase1,385,wèi,5,Jun Da frequency list; filtered by General Standard Level 1
+386,远,U+8FDC,hanzi_frequency,phase1,386,yuǎn,7,Jun Da frequency list; filtered by General Standard Level 1
+387,叫,U+53EB,hanzi_frequency,phase1,387,jiào,5,Jun Da frequency list; filtered by General Standard Level 1
+388,台,U+53F0,hanzi_frequency,phase1,388,tái,5,Jun Da frequency list; filtered by General Standard Level 1
+389,单,U+5355,hanzi_frequency,phase1,389,dān,8,Jun Da frequency list; filtered by General Standard Level 1
+390,影,U+5F71,hanzi_frequency,phase1,390,yǐng,15,Jun Da frequency list; filtered by General Standard Level 1
+391,具,U+5177,hanzi_frequency,phase1,391,jù,8,Jun Da frequency list; filtered by General Standard Level 1
+392,罗,U+7F57,hanzi_frequency,phase1,392,luō,8,Jun Da frequency list; filtered by General Standard Level 1
+393,字,U+5B57,hanzi_frequency,phase1,393,zì,6,Jun Da frequency list; filtered by General Standard Level 1
+394,爱,U+7231,hanzi_frequency,phase1,394,ài,10,Jun Da frequency list; filtered by General Standard Level 1
+395,击,U+51FB,hanzi_frequency,phase1,395,jī,5,Jun Da frequency list; filtered by General Standard Level 1
+396,流,U+6D41,hanzi_frequency,phase1,396,liú,10,Jun Da frequency list; filtered by General Standard Level 1
+397,备,U+5907,hanzi_frequency,phase1,397,bèi,8,Jun Da frequency list; filtered by General Standard Level 1
+398,兵,U+5175,hanzi_frequency,phase1,398,bīng,7,Jun Da frequency list; filtered by General Standard Level 1
+399,连,U+8FDE,hanzi_frequency,phase1,399,lián,7,Jun Da frequency list; filtered by General Standard Level 1
+400,调,U+8C03,hanzi_frequency,phase1,400,diào,10,Jun Da frequency list; filtered by General Standard Level 1
+401,深,U+6DF1,hanzi_frequency,phase1,401,shēn,11,Jun Da frequency list; filtered by General Standard Level 1
+402,商,U+5546,hanzi_frequency,phase1,402,shāng,11,Jun Da frequency list; filtered by General Standard Level 1
+403,算,U+7B97,hanzi_frequency,phase1,403,suàn,14,Jun Da frequency list; filtered by General Standard Level 1
+404,质,U+8D28,hanzi_frequency,phase1,404,zhì,8,Jun Da frequency list; filtered by General Standard Level 1
+405,团,U+56E2,hanzi_frequency,phase1,405,tuán,6,Jun Da frequency list; filtered by General Standard Level 1
+406,集,U+96C6,hanzi_frequency,phase1,406,jí,12,Jun Da frequency list; filtered by General Standard Level 1
+407,百,U+767E,hanzi_frequency,phase1,407,bǎi,6,Jun Da frequency list; filtered by General Standard Level 1
+408,需,U+9700,hanzi_frequency,phase1,408,xū,14,Jun Da frequency list; filtered by General Standard Level 1
+409,价,U+4EF7,hanzi_frequency,phase1,409,jià,6,Jun Da frequency list; filtered by General Standard Level 1
+410,花,U+82B1,hanzi_frequency,phase1,410,huā,7,Jun Da frequency list; filtered by General Standard Level 1
+411,党,U+515A,hanzi_frequency,phase1,411,dǎng,10,Jun Da frequency list; filtered by General Standard Level 1
+412,华,U+534E,hanzi_frequency,phase1,412,huá,6,Jun Da frequency list; filtered by General Standard Level 1
+413,城,U+57CE,hanzi_frequency,phase1,413,chéng,9,Jun Da frequency list; filtered by General Standard Level 1
+414,石,U+77F3,hanzi_frequency,phase1,414,shí,5,Jun Da frequency list; filtered by General Standard Level 1
+415,级,U+7EA7,hanzi_frequency,phase1,415,jí,6,Jun Da frequency list; filtered by General Standard Level 1
+416,整,U+6574,hanzi_frequency,phase1,416,zhěng,16,Jun Da frequency list; filtered by General Standard Level 1
+417,府,U+5E9C,hanzi_frequency,phase1,417,fǔ,8,Jun Da frequency list; filtered by General Standard Level 1
+418,离,U+79BB,hanzi_frequency,phase1,418,lí,10,Jun Da frequency list; filtered by General Standard Level 1
+419,况,U+51B5,hanzi_frequency,phase1,419,kuàng,7,Jun Da frequency list; filtered by General Standard Level 1
+420,亚,U+4E9A,hanzi_frequency,phase1,420,yà,6,Jun Da frequency list; filtered by General Standard Level 1
+421,请,U+8BF7,hanzi_frequency,phase1,421,qǐng,10,Jun Da frequency list; filtered by General Standard Level 1
+422,技,U+6280,hanzi_frequency,phase1,422,jì,7,Jun Da frequency list; filtered by General Standard Level 1
+423,际,U+9645,hanzi_frequency,phase1,423,jì,7,Jun Da frequency list; filtered by General Standard Level 1
+424,约,U+7EA6,hanzi_frequency,phase1,424,yuē,6,Jun Da frequency list; filtered by General Standard Level 1
+425,示,U+793A,hanzi_frequency,phase1,425,shì,5,Jun Da frequency list; filtered by General Standard Level 1
+426,复,U+590D,hanzi_frequency,phase1,426,fù,9,Jun Da frequency list; filtered by General Standard Level 1
+427,病,U+75C5,hanzi_frequency,phase1,427,bìng,10,Jun Da frequency list; filtered by General Standard Level 1
+428,息,U+606F,hanzi_frequency,phase1,428,xī,10,Jun Da frequency list; filtered by General Standard Level 1
+429,究,U+7A76,hanzi_frequency,phase1,429,jiū,7,Jun Da frequency list; filtered by General Standard Level 1
+430,线,U+7EBF,hanzi_frequency,phase1,430,xiàn,8,Jun Da frequency list; filtered by General Standard Level 1
+431,似,U+4F3C,hanzi_frequency,phase1,431,shì,6,Jun Da frequency list; filtered by General Standard Level 1
+432,官,U+5B98,hanzi_frequency,phase1,432,guān,8,Jun Da frequency list; filtered by General Standard Level 1
+433,火,U+706B,hanzi_frequency,phase1,433,huǒ,4,Jun Da frequency list; filtered by General Standard Level 1
+434,断,U+65AD,hanzi_frequency,phase1,434,duàn,11,Jun Da frequency list; filtered by General Standard Level 1
+435,精,U+7CBE,hanzi_frequency,phase1,435,jīng,14,Jun Da frequency list; filtered by General Standard Level 1
+436,满,U+6EE1,hanzi_frequency,phase1,436,mǎn,13,Jun Da frequency list; filtered by General Standard Level 1
+437,支,U+652F,hanzi_frequency,phase1,437,zhī,4,Jun Da frequency list; filtered by General Standard Level 1
+438,视,U+89C6,hanzi_frequency,phase1,438,shì,8,Jun Da frequency list; filtered by General Standard Level 1
+439,消,U+6D88,hanzi_frequency,phase1,439,xiāo,10,Jun Da frequency list; filtered by General Standard Level 1
+440,越,U+8D8A,hanzi_frequency,phase1,440,yuè,12,Jun Da frequency list; filtered by General Standard Level 1
+441,器,U+5668,hanzi_frequency,phase1,441,qì,16,Jun Da frequency list; filtered by General Standard Level 1
+442,容,U+5BB9,hanzi_frequency,phase1,442,róng,10,Jun Da frequency list; filtered by General Standard Level 1
+443,照,U+7167,hanzi_frequency,phase1,443,zhào,13,Jun Da frequency list; filtered by General Standard Level 1
+444,须,U+987B,hanzi_frequency,phase1,444,xū,9,Jun Da frequency list; filtered by General Standard Level 1
+445,九,U+4E5D,hanzi_frequency,phase1,445,jiǔ,2,Jun Da frequency list; filtered by General Standard Level 1
+446,增,U+589E,hanzi_frequency,phase1,446,zēng,15,Jun Da frequency list; filtered by General Standard Level 1
+447,研,U+7814,hanzi_frequency,phase1,447,yán,9,Jun Da frequency list; filtered by General Standard Level 1
+448,写,U+5199,hanzi_frequency,phase1,448,xiě,5,Jun Da frequency list; filtered by General Standard Level 1
+449,称,U+79F0,hanzi_frequency,phase1,449,chēng,10,Jun Da frequency list; filtered by General Standard Level 1
+450,企,U+4F01,hanzi_frequency,phase1,450,qǐ,6,Jun Da frequency list; filtered by General Standard Level 1
+451,八,U+516B,hanzi_frequency,phase1,451,bā,2,Jun Da frequency list; filtered by General Standard Level 1
+452,功,U+529F,hanzi_frequency,phase1,452,gōng,5,Jun Da frequency list; filtered by General Standard Level 1
+453,吗,U+5417,hanzi_frequency,phase1,453,ma,6,Jun Da frequency list; filtered by General Standard Level 1
+454,包,U+5305,hanzi_frequency,phase1,454,bāo,5,Jun Da frequency list; filtered by General Standard Level 1
+455,片,U+7247,hanzi_frequency,phase1,455,piàn,4,Jun Da frequency list; filtered by General Standard Level 1
+456,史,U+53F2,hanzi_frequency,phase1,456,shǐ,5,Jun Da frequency list; filtered by General Standard Level 1
+457,委,U+59D4,hanzi_frequency,phase1,457,wěi,8,Jun Da frequency list; filtered by General Standard Level 1
+458,乎,U+4E4E,hanzi_frequency,phase1,458,hū,5,Jun Da frequency list; filtered by General Standard Level 1
+459,查,U+67E5,hanzi_frequency,phase1,459,chá,9,Jun Da frequency list; filtered by General Standard Level 1
+460,轻,U+8F7B,hanzi_frequency,phase1,460,qīng,9,Jun Da frequency list; filtered by General Standard Level 1
+461,易,U+6613,hanzi_frequency,phase1,461,yì,8,Jun Da frequency list; filtered by General Standard Level 1
+462,早,U+65E9,hanzi_frequency,phase1,462,zǎo,6,Jun Da frequency list; filtered by General Standard Level 1
+463,曾,U+66FE,hanzi_frequency,phase1,463,céng,12,Jun Da frequency list; filtered by General Standard Level 1
+464,除,U+9664,hanzi_frequency,phase1,464,chú,9,Jun Da frequency list; filtered by General Standard Level 1
+465,农,U+519C,hanzi_frequency,phase1,465,nóng,6,Jun Da frequency list; filtered by General Standard Level 1
+466,找,U+627E,hanzi_frequency,phase1,466,zhǎo,7,Jun Da frequency list; filtered by General Standard Level 1
+467,装,U+88C5,hanzi_frequency,phase1,467,zhuāng,12,Jun Da frequency list; filtered by General Standard Level 1
+468,广,U+5E7F,hanzi_frequency,phase1,468,guǎng,3,Jun Da frequency list; filtered by General Standard Level 1
+469,显,U+663E,hanzi_frequency,phase1,469,xiǎn,9,Jun Da frequency list; filtered by General Standard Level 1
+470,吧,U+5427,hanzi_frequency,phase1,470,ba,7,Jun Da frequency list; filtered by General Standard Level 1
+471,阿,U+963F,hanzi_frequency,phase1,471,ā,7,Jun Da frequency list; filtered by General Standard Level 1
+472,李,U+674E,hanzi_frequency,phase1,472,lǐ,7,Jun Da frequency list; filtered by General Standard Level 1
+473,标,U+6807,hanzi_frequency,phase1,473,biāo,9,Jun Da frequency list; filtered by General Standard Level 1
+474,谈,U+8C08,hanzi_frequency,phase1,474,tán,10,Jun Da frequency list; filtered by General Standard Level 1
+475,吃,U+5403,hanzi_frequency,phase1,475,chī,6,Jun Da frequency list; filtered by General Standard Level 1
+476,图,U+56FE,hanzi_frequency,phase1,476,tú,8,Jun Da frequency list; filtered by General Standard Level 1
+477,念,U+5FF5,hanzi_frequency,phase1,477,niàn,8,Jun Da frequency list; filtered by General Standard Level 1
+478,六,U+516D,hanzi_frequency,phase1,478,liù,4,Jun Da frequency list; filtered by General Standard Level 1
+479,引,U+5F15,hanzi_frequency,phase1,479,yǐn,4,Jun Da frequency list; filtered by General Standard Level 1
+480,历,U+5386,hanzi_frequency,phase1,480,lì,4,Jun Da frequency list; filtered by General Standard Level 1
+481,首,U+9996,hanzi_frequency,phase1,481,shǒu,9,Jun Da frequency list; filtered by General Standard Level 1
+482,医,U+533B,hanzi_frequency,phase1,482,yī,7,Jun Da frequency list; filtered by General Standard Level 1
+483,局,U+5C40,hanzi_frequency,phase1,483,jú,7,Jun Da frequency list; filtered by General Standard Level 1
+484,突,U+7A81,hanzi_frequency,phase1,484,tū,9,Jun Da frequency list; filtered by General Standard Level 1
+485,专,U+4E13,hanzi_frequency,phase1,485,zhuān,4,Jun Da frequency list; filtered by General Standard Level 1
+486,费,U+8D39,hanzi_frequency,phase1,486,fèi,9,Jun Da frequency list; filtered by General Standard Level 1
+487,号,U+53F7,hanzi_frequency,phase1,487,hào,5,Jun Da frequency list; filtered by General Standard Level 1
+488,尽,U+5C3D,hanzi_frequency,phase1,488,jǐn,6,Jun Da frequency list; filtered by General Standard Level 1
+489,另,U+53E6,hanzi_frequency,phase1,489,lìng,5,Jun Da frequency list; filtered by General Standard Level 1
+490,周,U+5468,hanzi_frequency,phase1,490,zhōu,8,Jun Da frequency list; filtered by General Standard Level 1
+491,较,U+8F83,hanzi_frequency,phase1,491,jiào,10,Jun Da frequency list; filtered by General Standard Level 1
+492,注,U+6CE8,hanzi_frequency,phase1,492,zhù,8,Jun Da frequency list; filtered by General Standard Level 1
+493,语,U+8BED,hanzi_frequency,phase1,493,yǔ,9,Jun Da frequency list; filtered by General Standard Level 1
+494,仅,U+4EC5,hanzi_frequency,phase1,494,jǐn,4,Jun Da frequency list; filtered by General Standard Level 1
+495,考,U+8003,hanzi_frequency,phase1,495,kǎo,6,Jun Da frequency list; filtered by General Standard Level 1
+496,落,U+843D,hanzi_frequency,phase1,496,luò,12,Jun Da frequency list; filtered by General Standard Level 1
+497,青,U+9752,hanzi_frequency,phase1,497,qīng,8,Jun Da frequency list; filtered by General Standard Level 1
+498,随,U+968F,hanzi_frequency,phase1,498,suí,11,Jun Da frequency list; filtered by General Standard Level 1
+499,选,U+9009,hanzi_frequency,phase1,499,xuǎn,9,Jun Da frequency list; filtered by General Standard Level 1
+500,列,U+5217,hanzi_frequency,phase1,500,liè,6,Jun Da frequency list; filtered by General Standard Level 1
+501,武,U+6B66,hanzi_frequency,phase1,501,wǔ,8,Jun Da frequency list; filtered by General Standard Level 1
+502,红,U+7EA2,hanzi_frequency,phase1,502,hóng,6,Jun Da frequency list; filtered by General Standard Level 1
+503,响,U+54CD,hanzi_frequency,phase1,503,xiǎng,9,Jun Da frequency list; filtered by General Standard Level 1
+504,虽,U+867D,hanzi_frequency,phase1,504,suī,9,Jun Da frequency list; filtered by General Standard Level 1
+505,推,U+63A8,hanzi_frequency,phase1,505,tuī,11,Jun Da frequency list; filtered by General Standard Level 1
+506,势,U+52BF,hanzi_frequency,phase1,506,shì,8,Jun Da frequency list; filtered by General Standard Level 1
+507,参,U+53C2,hanzi_frequency,phase1,507,cān,8,Jun Da frequency list; filtered by General Standard Level 1
+508,希,U+5E0C,hanzi_frequency,phase1,508,xī,7,Jun Da frequency list; filtered by General Standard Level 1
+509,古,U+53E4,hanzi_frequency,phase1,509,gǔ,5,Jun Da frequency list; filtered by General Standard Level 1
+510,众,U+4F17,hanzi_frequency,phase1,510,zhòng,6,Jun Da frequency list; filtered by General Standard Level 1
+511,构,U+6784,hanzi_frequency,phase1,511,gòu,8,Jun Da frequency list; filtered by General Standard Level 1
+512,房,U+623F,hanzi_frequency,phase1,512,fáng,8,Jun Da frequency list; filtered by General Standard Level 1
+513,半,U+534A,hanzi_frequency,phase1,513,bàn,5,Jun Da frequency list; filtered by General Standard Level 1
+514,节,U+8282,hanzi_frequency,phase1,514,jié,5,Jun Da frequency list; filtered by General Standard Level 1
+515,土,U+571F,hanzi_frequency,phase1,515,tǔ,3,Jun Da frequency list; filtered by General Standard Level 1
+516,投,U+6295,hanzi_frequency,phase1,516,tóu,7,Jun Da frequency list; filtered by General Standard Level 1
+517,某,U+67D0,hanzi_frequency,phase1,517,mǒu,9,Jun Da frequency list; filtered by General Standard Level 1
+518,案,U+6848,hanzi_frequency,phase1,518,àn,10,Jun Da frequency list; filtered by General Standard Level 1
+519,黑,U+9ED1,hanzi_frequency,phase1,519,hēi,12,Jun Da frequency list; filtered by General Standard Level 1
+520,维,U+7EF4,hanzi_frequency,phase1,520,wéi,11,Jun Da frequency list; filtered by General Standard Level 1
+521,革,U+9769,hanzi_frequency,phase1,521,gé,9,Jun Da frequency list; filtered by General Standard Level 1
+522,划,U+5212,hanzi_frequency,phase1,522,huà,6,Jun Da frequency list; filtered by General Standard Level 1
+523,敌,U+654C,hanzi_frequency,phase1,523,dí,10,Jun Da frequency list; filtered by General Standard Level 1
+524,致,U+81F4,hanzi_frequency,phase1,524,zhì,10,Jun Da frequency list; filtered by General Standard Level 1
+525,陈,U+9648,hanzi_frequency,phase1,525,chén,7,Jun Da frequency list; filtered by General Standard Level 1
+526,律,U+5F8B,hanzi_frequency,phase1,526,lǜ,9,Jun Da frequency list; filtered by General Standard Level 1
+527,足,U+8DB3,hanzi_frequency,phase1,527,zú,7,Jun Da frequency list; filtered by General Standard Level 1
+528,态,U+6001,hanzi_frequency,phase1,528,tài,8,Jun Da frequency list; filtered by General Standard Level 1
+529,护,U+62A4,hanzi_frequency,phase1,529,hù,7,Jun Da frequency list; filtered by General Standard Level 1
+530,七,U+4E03,hanzi_frequency,phase1,530,qī,2,Jun Da frequency list; filtered by General Standard Level 1
+531,兴,U+5174,hanzi_frequency,phase1,531,xìng,6,Jun Da frequency list; filtered by General Standard Level 1
+532,派,U+6D3E,hanzi_frequency,phase1,532,pài,9,Jun Da frequency list; filtered by General Standard Level 1
+533,孩,U+5B69,hanzi_frequency,phase1,533,hái,9,Jun Da frequency list; filtered by General Standard Level 1
+534,验,U+9A8C,hanzi_frequency,phase1,534,yàn,10,Jun Da frequency list; filtered by General Standard Level 1
+535,责,U+8D23,hanzi_frequency,phase1,535,zé,8,Jun Da frequency list; filtered by General Standard Level 1
+536,营,U+8425,hanzi_frequency,phase1,536,yíng,11,Jun Da frequency list; filtered by General Standard Level 1
+537,星,U+661F,hanzi_frequency,phase1,537,xīng,9,Jun Da frequency list; filtered by General Standard Level 1
+538,够,U+591F,hanzi_frequency,phase1,538,gòu,11,Jun Da frequency list; filtered by General Standard Level 1
+539,章,U+7AE0,hanzi_frequency,phase1,539,zhāng,11,Jun Da frequency list; filtered by General Standard Level 1
+540,音,U+97F3,hanzi_frequency,phase1,540,yīn,9,Jun Da frequency list; filtered by General Standard Level 1
+541,跟,U+8DDF,hanzi_frequency,phase1,541,gēn,13,Jun Da frequency list; filtered by General Standard Level 1
+542,志,U+5FD7,hanzi_frequency,phase1,542,zhì,7,Jun Da frequency list; filtered by General Standard Level 1
+543,底,U+5E95,hanzi_frequency,phase1,543,dǐ,8,Jun Da frequency list; filtered by General Standard Level 1
+544,站,U+7AD9,hanzi_frequency,phase1,544,zhàn,10,Jun Da frequency list; filtered by General Standard Level 1
+545,严,U+4E25,hanzi_frequency,phase1,545,yán,7,Jun Da frequency list; filtered by General Standard Level 1
+546,巴,U+5DF4,hanzi_frequency,phase1,546,bā,4,Jun Da frequency list; filtered by General Standard Level 1
+547,例,U+4F8B,hanzi_frequency,phase1,547,lì,8,Jun Da frequency list; filtered by General Standard Level 1
+548,防,U+9632,hanzi_frequency,phase1,548,fáng,6,Jun Da frequency list; filtered by General Standard Level 1
+549,族,U+65CF,hanzi_frequency,phase1,549,zú,11,Jun Da frequency list; filtered by General Standard Level 1
+550,供,U+4F9B,hanzi_frequency,phase1,550,gōng,8,Jun Da frequency list; filtered by General Standard Level 1
+551,效,U+6548,hanzi_frequency,phase1,551,xiào,10,Jun Da frequency list; filtered by General Standard Level 1
+552,续,U+7EED,hanzi_frequency,phase1,552,xù,11,Jun Da frequency list; filtered by General Standard Level 1
+553,施,U+65BD,hanzi_frequency,phase1,553,shī,9,Jun Da frequency list; filtered by General Standard Level 1
+554,留,U+7559,hanzi_frequency,phase1,554,liú,10,Jun Da frequency list; filtered by General Standard Level 1
+555,讲,U+8BB2,hanzi_frequency,phase1,555,jiǎng,6,Jun Da frequency list; filtered by General Standard Level 1
+556,型,U+578B,hanzi_frequency,phase1,556,xíng,9,Jun Da frequency list; filtered by General Standard Level 1
+557,料,U+6599,hanzi_frequency,phase1,557,liào,10,Jun Da frequency list; filtered by General Standard Level 1
+558,终,U+7EC8,hanzi_frequency,phase1,558,zhōng,8,Jun Da frequency list; filtered by General Standard Level 1
+559,答,U+7B54,hanzi_frequency,phase1,559,dá,12,Jun Da frequency list; filtered by General Standard Level 1
+560,紧,U+7D27,hanzi_frequency,phase1,560,jǐn,10,Jun Da frequency list; filtered by General Standard Level 1
+561,黄,U+9EC4,hanzi_frequency,phase1,561,huáng,11,Jun Da frequency list; filtered by General Standard Level 1
+562,绝,U+7EDD,hanzi_frequency,phase1,562,jué,9,Jun Da frequency list; filtered by General Standard Level 1
+563,奇,U+5947,hanzi_frequency,phase1,563,qí,8,Jun Da frequency list; filtered by General Standard Level 1
+564,察,U+5BDF,hanzi_frequency,phase1,564,chá,14,Jun Da frequency list; filtered by General Standard Level 1
+565,母,U+6BCD,hanzi_frequency,phase1,565,mǔ,5,Jun Da frequency list; filtered by General Standard Level 1
+566,京,U+4EAC,hanzi_frequency,phase1,566,jīng,8,Jun Da frequency list; filtered by General Standard Level 1
+567,段,U+6BB5,hanzi_frequency,phase1,567,duàn,9,Jun Da frequency list; filtered by General Standard Level 1
+568,依,U+4F9D,hanzi_frequency,phase1,568,yī,8,Jun Da frequency list; filtered by General Standard Level 1
+569,批,U+6279,hanzi_frequency,phase1,569,pī,7,Jun Da frequency list; filtered by General Standard Level 1
+570,群,U+7FA4,hanzi_frequency,phase1,570,qún,13,Jun Da frequency list; filtered by General Standard Level 1
+571,项,U+9879,hanzi_frequency,phase1,571,xiàng,9,Jun Da frequency list; filtered by General Standard Level 1
+572,故,U+6545,hanzi_frequency,phase1,572,gù,9,Jun Da frequency list; filtered by General Standard Level 1
+573,按,U+6309,hanzi_frequency,phase1,573,àn,9,Jun Da frequency list; filtered by General Standard Level 1
+574,河,U+6CB3,hanzi_frequency,phase1,574,hé,8,Jun Da frequency list; filtered by General Standard Level 1
+575,米,U+7C73,hanzi_frequency,phase1,575,mǐ,6,Jun Da frequency list; filtered by General Standard Level 1
+576,围,U+56F4,hanzi_frequency,phase1,576,wéi,7,Jun Da frequency list; filtered by General Standard Level 1
+577,江,U+6C5F,hanzi_frequency,phase1,577,jiāng,6,Jun Da frequency list; filtered by General Standard Level 1
+578,织,U+7EC7,hanzi_frequency,phase1,578,zhī,8,Jun Da frequency list; filtered by General Standard Level 1
+579,害,U+5BB3,hanzi_frequency,phase1,579,hài,10,Jun Da frequency list; filtered by General Standard Level 1
+580,斗,U+6597,hanzi_frequency,phase1,580,dòu,4,Jun Da frequency list; filtered by General Standard Level 1
+581,双,U+53CC,hanzi_frequency,phase1,581,shuāng,4,Jun Da frequency list; filtered by General Standard Level 1
+582,境,U+5883,hanzi_frequency,phase1,582,jìng,14,Jun Da frequency list; filtered by General Standard Level 1
+583,客,U+5BA2,hanzi_frequency,phase1,583,kè,9,Jun Da frequency list; filtered by General Standard Level 1
+584,纪,U+7EAA,hanzi_frequency,phase1,584,jì,6,Jun Da frequency list; filtered by General Standard Level 1
+585,采,U+91C7,hanzi_frequency,phase1,585,cǎi,8,Jun Da frequency list; filtered by General Standard Level 1
+586,举,U+4E3E,hanzi_frequency,phase1,586,jǔ,9,Jun Da frequency list; filtered by General Standard Level 1
+587,杀,U+6740,hanzi_frequency,phase1,587,shā,6,Jun Da frequency list; filtered by General Standard Level 1
+588,攻,U+653B,hanzi_frequency,phase1,588,gōng,7,Jun Da frequency list; filtered by General Standard Level 1
+589,父,U+7236,hanzi_frequency,phase1,589,fù,4,Jun Da frequency list; filtered by General Standard Level 1
+590,苏,U+82CF,hanzi_frequency,phase1,590,sū,7,Jun Da frequency list; filtered by General Standard Level 1
+591,密,U+5BC6,hanzi_frequency,phase1,591,mì,11,Jun Da frequency list; filtered by General Standard Level 1
+592,低,U+4F4E,hanzi_frequency,phase1,592,dī,7,Jun Da frequency list; filtered by General Standard Level 1
+593,朝,U+671D,hanzi_frequency,phase1,593,cháo,12,Jun Da frequency list; filtered by General Standard Level 1
+594,友,U+53CB,hanzi_frequency,phase1,594,yǒu,4,Jun Da frequency list; filtered by General Standard Level 1
+595,诉,U+8BC9,hanzi_frequency,phase1,595,sù,7,Jun Da frequency list; filtered by General Standard Level 1
+596,止,U+6B62,hanzi_frequency,phase1,596,zhǐ,4,Jun Da frequency list; filtered by General Standard Level 1
+597,细,U+7EC6,hanzi_frequency,phase1,597,xì,8,Jun Da frequency list; filtered by General Standard Level 1
+598,愿,U+613F,hanzi_frequency,phase1,598,yuàn,14,Jun Da frequency list; filtered by General Standard Level 1
+599,千,U+5343,hanzi_frequency,phase1,599,qiān,3,Jun Da frequency list; filtered by General Standard Level 1
+600,值,U+503C,hanzi_frequency,phase1,600,zhí,10,Jun Da frequency list; filtered by General Standard Level 1
+601,仍,U+4ECD,hanzi_frequency,phase1,601,réng,4,Jun Da frequency list; filtered by General Standard Level 1
+602,男,U+7537,hanzi_frequency,phase1,602,nán,7,Jun Da frequency list; filtered by General Standard Level 1
+603,钱,U+94B1,hanzi_frequency,phase1,603,qián,10,Jun Da frequency list; filtered by General Standard Level 1
+604,破,U+7834,hanzi_frequency,phase1,604,pò,10,Jun Da frequency list; filtered by General Standard Level 1
+605,网,U+7F51,hanzi_frequency,phase1,605,wǎng,6,Jun Da frequency list; filtered by General Standard Level 1
+606,热,U+70ED,hanzi_frequency,phase1,606,rè,10,Jun Da frequency list; filtered by General Standard Level 1
+607,助,U+52A9,hanzi_frequency,phase1,607,zhù,7,Jun Da frequency list; filtered by General Standard Level 1
+608,倒,U+5012,hanzi_frequency,phase1,608,dào,10,Jun Da frequency list; filtered by General Standard Level 1
+609,育,U+80B2,hanzi_frequency,phase1,609,yù,8,Jun Da frequency list; filtered by General Standard Level 1
+610,属,U+5C5E,hanzi_frequency,phase1,610,shǔ,12,Jun Da frequency list; filtered by General Standard Level 1
+611,坐,U+5750,hanzi_frequency,phase1,611,zuò,7,Jun Da frequency list; filtered by General Standard Level 1
+612,帝,U+5E1D,hanzi_frequency,phase1,612,dì,9,Jun Da frequency list; filtered by General Standard Level 1
+613,限,U+9650,hanzi_frequency,phase1,613,xiàn,8,Jun Da frequency list; filtered by General Standard Level 1
+614,船,U+8239,hanzi_frequency,phase1,614,chuán,11,Jun Da frequency list; filtered by General Standard Level 1
+615,脸,U+8138,hanzi_frequency,phase1,615,liǎn,11,Jun Da frequency list; filtered by General Standard Level 1
+616,职,U+804C,hanzi_frequency,phase1,616,zhí,11,Jun Da frequency list; filtered by General Standard Level 1
+617,速,U+901F,hanzi_frequency,phase1,617,sù,10,Jun Da frequency list; filtered by General Standard Level 1
+618,刻,U+523B,hanzi_frequency,phase1,618,kè,8,Jun Da frequency list; filtered by General Standard Level 1
+619,乐,U+4E50,hanzi_frequency,phase1,619,lè,5,Jun Da frequency list; filtered by General Standard Level 1
+620,否,U+5426,hanzi_frequency,phase1,620,fǒu,7,Jun Da frequency list; filtered by General Standard Level 1
+621,刚,U+521A,hanzi_frequency,phase1,621,gāng,6,Jun Da frequency list; filtered by General Standard Level 1
+622,威,U+5A01,hanzi_frequency,phase1,622,wēi,9,Jun Da frequency list; filtered by General Standard Level 1
+623,毛,U+6BDB,hanzi_frequency,phase1,623,máo,4,Jun Da frequency list; filtered by General Standard Level 1
+624,状,U+72B6,hanzi_frequency,phase1,624,zhuàng,7,Jun Da frequency list; filtered by General Standard Level 1
+625,率,U+7387,hanzi_frequency,phase1,625,lǜ,11,Jun Da frequency list; filtered by General Standard Level 1
+626,甚,U+751A,hanzi_frequency,phase1,626,shén,9,Jun Da frequency list; filtered by General Standard Level 1
+627,独,U+72EC,hanzi_frequency,phase1,627,dú,9,Jun Da frequency list; filtered by General Standard Level 1
+628,球,U+7403,hanzi_frequency,phase1,628,qiú,11,Jun Da frequency list; filtered by General Standard Level 1
+629,般,U+822C,hanzi_frequency,phase1,629,bān,10,Jun Da frequency list; filtered by General Standard Level 1
+630,普,U+666E,hanzi_frequency,phase1,630,pǔ,12,Jun Da frequency list; filtered by General Standard Level 1
+631,怕,U+6015,hanzi_frequency,phase1,631,pà,8,Jun Da frequency list; filtered by General Standard Level 1
+632,弹,U+5F39,hanzi_frequency,phase1,632,dàn,11,Jun Da frequency list; filtered by General Standard Level 1
+633,校,U+6821,hanzi_frequency,phase1,633,xiào,10,Jun Da frequency list; filtered by General Standard Level 1
+634,苦,U+82E6,hanzi_frequency,phase1,634,kǔ,8,Jun Da frequency list; filtered by General Standard Level 1
+635,创,U+521B,hanzi_frequency,phase1,635,chuàng,6,Jun Da frequency list; filtered by General Standard Level 1
+636,假,U+5047,hanzi_frequency,phase1,636,jiǎ,11,Jun Da frequency list; filtered by General Standard Level 1
+637,久,U+4E45,hanzi_frequency,phase1,637,jiǔ,3,Jun Da frequency list; filtered by General Standard Level 1
+638,错,U+9519,hanzi_frequency,phase1,638,cuò,13,Jun Da frequency list; filtered by General Standard Level 1
+639,承,U+627F,hanzi_frequency,phase1,639,chéng,8,Jun Da frequency list; filtered by General Standard Level 1
+640,印,U+5370,hanzi_frequency,phase1,640,yìn,5,Jun Da frequency list; filtered by General Standard Level 1
+641,晚,U+665A,hanzi_frequency,phase1,641,wǎn,11,Jun Da frequency list; filtered by General Standard Level 1
+642,兰,U+5170,hanzi_frequency,phase1,642,lán,5,Jun Da frequency list; filtered by General Standard Level 1
+643,试,U+8BD5,hanzi_frequency,phase1,643,shì,8,Jun Da frequency list; filtered by General Standard Level 1
+644,股,U+80A1,hanzi_frequency,phase1,644,gǔ,8,Jun Da frequency list; filtered by General Standard Level 1
+645,拿,U+62FF,hanzi_frequency,phase1,645,ná,10,Jun Da frequency list; filtered by General Standard Level 1
+646,脑,U+8111,hanzi_frequency,phase1,646,nǎo,10,Jun Da frequency list; filtered by General Standard Level 1
+647,预,U+9884,hanzi_frequency,phase1,647,yù,10,Jun Da frequency list; filtered by General Standard Level 1
+648,谁,U+8C01,hanzi_frequency,phase1,648,shuí,10,Jun Da frequency list; filtered by General Standard Level 1
+649,益,U+76CA,hanzi_frequency,phase1,649,yì,10,Jun Da frequency list; filtered by General Standard Level 1
+650,阳,U+9633,hanzi_frequency,phase1,650,yáng,6,Jun Da frequency list; filtered by General Standard Level 1
+651,若,U+82E5,hanzi_frequency,phase1,651,ruò,8,Jun Da frequency list; filtered by General Standard Level 1
+652,哪,U+54EA,hanzi_frequency,phase1,652,nǎ,9,Jun Da frequency list; filtered by General Standard Level 1
+653,微,U+5FAE,hanzi_frequency,phase1,653,wēi,13,Jun Da frequency list; filtered by General Standard Level 1
+654,尼,U+5C3C,hanzi_frequency,phase1,654,ní,5,Jun Da frequency list; filtered by General Standard Level 1
+655,继,U+7EE7,hanzi_frequency,phase1,655,jì,10,Jun Da frequency list; filtered by General Standard Level 1
+656,送,U+9001,hanzi_frequency,phase1,656,sòng,9,Jun Da frequency list; filtered by General Standard Level 1
+657,急,U+6025,hanzi_frequency,phase1,657,jí,9,Jun Da frequency list; filtered by General Standard Level 1
+658,血,U+8840,hanzi_frequency,phase1,658,xuè,6,Jun Da frequency list; filtered by General Standard Level 1
+659,惊,U+60CA,hanzi_frequency,phase1,659,jīng,11,Jun Da frequency list; filtered by General Standard Level 1
+660,伤,U+4F24,hanzi_frequency,phase1,660,shāng,6,Jun Da frequency list; filtered by General Standard Level 1
+661,素,U+7D20,hanzi_frequency,phase1,661,sù,10,Jun Da frequency list; filtered by General Standard Level 1
+662,药,U+836F,hanzi_frequency,phase1,662,yào,9,Jun Da frequency list; filtered by General Standard Level 1
+663,适,U+9002,hanzi_frequency,phase1,663,shì,9,Jun Da frequency list; filtered by General Standard Level 1
+664,波,U+6CE2,hanzi_frequency,phase1,664,bō,8,Jun Da frequency list; filtered by General Standard Level 1
+665,夜,U+591C,hanzi_frequency,phase1,665,yè,8,Jun Da frequency list; filtered by General Standard Level 1
+666,省,U+7701,hanzi_frequency,phase1,666,shěng,9,Jun Da frequency list; filtered by General Standard Level 1
+667,初,U+521D,hanzi_frequency,phase1,667,chū,7,Jun Da frequency list; filtered by General Standard Level 1
+668,喜,U+559C,hanzi_frequency,phase1,668,xǐ,12,Jun Da frequency list; filtered by General Standard Level 1
+669,卫,U+536B,hanzi_frequency,phase1,669,wèi,3,Jun Da frequency list; filtered by General Standard Level 1
+670,源,U+6E90,hanzi_frequency,phase1,670,yuán,13,Jun Da frequency list; filtered by General Standard Level 1
+671,食,U+98DF,hanzi_frequency,phase1,671,shí,9,Jun Da frequency list; filtered by General Standard Level 1
+672,险,U+9669,hanzi_frequency,phase1,672,xiǎn,9,Jun Da frequency list; filtered by General Standard Level 1
+673,待,U+5F85,hanzi_frequency,phase1,673,dài,9,Jun Da frequency list; filtered by General Standard Level 1
+674,述,U+8FF0,hanzi_frequency,phase1,674,shù,8,Jun Da frequency list; filtered by General Standard Level 1
+675,陆,U+9646,hanzi_frequency,phase1,675,lù,7,Jun Da frequency list; filtered by General Standard Level 1
+676,习,U+4E60,hanzi_frequency,phase1,676,xí,3,Jun Da frequency list; filtered by General Standard Level 1
+677,置,U+7F6E,hanzi_frequency,phase1,677,zhì,13,Jun Da frequency list; filtered by General Standard Level 1
+678,居,U+5C45,hanzi_frequency,phase1,678,jū,8,Jun Da frequency list; filtered by General Standard Level 1
+679,劳,U+52B3,hanzi_frequency,phase1,679,láo,7,Jun Da frequency list; filtered by General Standard Level 1
+680,财,U+8D22,hanzi_frequency,phase1,680,cái,7,Jun Da frequency list; filtered by General Standard Level 1
+681,环,U+73AF,hanzi_frequency,phase1,681,huán,8,Jun Da frequency list; filtered by General Standard Level 1
+682,排,U+6392,hanzi_frequency,phase1,682,pái,11,Jun Da frequency list; filtered by General Standard Level 1
+683,福,U+798F,hanzi_frequency,phase1,683,fú,13,Jun Da frequency list; filtered by General Standard Level 1
+684,纳,U+7EB3,hanzi_frequency,phase1,684,nà,7,Jun Da frequency list; filtered by General Standard Level 1
+685,欢,U+6B22,hanzi_frequency,phase1,685,huān,6,Jun Da frequency list; filtered by General Standard Level 1
+686,雷,U+96F7,hanzi_frequency,phase1,686,léi,13,Jun Da frequency list; filtered by General Standard Level 1
+687,警,U+8B66,hanzi_frequency,phase1,687,jǐng,19,Jun Da frequency list; filtered by General Standard Level 1
+688,获,U+83B7,hanzi_frequency,phase1,688,huò,10,Jun Da frequency list; filtered by General Standard Level 1
+689,模,U+6A21,hanzi_frequency,phase1,689,mó,14,Jun Da frequency list; filtered by General Standard Level 1
+690,充,U+5145,hanzi_frequency,phase1,690,chōng,6,Jun Da frequency list; filtered by General Standard Level 1
+691,负,U+8D1F,hanzi_frequency,phase1,691,fù,6,Jun Da frequency list; filtered by General Standard Level 1
+692,云,U+4E91,hanzi_frequency,phase1,692,yún,4,Jun Da frequency list; filtered by General Standard Level 1
+693,停,U+505C,hanzi_frequency,phase1,693,tíng,11,Jun Da frequency list; filtered by General Standard Level 1
+694,木,U+6728,hanzi_frequency,phase1,694,mù,4,Jun Da frequency list; filtered by General Standard Level 1
+695,游,U+6E38,hanzi_frequency,phase1,695,yóu,12,Jun Da frequency list; filtered by General Standard Level 1
+696,龙,U+9F99,hanzi_frequency,phase1,696,lóng,5,Jun Da frequency list; filtered by General Standard Level 1
+697,树,U+6811,hanzi_frequency,phase1,697,shù,9,Jun Da frequency list; filtered by General Standard Level 1
+698,疑,U+7591,hanzi_frequency,phase1,698,yí,14,Jun Da frequency list; filtered by General Standard Level 1
+699,层,U+5C42,hanzi_frequency,phase1,699,céng,7,Jun Da frequency list; filtered by General Standard Level 1
+700,冷,U+51B7,hanzi_frequency,phase1,700,lěng,7,Jun Da frequency list; filtered by General Standard Level 1
+701,洲,U+6D32,hanzi_frequency,phase1,701,zhōu,9,Jun Da frequency list; filtered by General Standard Level 1
+702,冲,U+51B2,hanzi_frequency,phase1,702,chōng,6,Jun Da frequency list; filtered by General Standard Level 1
+703,射,U+5C04,hanzi_frequency,phase1,703,shè,10,Jun Da frequency list; filtered by General Standard Level 1
+704,略,U+7565,hanzi_frequency,phase1,704,lüè,11,Jun Da frequency list; filtered by General Standard Level 1
+705,范,U+8303,hanzi_frequency,phase1,705,fàn,8 9,Jun Da frequency list; filtered by General Standard Level 1
+706,竟,U+7ADF,hanzi_frequency,phase1,706,jìng,11,Jun Da frequency list; filtered by General Standard Level 1
+707,句,U+53E5,hanzi_frequency,phase1,707,jù,5,Jun Da frequency list; filtered by General Standard Level 1
+708,室,U+5BA4,hanzi_frequency,phase1,708,shì,9,Jun Da frequency list; filtered by General Standard Level 1
+709,异,U+5F02,hanzi_frequency,phase1,709,yì,6,Jun Da frequency list; filtered by General Standard Level 1
+710,激,U+6FC0,hanzi_frequency,phase1,710,jī,16,Jun Da frequency list; filtered by General Standard Level 1
+711,汉,U+6C49,hanzi_frequency,phase1,711,hàn,5,Jun Da frequency list; filtered by General Standard Level 1
+712,村,U+6751,hanzi_frequency,phase1,712,cūn,7,Jun Da frequency list; filtered by General Standard Level 1
+713,哈,U+54C8,hanzi_frequency,phase1,713,hā,9,Jun Da frequency list; filtered by General Standard Level 1
+714,策,U+7B56,hanzi_frequency,phase1,714,cè,12,Jun Da frequency list; filtered by General Standard Level 1
+715,演,U+6F14,hanzi_frequency,phase1,715,yǎn,14,Jun Da frequency list; filtered by General Standard Level 1
+716,简,U+7B80,hanzi_frequency,phase1,716,jiǎn,13,Jun Da frequency list; filtered by General Standard Level 1
+717,卡,U+5361,hanzi_frequency,phase1,717,kǎ,5,Jun Da frequency list; filtered by General Standard Level 1
+718,罪,U+7F6A,hanzi_frequency,phase1,718,zuì,13,Jun Da frequency list; filtered by General Standard Level 1
+719,判,U+5224,hanzi_frequency,phase1,719,pàn,7,Jun Da frequency list; filtered by General Standard Level 1
+720,担,U+62C5,hanzi_frequency,phase1,720,dān,8,Jun Da frequency list; filtered by General Standard Level 1
+721,州,U+5DDE,hanzi_frequency,phase1,721,zhōu,6,Jun Da frequency list; filtered by General Standard Level 1
+722,静,U+9759,hanzi_frequency,phase1,722,jìng,14,Jun Da frequency list; filtered by General Standard Level 1
+723,退,U+9000,hanzi_frequency,phase1,723,tuì,9,Jun Da frequency list; filtered by General Standard Level 1
+724,既,U+65E2,hanzi_frequency,phase1,724,jì,9,Jun Da frequency list; filtered by General Standard Level 1
+725,衣,U+8863,hanzi_frequency,phase1,725,yī,6,Jun Da frequency list; filtered by General Standard Level 1
+726,您,U+60A8,hanzi_frequency,phase1,726,nín,11,Jun Da frequency list; filtered by General Standard Level 1
+727,宗,U+5B97,hanzi_frequency,phase1,727,zōng,8,Jun Da frequency list; filtered by General Standard Level 1
+728,积,U+79EF,hanzi_frequency,phase1,728,jī,10,Jun Da frequency list; filtered by General Standard Level 1
+729,余,U+4F59,hanzi_frequency,phase1,729,yú,7,Jun Da frequency list; filtered by General Standard Level 1
+730,痛,U+75DB,hanzi_frequency,phase1,730,tòng,12,Jun Da frequency list; filtered by General Standard Level 1
+731,检,U+68C0,hanzi_frequency,phase1,731,jiǎn,11,Jun Da frequency list; filtered by General Standard Level 1
+732,差,U+5DEE,hanzi_frequency,phase1,732,chà,9,Jun Da frequency list; filtered by General Standard Level 1
+733,富,U+5BCC,hanzi_frequency,phase1,733,fù,12,Jun Da frequency list; filtered by General Standard Level 1
+734,灵,U+7075,hanzi_frequency,phase1,734,líng,7,Jun Da frequency list; filtered by General Standard Level 1
+735,协,U+534F,hanzi_frequency,phase1,735,xié,6,Jun Da frequency list; filtered by General Standard Level 1
+736,角,U+89D2,hanzi_frequency,phase1,736,jiǎo,7,Jun Da frequency list; filtered by General Standard Level 1
+737,占,U+5360,hanzi_frequency,phase1,737,zhàn,5,Jun Da frequency list; filtered by General Standard Level 1
+738,配,U+914D,hanzi_frequency,phase1,738,pèi,10,Jun Da frequency list; filtered by General Standard Level 1
+739,征,U+5F81,hanzi_frequency,phase1,739,zhēng,8,Jun Da frequency list; filtered by General Standard Level 1
+740,修,U+4FEE,hanzi_frequency,phase1,740,xiū,9,Jun Da frequency list; filtered by General Standard Level 1
+741,皮,U+76AE,hanzi_frequency,phase1,741,pí,5,Jun Da frequency list; filtered by General Standard Level 1
+742,挥,U+6325,hanzi_frequency,phase1,742,huī,9,Jun Da frequency list; filtered by General Standard Level 1
+743,胜,U+80DC,hanzi_frequency,phase1,743,shèng,9,Jun Da frequency list; filtered by General Standard Level 1
+744,降,U+964D,hanzi_frequency,phase1,744,jiàng,8,Jun Da frequency list; filtered by General Standard Level 1
+745,阶,U+9636,hanzi_frequency,phase1,745,jiē,6,Jun Da frequency list; filtered by General Standard Level 1
+746,审,U+5BA1,hanzi_frequency,phase1,746,shěn,8,Jun Da frequency list; filtered by General Standard Level 1
+747,沉,U+6C89,hanzi_frequency,phase1,747,chén,7,Jun Da frequency list; filtered by General Standard Level 1
+748,坚,U+575A,hanzi_frequency,phase1,748,jiān,7,Jun Da frequency list; filtered by General Standard Level 1
+749,善,U+5584,hanzi_frequency,phase1,749,shàn,12,Jun Da frequency list; filtered by General Standard Level 1
+750,妈,U+5988,hanzi_frequency,phase1,750,mā,6,Jun Da frequency list; filtered by General Standard Level 1
+751,刘,U+5218,hanzi_frequency,phase1,751,liú,6,Jun Da frequency list; filtered by General Standard Level 1
+752,读,U+8BFB,hanzi_frequency,phase1,752,dú,10,Jun Da frequency list; filtered by General Standard Level 1
+753,啊,U+554A,hanzi_frequency,phase1,753,a,10,Jun Da frequency list; filtered by General Standard Level 1
+754,超,U+8D85,hanzi_frequency,phase1,754,chāo,12,Jun Da frequency list; filtered by General Standard Level 1
+755,免,U+514D,hanzi_frequency,phase1,755,miǎn,7,Jun Da frequency list; filtered by General Standard Level 1
+756,压,U+538B,hanzi_frequency,phase1,756,yā,6,Jun Da frequency list; filtered by General Standard Level 1
+757,银,U+94F6,hanzi_frequency,phase1,757,yín,11,Jun Da frequency list; filtered by General Standard Level 1
+758,买,U+4E70,hanzi_frequency,phase1,758,mǎi,6,Jun Da frequency list; filtered by General Standard Level 1
+759,皇,U+7687,hanzi_frequency,phase1,759,huáng,9,Jun Da frequency list; filtered by General Standard Level 1
+760,养,U+517B,hanzi_frequency,phase1,760,yǎng,9,Jun Da frequency list; filtered by General Standard Level 1
+761,伊,U+4F0A,hanzi_frequency,phase1,761,yī,6,Jun Da frequency list; filtered by General Standard Level 1
+762,怀,U+6000,hanzi_frequency,phase1,762,huái,7,Jun Da frequency list; filtered by General Standard Level 1
+763,执,U+6267,hanzi_frequency,phase1,763,zhí,6,Jun Da frequency list; filtered by General Standard Level 1
+764,副,U+526F,hanzi_frequency,phase1,764,fù,11,Jun Da frequency list; filtered by General Standard Level 1
+765,乱,U+4E71,hanzi_frequency,phase1,765,luàn,7,Jun Da frequency list; filtered by General Standard Level 1
+766,抗,U+6297,hanzi_frequency,phase1,766,kàng,7,Jun Da frequency list; filtered by General Standard Level 1
+767,犯,U+72AF,hanzi_frequency,phase1,767,fàn,5,Jun Da frequency list; filtered by General Standard Level 1
+768,追,U+8FFD,hanzi_frequency,phase1,768,zhuī,9,Jun Da frequency list; filtered by General Standard Level 1
+769,帮,U+5E2E,hanzi_frequency,phase1,769,bāng,9,Jun Da frequency list; filtered by General Standard Level 1
+770,宣,U+5BA3,hanzi_frequency,phase1,770,xuān,9,Jun Da frequency list; filtered by General Standard Level 1
+771,佛,U+4F5B,hanzi_frequency,phase1,771,fú,7,Jun Da frequency list; filtered by General Standard Level 1
+772,岁,U+5C81,hanzi_frequency,phase1,772,suì,6,Jun Da frequency list; filtered by General Standard Level 1
+773,航,U+822A,hanzi_frequency,phase1,773,háng,10,Jun Da frequency list; filtered by General Standard Level 1
+774,优,U+4F18,hanzi_frequency,phase1,774,yōu,6,Jun Da frequency list; filtered by General Standard Level 1
+775,怪,U+602A,hanzi_frequency,phase1,775,guài,8,Jun Da frequency list; filtered by General Standard Level 1
+776,香,U+9999,hanzi_frequency,phase1,776,xiāng,9,Jun Da frequency list; filtered by General Standard Level 1
+777,著,U+8457,hanzi_frequency,phase1,777,zhe,11,Jun Da frequency list; filtered by General Standard Level 1
+778,田,U+7530,hanzi_frequency,phase1,778,tián,5,Jun Da frequency list; filtered by General Standard Level 1
+779,铁,U+94C1,hanzi_frequency,phase1,779,tiě,10,Jun Da frequency list; filtered by General Standard Level 1
+780,控,U+63A7,hanzi_frequency,phase1,780,kòng,11,Jun Da frequency list; filtered by General Standard Level 1
+781,税,U+7A0E,hanzi_frequency,phase1,781,shuì,12,Jun Da frequency list; filtered by General Standard Level 1
+782,左,U+5DE6,hanzi_frequency,phase1,782,zuǒ,5,Jun Da frequency list; filtered by General Standard Level 1
+783,右,U+53F3,hanzi_frequency,phase1,783,yòu,5,Jun Da frequency list; filtered by General Standard Level 1
+784,份,U+4EFD,hanzi_frequency,phase1,784,fèn,6,Jun Da frequency list; filtered by General Standard Level 1
+785,穿,U+7A7F,hanzi_frequency,phase1,785,chuān,9,Jun Da frequency list; filtered by General Standard Level 1
+786,艺,U+827A,hanzi_frequency,phase1,786,yì,4,Jun Da frequency list; filtered by General Standard Level 1
+787,背,U+80CC,hanzi_frequency,phase1,787,bèi,9,Jun Da frequency list; filtered by General Standard Level 1
+788,阵,U+9635,hanzi_frequency,phase1,788,zhèn,6,Jun Da frequency list; filtered by General Standard Level 1
+789,草,U+8349,hanzi_frequency,phase1,789,cǎo,9,Jun Da frequency list; filtered by General Standard Level 1
+790,脚,U+811A,hanzi_frequency,phase1,790,jiǎo,11,Jun Da frequency list; filtered by General Standard Level 1
+791,概,U+6982,hanzi_frequency,phase1,791,gài,13,Jun Da frequency list; filtered by General Standard Level 1
+792,恶,U+6076,hanzi_frequency,phase1,792,è,10,Jun Da frequency list; filtered by General Standard Level 1
+793,块,U+5757,hanzi_frequency,phase1,793,kuài,7,Jun Da frequency list; filtered by General Standard Level 1
+794,顿,U+987F,hanzi_frequency,phase1,794,dùn,10,Jun Da frequency list; filtered by General Standard Level 1
+795,敢,U+6562,hanzi_frequency,phase1,795,gǎn,11,Jun Da frequency list; filtered by General Standard Level 1
+796,守,U+5B88,hanzi_frequency,phase1,796,shǒu,6,Jun Da frequency list; filtered by General Standard Level 1
+797,酒,U+9152,hanzi_frequency,phase1,797,jiǔ,10,Jun Da frequency list; filtered by General Standard Level 1
+798,岛,U+5C9B,hanzi_frequency,phase1,798,dǎo,7,Jun Da frequency list; filtered by General Standard Level 1
+799,托,U+6258,hanzi_frequency,phase1,799,tuō,6,Jun Da frequency list; filtered by General Standard Level 1
+800,央,U+592E,hanzi_frequency,phase1,800,yāng,5,Jun Da frequency list; filtered by General Standard Level 1
+801,户,U+6237,hanzi_frequency,phase1,801,hù,4,Jun Da frequency list; filtered by General Standard Level 1
+802,烈,U+70C8,hanzi_frequency,phase1,802,liè,10,Jun Da frequency list; filtered by General Standard Level 1
+803,洋,U+6D0B,hanzi_frequency,phase1,803,yáng,9,Jun Da frequency list; filtered by General Standard Level 1
+804,哥,U+54E5,hanzi_frequency,phase1,804,gē,10,Jun Da frequency list; filtered by General Standard Level 1
+805,索,U+7D22,hanzi_frequency,phase1,805,suǒ,10,Jun Da frequency list; filtered by General Standard Level 1
+806,胡,U+80E1,hanzi_frequency,phase1,806,hú,9,Jun Da frequency list; filtered by General Standard Level 1
+807,款,U+6B3E,hanzi_frequency,phase1,807,kuǎn,12,Jun Da frequency list; filtered by General Standard Level 1
+808,靠,U+9760,hanzi_frequency,phase1,808,kào,15,Jun Da frequency list; filtered by General Standard Level 1
+809,评,U+8BC4,hanzi_frequency,phase1,809,píng,7,Jun Da frequency list; filtered by General Standard Level 1
+810,版,U+7248,hanzi_frequency,phase1,810,bǎn,8,Jun Da frequency list; filtered by General Standard Level 1
+811,宝,U+5B9D,hanzi_frequency,phase1,811,bǎo,8,Jun Da frequency list; filtered by General Standard Level 1
+812,座,U+5EA7,hanzi_frequency,phase1,812,zuò,10,Jun Da frequency list; filtered by General Standard Level 1
+813,释,U+91CA,hanzi_frequency,phase1,813,shì,12,Jun Da frequency list; filtered by General Standard Level 1
+814,景,U+666F,hanzi_frequency,phase1,814,jǐng,12,Jun Da frequency list; filtered by General Standard Level 1
+815,顾,U+987E,hanzi_frequency,phase1,815,gù,10,Jun Da frequency list; filtered by General Standard Level 1
+816,弟,U+5F1F,hanzi_frequency,phase1,816,dì,7,Jun Da frequency list; filtered by General Standard Level 1
+817,登,U+767B,hanzi_frequency,phase1,817,dēng,12,Jun Da frequency list; filtered by General Standard Level 1
+818,货,U+8D27,hanzi_frequency,phase1,818,huò,8,Jun Da frequency list; filtered by General Standard Level 1
+819,互,U+4E92,hanzi_frequency,phase1,819,hù,4,Jun Da frequency list; filtered by General Standard Level 1
+820,付,U+4ED8,hanzi_frequency,phase1,820,fù,5,Jun Da frequency list; filtered by General Standard Level 1
+821,伯,U+4F2F,hanzi_frequency,phase1,821,bó,7,Jun Da frequency list; filtered by General Standard Level 1
+822,慢,U+6162,hanzi_frequency,phase1,822,màn,14,Jun Da frequency list; filtered by General Standard Level 1
+823,欧,U+6B27,hanzi_frequency,phase1,823,ōu,8,Jun Da frequency list; filtered by General Standard Level 1
+824,换,U+6362,hanzi_frequency,phase1,824,huàn,10,Jun Da frequency list; filtered by General Standard Level 1
+825,闻,U+95FB,hanzi_frequency,phase1,825,wén,9,Jun Da frequency list; filtered by General Standard Level 1
+826,危,U+5371,hanzi_frequency,phase1,826,wēi,6,Jun Da frequency list; filtered by General Standard Level 1
+827,忙,U+5FD9,hanzi_frequency,phase1,827,máng,6,Jun Da frequency list; filtered by General Standard Level 1
+828,核,U+6838,hanzi_frequency,phase1,828,hé,10,Jun Da frequency list; filtered by General Standard Level 1
+829,暗,U+6697,hanzi_frequency,phase1,829,àn,13,Jun Da frequency list; filtered by General Standard Level 1
+830,姐,U+59D0,hanzi_frequency,phase1,830,jiě,8,Jun Da frequency list; filtered by General Standard Level 1
+831,介,U+4ECB,hanzi_frequency,phase1,831,jiè,4,Jun Da frequency list; filtered by General Standard Level 1
+832,坏,U+574F,hanzi_frequency,phase1,832,huài,7,Jun Da frequency list; filtered by General Standard Level 1
+833,讨,U+8BA8,hanzi_frequency,phase1,833,tǎo,5,Jun Da frequency list; filtered by General Standard Level 1
+834,丽,U+4E3D,hanzi_frequency,phase1,834,lì,7,Jun Da frequency list; filtered by General Standard Level 1
+835,良,U+826F,hanzi_frequency,phase1,835,liáng,7,Jun Da frequency list; filtered by General Standard Level 1
+836,序,U+5E8F,hanzi_frequency,phase1,836,xù,7,Jun Da frequency list; filtered by General Standard Level 1
+837,升,U+5347,hanzi_frequency,phase1,837,shēng,4,Jun Da frequency list; filtered by General Standard Level 1
+838,监,U+76D1,hanzi_frequency,phase1,838,jiān,10,Jun Da frequency list; filtered by General Standard Level 1
+839,临,U+4E34,hanzi_frequency,phase1,839,lín,9,Jun Da frequency list; filtered by General Standard Level 1
+840,亮,U+4EAE,hanzi_frequency,phase1,840,liàng,9,Jun Da frequency list; filtered by General Standard Level 1
+841,露,U+9732,hanzi_frequency,phase1,841,lù,21,Jun Da frequency list; filtered by General Standard Level 1
+842,永,U+6C38,hanzi_frequency,phase1,842,yǒng,5,Jun Da frequency list; filtered by General Standard Level 1
+843,呼,U+547C,hanzi_frequency,phase1,843,hū,8,Jun Da frequency list; filtered by General Standard Level 1
+844,味,U+5473,hanzi_frequency,phase1,844,wèi,8,Jun Da frequency list; filtered by General Standard Level 1
+845,野,U+91CE,hanzi_frequency,phase1,845,yě,11,Jun Da frequency list; filtered by General Standard Level 1
+846,架,U+67B6,hanzi_frequency,phase1,846,jià,9,Jun Da frequency list; filtered by General Standard Level 1
+847,域,U+57DF,hanzi_frequency,phase1,847,yù,11,Jun Da frequency list; filtered by General Standard Level 1
+848,沙,U+6C99,hanzi_frequency,phase1,848,shā,7,Jun Da frequency list; filtered by General Standard Level 1
+849,掉,U+6389,hanzi_frequency,phase1,849,diào,11,Jun Da frequency list; filtered by General Standard Level 1
+850,括,U+62EC,hanzi_frequency,phase1,850,kuò,9,Jun Da frequency list; filtered by General Standard Level 1
+851,舰,U+8230,hanzi_frequency,phase1,851,jiàn,10,Jun Da frequency list; filtered by General Standard Level 1
+852,鱼,U+9C7C,hanzi_frequency,phase1,852,yú,8,Jun Da frequency list; filtered by General Standard Level 1
+853,杂,U+6742,hanzi_frequency,phase1,853,zá,6,Jun Da frequency list; filtered by General Standard Level 1
+854,误,U+8BEF,hanzi_frequency,phase1,854,wù,9,Jun Da frequency list; filtered by General Standard Level 1
+855,湾,U+6E7E,hanzi_frequency,phase1,855,wān,12,Jun Da frequency list; filtered by General Standard Level 1
+856,吉,U+5409,hanzi_frequency,phase1,856,jí,6,Jun Da frequency list; filtered by General Standard Level 1
+857,减,U+51CF,hanzi_frequency,phase1,857,jiǎn,11,Jun Da frequency list; filtered by General Standard Level 1
+858,编,U+7F16,hanzi_frequency,phase1,858,biān,12,Jun Da frequency list; filtered by General Standard Level 1
+859,楚,U+695A,hanzi_frequency,phase1,859,chǔ,13,Jun Da frequency list; filtered by General Standard Level 1
+860,肯,U+80AF,hanzi_frequency,phase1,860,kěn,8,Jun Da frequency list; filtered by General Standard Level 1
+861,测,U+6D4B,hanzi_frequency,phase1,861,cè,9,Jun Da frequency list; filtered by General Standard Level 1
+862,败,U+8D25,hanzi_frequency,phase1,862,bài,8,Jun Da frequency list; filtered by General Standard Level 1
+863,屋,U+5C4B,hanzi_frequency,phase1,863,wū,9,Jun Da frequency list; filtered by General Standard Level 1
+864,跑,U+8DD1,hanzi_frequency,phase1,864,pǎo,12,Jun Da frequency list; filtered by General Standard Level 1
+865,梦,U+68A6,hanzi_frequency,phase1,865,mèng,11,Jun Da frequency list; filtered by General Standard Level 1
+866,散,U+6563,hanzi_frequency,phase1,866,sàn,12,Jun Da frequency list; filtered by General Standard Level 1
+867,温,U+6E29,hanzi_frequency,phase1,867,wēn,12,Jun Da frequency list; filtered by General Standard Level 1
+868,困,U+56F0,hanzi_frequency,phase1,868,kùn,7,Jun Da frequency list; filtered by General Standard Level 1
+869,剑,U+5251,hanzi_frequency,phase1,869,jiàn,9,Jun Da frequency list; filtered by General Standard Level 1
+870,渐,U+6E10,hanzi_frequency,phase1,870,jiàn,11,Jun Da frequency list; filtered by General Standard Level 1
+871,封,U+5C01,hanzi_frequency,phase1,871,fēng,9,Jun Da frequency list; filtered by General Standard Level 1
+872,救,U+6551,hanzi_frequency,phase1,872,jiù,11,Jun Da frequency list; filtered by General Standard Level 1
+873,贵,U+8D35,hanzi_frequency,phase1,873,guì,9,Jun Da frequency list; filtered by General Standard Level 1
+874,枪,U+67AA,hanzi_frequency,phase1,874,qiāng,8,Jun Da frequency list; filtered by General Standard Level 1
+875,缺,U+7F3A,hanzi_frequency,phase1,875,quē,10,Jun Da frequency list; filtered by General Standard Level 1
+876,楼,U+697C,hanzi_frequency,phase1,876,lóu,13,Jun Da frequency list; filtered by General Standard Level 1
+877,县,U+53BF,hanzi_frequency,phase1,877,xiàn,7,Jun Da frequency list; filtered by General Standard Level 1
+878,尚,U+5C1A,hanzi_frequency,phase1,878,shàng,8,Jun Da frequency list; filtered by General Standard Level 1
+879,毫,U+6BEB,hanzi_frequency,phase1,879,háo,11,Jun Da frequency list; filtered by General Standard Level 1
+880,移,U+79FB,hanzi_frequency,phase1,880,yí,11,Jun Da frequency list; filtered by General Standard Level 1
+881,娘,U+5A18,hanzi_frequency,phase1,881,niáng,10,Jun Da frequency list; filtered by General Standard Level 1
+882,朋,U+670B,hanzi_frequency,phase1,882,péng,8,Jun Da frequency list; filtered by General Standard Level 1
+883,画,U+753B,hanzi_frequency,phase1,883,huà,8,Jun Da frequency list; filtered by General Standard Level 1
+884,班,U+73ED,hanzi_frequency,phase1,884,bān,10,Jun Da frequency list; filtered by General Standard Level 1
+885,智,U+667A,hanzi_frequency,phase1,885,zhì,12,Jun Da frequency list; filtered by General Standard Level 1
+886,亦,U+4EA6,hanzi_frequency,phase1,886,yì,6,Jun Da frequency list; filtered by General Standard Level 1
+887,耳,U+8033,hanzi_frequency,phase1,887,ěr,6,Jun Da frequency list; filtered by General Standard Level 1
+888,恩,U+6069,hanzi_frequency,phase1,888,ēn,10,Jun Da frequency list; filtered by General Standard Level 1
+889,短,U+77ED,hanzi_frequency,phase1,889,duǎn,12,Jun Da frequency list; filtered by General Standard Level 1
+890,掌,U+638C,hanzi_frequency,phase1,890,zhǎng,12,Jun Da frequency list; filtered by General Standard Level 1
+891,恐,U+6050,hanzi_frequency,phase1,891,kǒng,10,Jun Da frequency list; filtered by General Standard Level 1
+892,遗,U+9057,hanzi_frequency,phase1,892,yí,12,Jun Da frequency list; filtered by General Standard Level 1
+893,固,U+56FA,hanzi_frequency,phase1,893,gù,8,Jun Da frequency list; filtered by General Standard Level 1
+894,席,U+5E2D,hanzi_frequency,phase1,894,xí,10,Jun Da frequency list; filtered by General Standard Level 1
+895,松,U+677E,hanzi_frequency,phase1,895,sōng,8,Jun Da frequency list; filtered by General Standard Level 1
+896,秘,U+79D8,hanzi_frequency,phase1,896,mì,10,Jun Da frequency list; filtered by General Standard Level 1
+897,谢,U+8C22,hanzi_frequency,phase1,897,xiè,12,Jun Da frequency list; filtered by General Standard Level 1
+898,鲁,U+9C81,hanzi_frequency,phase1,898,lǔ,12,Jun Da frequency list; filtered by General Standard Level 1
+899,遇,U+9047,hanzi_frequency,phase1,899,yù,12,Jun Da frequency list; filtered by General Standard Level 1
+900,康,U+5EB7,hanzi_frequency,phase1,900,kāng,11,Jun Da frequency list; filtered by General Standard Level 1
+901,虑,U+8651,hanzi_frequency,phase1,901,lǜ,10,Jun Da frequency list; filtered by General Standard Level 1
+902,幸,U+5E78,hanzi_frequency,phase1,902,xìng,8,Jun Da frequency list; filtered by General Standard Level 1
+903,均,U+5747,hanzi_frequency,phase1,903,jūn,7,Jun Da frequency list; filtered by General Standard Level 1
+904,销,U+9500,hanzi_frequency,phase1,904,xiāo,12,Jun Da frequency list; filtered by General Standard Level 1
+905,钟,U+949F,hanzi_frequency,phase1,905,zhōng,9,Jun Da frequency list; filtered by General Standard Level 1
+906,诗,U+8BD7,hanzi_frequency,phase1,906,shī,8,Jun Da frequency list; filtered by General Standard Level 1
+907,藏,U+85CF,hanzi_frequency,phase1,907,cáng,17,Jun Da frequency list; filtered by General Standard Level 1
+908,赶,U+8D76,hanzi_frequency,phase1,908,gǎn,10,Jun Da frequency list; filtered by General Standard Level 1
+909,剧,U+5267,hanzi_frequency,phase1,909,jù,10,Jun Da frequency list; filtered by General Standard Level 1
+910,票,U+7968,hanzi_frequency,phase1,910,piào,11,Jun Da frequency list; filtered by General Standard Level 1
+911,损,U+635F,hanzi_frequency,phase1,911,sǔn,10,Jun Da frequency list; filtered by General Standard Level 1
+912,忽,U+5FFD,hanzi_frequency,phase1,912,hū,8,Jun Da frequency list; filtered by General Standard Level 1
+913,巨,U+5DE8,hanzi_frequency,phase1,913,jù,4,Jun Da frequency list; filtered by General Standard Level 1
+914,炮,U+70AE,hanzi_frequency,phase1,914,pào,9,Jun Da frequency list; filtered by General Standard Level 1
+915,旧,U+65E7,hanzi_frequency,phase1,915,jiù,5,Jun Da frequency list; filtered by General Standard Level 1
+916,端,U+7AEF,hanzi_frequency,phase1,916,duān,14,Jun Da frequency list; filtered by General Standard Level 1
+917,探,U+63A2,hanzi_frequency,phase1,917,tàn,11,Jun Da frequency list; filtered by General Standard Level 1
+918,湖,U+6E56,hanzi_frequency,phase1,918,hú,12,Jun Da frequency list; filtered by General Standard Level 1
+919,录,U+5F55,hanzi_frequency,phase1,919,lù,8,Jun Da frequency list; filtered by General Standard Level 1
+920,叶,U+53F6,hanzi_frequency,phase1,920,yè,5,Jun Da frequency list; filtered by General Standard Level 1
+921,春,U+6625,hanzi_frequency,phase1,921,chūn,9,Jun Da frequency list; filtered by General Standard Level 1
+922,乡,U+4E61,hanzi_frequency,phase1,922,xiāng,3,Jun Da frequency list; filtered by General Standard Level 1
+923,附,U+9644,hanzi_frequency,phase1,923,fù,7,Jun Da frequency list; filtered by General Standard Level 1
+924,吸,U+5438,hanzi_frequency,phase1,924,xī,6,Jun Da frequency list; filtered by General Standard Level 1
+925,予,U+4E88,hanzi_frequency,phase1,925,yǔ,4,Jun Da frequency list; filtered by General Standard Level 1
+926,礼,U+793C,hanzi_frequency,phase1,926,lǐ,5,Jun Da frequency list; filtered by General Standard Level 1
+927,港,U+6E2F,hanzi_frequency,phase1,927,gǎng,12,Jun Da frequency list; filtered by General Standard Level 1
+928,雨,U+96E8,hanzi_frequency,phase1,928,yǔ,8,Jun Da frequency list; filtered by General Standard Level 1
+929,呀,U+5440,hanzi_frequency,phase1,929,ya,7,Jun Da frequency list; filtered by General Standard Level 1
+930,板,U+677F,hanzi_frequency,phase1,930,bǎn,8,Jun Da frequency list; filtered by General Standard Level 1
+931,庭,U+5EAD,hanzi_frequency,phase1,931,tíng,9,Jun Da frequency list; filtered by General Standard Level 1
+932,妇,U+5987,hanzi_frequency,phase1,932,fù,6,Jun Da frequency list; filtered by General Standard Level 1
+933,归,U+5F52,hanzi_frequency,phase1,933,guī,5,Jun Da frequency list; filtered by General Standard Level 1
+934,睛,U+775B,hanzi_frequency,phase1,934,jīng,13,Jun Da frequency list; filtered by General Standard Level 1
+935,饭,U+996D,hanzi_frequency,phase1,935,fàn,7,Jun Da frequency list; filtered by General Standard Level 1
+936,额,U+989D,hanzi_frequency,phase1,936,é,15,Jun Da frequency list; filtered by General Standard Level 1
+937,含,U+542B,hanzi_frequency,phase1,937,hán,7,Jun Da frequency list; filtered by General Standard Level 1
+938,顺,U+987A,hanzi_frequency,phase1,938,shùn,9,Jun Da frequency list; filtered by General Standard Level 1
+939,输,U+8F93,hanzi_frequency,phase1,939,shū,13,Jun Da frequency list; filtered by General Standard Level 1
+940,摇,U+6447,hanzi_frequency,phase1,940,yáo,13,Jun Da frequency list; filtered by General Standard Level 1
+941,招,U+62DB,hanzi_frequency,phase1,941,zhāo,8,Jun Da frequency list; filtered by General Standard Level 1
+942,婚,U+5A5A,hanzi_frequency,phase1,942,hūn,11,Jun Da frequency list; filtered by General Standard Level 1
+943,脱,U+8131,hanzi_frequency,phase1,943,tuō,11,Jun Da frequency list; filtered by General Standard Level 1
+944,补,U+8865,hanzi_frequency,phase1,944,bǔ,7,Jun Da frequency list; filtered by General Standard Level 1
+945,谓,U+8C13,hanzi_frequency,phase1,945,wèi,11,Jun Da frequency list; filtered by General Standard Level 1
+946,督,U+7763,hanzi_frequency,phase1,946,dū,13,Jun Da frequency list; filtered by General Standard Level 1
+947,毒,U+6BD2,hanzi_frequency,phase1,947,dú,9,Jun Da frequency list; filtered by General Standard Level 1
+948,油,U+6CB9,hanzi_frequency,phase1,948,yóu,8,Jun Da frequency list; filtered by General Standard Level 1
+949,疗,U+7597,hanzi_frequency,phase1,949,liáo,7,Jun Da frequency list; filtered by General Standard Level 1
+950,旅,U+65C5,hanzi_frequency,phase1,950,lǚ,10,Jun Da frequency list; filtered by General Standard Level 1
+951,泽,U+6CFD,hanzi_frequency,phase1,951,zé,8,Jun Da frequency list; filtered by General Standard Level 1
+952,材,U+6750,hanzi_frequency,phase1,952,cái,7,Jun Da frequency list; filtered by General Standard Level 1
+953,灭,U+706D,hanzi_frequency,phase1,953,miè,5,Jun Da frequency list; filtered by General Standard Level 1
+954,逐,U+9010,hanzi_frequency,phase1,954,zhú,10,Jun Da frequency list; filtered by General Standard Level 1
+955,莫,U+83AB,hanzi_frequency,phase1,955,mò,10,Jun Da frequency list; filtered by General Standard Level 1
+956,笔,U+7B14,hanzi_frequency,phase1,956,bǐ,10,Jun Da frequency list; filtered by General Standard Level 1
+957,亡,U+4EA1,hanzi_frequency,phase1,957,wáng,3,Jun Da frequency list; filtered by General Standard Level 1
+958,鲜,U+9C9C,hanzi_frequency,phase1,958,xiān,14,Jun Da frequency list; filtered by General Standard Level 1
+959,词,U+8BCD,hanzi_frequency,phase1,959,cí,7,Jun Da frequency list; filtered by General Standard Level 1
+960,圣,U+5723,hanzi_frequency,phase1,960,shèng,5,Jun Da frequency list; filtered by General Standard Level 1
+961,择,U+62E9,hanzi_frequency,phase1,961,zé,8,Jun Da frequency list; filtered by General Standard Level 1
+962,寻,U+5BFB,hanzi_frequency,phase1,962,xún,6,Jun Da frequency list; filtered by General Standard Level 1
+963,厂,U+5382,hanzi_frequency,phase1,963,chǎng,2,Jun Da frequency list; filtered by General Standard Level 1
+964,睡,U+7761,hanzi_frequency,phase1,964,shuì,13,Jun Da frequency list; filtered by General Standard Level 1
+965,博,U+535A,hanzi_frequency,phase1,965,bó,12,Jun Da frequency list; filtered by General Standard Level 1
+966,勒,U+52D2,hanzi_frequency,phase1,966,lēi,11,Jun Da frequency list; filtered by General Standard Level 1
+967,烟,U+70DF,hanzi_frequency,phase1,967,yān,10,Jun Da frequency list; filtered by General Standard Level 1
+968,授,U+6388,hanzi_frequency,phase1,968,shòu,11,Jun Da frequency list; filtered by General Standard Level 1
+969,诺,U+8BFA,hanzi_frequency,phase1,969,nuò,10,Jun Da frequency list; filtered by General Standard Level 1
+970,伦,U+4F26,hanzi_frequency,phase1,970,lún,6,Jun Da frequency list; filtered by General Standard Level 1
+971,岸,U+5CB8,hanzi_frequency,phase1,971,àn,8,Jun Da frequency list; filtered by General Standard Level 1
+972,奥,U+5965,hanzi_frequency,phase1,972,ào,12,Jun Da frequency list; filtered by General Standard Level 1
+973,唐,U+5510,hanzi_frequency,phase1,973,táng,10,Jun Da frequency list; filtered by General Standard Level 1
+974,卖,U+5356,hanzi_frequency,phase1,974,mài,8,Jun Da frequency list; filtered by General Standard Level 1
+975,俄,U+4FC4,hanzi_frequency,phase1,975,é,9,Jun Da frequency list; filtered by General Standard Level 1
+976,炸,U+70B8,hanzi_frequency,phase1,976,zhà,9,Jun Da frequency list; filtered by General Standard Level 1
+977,载,U+8F7D,hanzi_frequency,phase1,977,zài,10,Jun Da frequency list; filtered by General Standard Level 1
+978,洛,U+6D1B,hanzi_frequency,phase1,978,luò,9,Jun Da frequency list; filtered by General Standard Level 1
+979,健,U+5065,hanzi_frequency,phase1,979,jiàn,10,Jun Da frequency list; filtered by General Standard Level 1
+980,堂,U+5802,hanzi_frequency,phase1,980,táng,11,Jun Da frequency list; filtered by General Standard Level 1
+981,旁,U+65C1,hanzi_frequency,phase1,981,páng,10,Jun Da frequency list; filtered by General Standard Level 1
+982,宫,U+5BAB,hanzi_frequency,phase1,982,gōng,9,Jun Da frequency list; filtered by General Standard Level 1
+983,喝,U+559D,hanzi_frequency,phase1,983,hē,12,Jun Da frequency list; filtered by General Standard Level 1
+984,借,U+501F,hanzi_frequency,phase1,984,jiè,10,Jun Da frequency list; filtered by General Standard Level 1
+985,君,U+541B,hanzi_frequency,phase1,985,jūn,7,Jun Da frequency list; filtered by General Standard Level 1
+986,禁,U+7981,hanzi_frequency,phase1,986,jìn,13,Jun Da frequency list; filtered by General Standard Level 1
+987,阴,U+9634,hanzi_frequency,phase1,987,yīn,6,Jun Da frequency list; filtered by General Standard Level 1
+988,园,U+56ED,hanzi_frequency,phase1,988,yuán,7,Jun Da frequency list; filtered by General Standard Level 1
+989,谋,U+8C0B,hanzi_frequency,phase1,989,móu,11,Jun Da frequency list; filtered by General Standard Level 1
+990,宋,U+5B8B,hanzi_frequency,phase1,990,sòng,7,Jun Da frequency list; filtered by General Standard Level 1
+991,避,U+907F,hanzi_frequency,phase1,991,bì,16,Jun Da frequency list; filtered by General Standard Level 1
+992,抓,U+6293,hanzi_frequency,phase1,992,zhuā,7,Jun Da frequency list; filtered by General Standard Level 1
+993,荣,U+8363,hanzi_frequency,phase1,993,róng,9,Jun Da frequency list; filtered by General Standard Level 1
+994,姑,U+59D1,hanzi_frequency,phase1,994,gū,8,Jun Da frequency list; filtered by General Standard Level 1
+995,孙,U+5B59,hanzi_frequency,phase1,995,sūn,6,Jun Da frequency list; filtered by General Standard Level 1
+996,逃,U+9003,hanzi_frequency,phase1,996,táo,9,Jun Da frequency list; filtered by General Standard Level 1
+997,牙,U+7259,hanzi_frequency,phase1,997,yá,4,Jun Da frequency list; filtered by General Standard Level 1
+998,束,U+675F,hanzi_frequency,phase1,998,shù,7,Jun Da frequency list; filtered by General Standard Level 1
+999,跳,U+8DF3,hanzi_frequency,phase1,999,tiào,13,Jun Da frequency list; filtered by General Standard Level 1
+1000,顶,U+9876,hanzi_frequency,phase1,1000,dǐng,8,Jun Da frequency list; filtered by General Standard Level 1
+1001,仪,U+4EEA,hanzi_domain,phase1,1283,yí,5,University experiment-report domain supplement
+1002,姓,U+59D3,hanzi_domain,phase1,1149,xìng,8,University experiment-report domain supplement
+1003,曲,U+66F2,hanzi_domain,phase1,1066,qū,6,University experiment-report domain supplement
+1004,析,U+6790,hanzi_domain,phase1,1073,xī,8,University experiment-report domain supplement
+1005,械,U+68B0,hanzi_domain,phase1,1657,xiè,11,University experiment-report domain supplement
+1006,阻,U+963B,hanzi_domain,phase1,1175,zǔ,7,University experiment-report domain supplement
+1007,频,U+9891,hanzi_domain,phase1,1535,pín,13,University experiment-report domain supplement
+1008,骤,U+9AA4,hanzi_domain,phase1,2045,zhòu,17,University experiment-report domain supplement
+1009,a,U+0061,lowercase,phase1,,,,拉丁小写字母
+1010,b,U+0062,lowercase,phase1,,,,拉丁小写字母
+1011,c,U+0063,lowercase,phase1,,,,拉丁小写字母
+1012,d,U+0064,lowercase,phase1,,,,拉丁小写字母
+1013,e,U+0065,lowercase,phase1,,,,拉丁小写字母
+1014,f,U+0066,lowercase,phase1,,,,拉丁小写字母
+1015,g,U+0067,lowercase,phase1,,,,拉丁小写字母
+1016,h,U+0068,lowercase,phase1,,,,拉丁小写字母
+1017,i,U+0069,lowercase,phase1,,,,拉丁小写字母
+1018,j,U+006A,lowercase,phase1,,,,拉丁小写字母
+1019,k,U+006B,lowercase,phase1,,,,拉丁小写字母
+1020,l,U+006C,lowercase,phase1,,,,拉丁小写字母
+1021,m,U+006D,lowercase,phase1,,,,拉丁小写字母
+1022,n,U+006E,lowercase,phase1,,,,拉丁小写字母
+1023,o,U+006F,lowercase,phase1,,,,拉丁小写字母
+1024,p,U+0070,lowercase,phase1,,,,拉丁小写字母
+1025,q,U+0071,lowercase,phase1,,,,拉丁小写字母
+1026,r,U+0072,lowercase,phase1,,,,拉丁小写字母
+1027,s,U+0073,lowercase,phase1,,,,拉丁小写字母
+1028,t,U+0074,lowercase,phase1,,,,拉丁小写字母
+1029,u,U+0075,lowercase,phase1,,,,拉丁小写字母
+1030,v,U+0076,lowercase,phase1,,,,拉丁小写字母
+1031,w,U+0077,lowercase,phase1,,,,拉丁小写字母
+1032,x,U+0078,lowercase,phase1,,,,拉丁小写字母
+1033,y,U+0079,lowercase,phase1,,,,拉丁小写字母
+1034,z,U+007A,lowercase,phase1,,,,拉丁小写字母
+1035,A,U+0041,uppercase,phase1,,,,拉丁大写字母
+1036,B,U+0042,uppercase,phase1,,,,拉丁大写字母
+1037,C,U+0043,uppercase,phase1,,,,拉丁大写字母
+1038,D,U+0044,uppercase,phase1,,,,拉丁大写字母
+1039,E,U+0045,uppercase,phase1,,,,拉丁大写字母
+1040,F,U+0046,uppercase,phase1,,,,拉丁大写字母
+1041,G,U+0047,uppercase,phase1,,,,拉丁大写字母
+1042,H,U+0048,uppercase,phase1,,,,拉丁大写字母
+1043,I,U+0049,uppercase,phase1,,,,拉丁大写字母
+1044,J,U+004A,uppercase,phase1,,,,拉丁大写字母
+1045,K,U+004B,uppercase,phase1,,,,拉丁大写字母
+1046,L,U+004C,uppercase,phase1,,,,拉丁大写字母
+1047,M,U+004D,uppercase,phase1,,,,拉丁大写字母
+1048,N,U+004E,uppercase,phase1,,,,拉丁大写字母
+1049,O,U+004F,uppercase,phase1,,,,拉丁大写字母
+1050,P,U+0050,uppercase,phase1,,,,拉丁大写字母
+1051,Q,U+0051,uppercase,phase1,,,,拉丁大写字母
+1052,R,U+0052,uppercase,phase1,,,,拉丁大写字母
+1053,S,U+0053,uppercase,phase1,,,,拉丁大写字母
+1054,T,U+0054,uppercase,phase1,,,,拉丁大写字母
+1055,U,U+0055,uppercase,phase1,,,,拉丁大写字母
+1056,V,U+0056,uppercase,phase1,,,,拉丁大写字母
+1057,W,U+0057,uppercase,phase1,,,,拉丁大写字母
+1058,X,U+0058,uppercase,phase1,,,,拉丁大写字母
+1059,Y,U+0059,uppercase,phase1,,,,拉丁大写字母
+1060,Z,U+005A,uppercase,phase1,,,,拉丁大写字母
+1061,0,U+0030,digits,phase1,,,,阿拉伯数字
+1062,1,U+0031,digits,phase1,,,,阿拉伯数字
+1063,2,U+0032,digits,phase1,,,,阿拉伯数字
+1064,3,U+0033,digits,phase1,,,,阿拉伯数字
+1065,4,U+0034,digits,phase1,,,,阿拉伯数字
+1066,5,U+0035,digits,phase1,,,,阿拉伯数字
+1067,6,U+0036,digits,phase1,,,,阿拉伯数字
+1068,7,U+0037,digits,phase1,,,,阿拉伯数字
+1069,8,U+0038,digits,phase1,,,,阿拉伯数字
+1070,9,U+0039,digits,phase1,,,,阿拉伯数字
+1071,，,U+FF0C,punctuation,phase1,,,,常用中英文标点和书写符号
+1072,。,U+3002,punctuation,phase1,,,,常用中英文标点和书写符号
+1073,；,U+FF1B,punctuation,phase1,,,,常用中英文标点和书写符号
+1074,：,U+FF1A,punctuation,phase1,,,,常用中英文标点和书写符号
+1075,？,U+FF1F,punctuation,phase1,,,,常用中英文标点和书写符号
+1076,！,U+FF01,punctuation,phase1,,,,常用中英文标点和书写符号
+1077,、,U+3001,punctuation,phase1,,,,常用中英文标点和书写符号
+1078,（,U+FF08,punctuation,phase1,,,,常用中英文标点和书写符号
+1079,）,U+FF09,punctuation,phase1,,,,常用中英文标点和书写符号
+1080,《,U+300A,punctuation,phase1,,,,常用中英文标点和书写符号
+1081,》,U+300B,punctuation,phase1,,,,常用中英文标点和书写符号
+1082,“,U+201C,punctuation,phase1,,,,常用中英文标点和书写符号
+1083,”,U+201D,punctuation,phase1,,,,常用中英文标点和书写符号
+1084,‘,U+2018,punctuation,phase1,,,,常用中英文标点和书写符号
+1085,’,U+2019,punctuation,phase1,,,,常用中英文标点和书写符号
+1086,—,U+2014,punctuation,phase1,,,,常用中英文标点和书写符号
+1087,…,U+2026,punctuation,phase1,,,,常用中英文标点和书写符号
+1088,·,U+00B7,punctuation,phase1,,,,常用中英文标点和书写符号
+1089,",",U+002C,punctuation,phase1,,,,常用中英文标点和书写符号
+1090,.,U+002E,punctuation,phase1,,,,常用中英文标点和书写符号
+1091,?,U+003F,punctuation,phase1,,,,常用中英文标点和书写符号
+1092,!,U+0021,punctuation,phase1,,,,常用中英文标点和书写符号
+1093,:,U+003A,punctuation,phase1,,,,常用中英文标点和书写符号
+1094,;,U+003B,punctuation,phase1,,,,常用中英文标点和书写符号
+1095,(,U+0028,punctuation,phase1,,,,常用中英文标点和书写符号
+1096,),U+0029,punctuation,phase1,,,,常用中英文标点和书写符号
+1097,[,U+005B,punctuation,phase1,,,,常用中英文标点和书写符号
+1098,],U+005D,punctuation,phase1,,,,常用中英文标点和书写符号
+1099,{,U+007B,punctuation,phase1,,,,常用中英文标点和书写符号
+1100,},U+007D,punctuation,phase1,,,,常用中英文标点和书写符号
+1101,<,U+003C,punctuation,phase1,,,,常用中英文标点和书写符号
+1102,>,U+003E,punctuation,phase1,,,,常用中英文标点和书写符号
+1103,/,U+002F,punctuation,phase1,,,,常用中英文标点和书写符号
+1104,_,U+005F,punctuation,phase1,,,,常用中英文标点和书写符号
+1105,-,U+002D,punctuation,phase1,,,,常用中英文标点和书写符号
+1106,+,U+002B,punctuation,phase1,,,,常用中英文标点和书写符号
+1107,=,U+003D,punctuation,phase1,,,,常用中英文标点和书写符号
+1108,−,U+2212,math,phase1,,,,常用数学符号
+1109,×,U+00D7,math,phase1,,,,常用数学符号
+1110,÷,U+00F7,math,phase1,,,,常用数学符号
+1111,≠,U+2260,math,phase1,,,,常用数学符号
+1112,≈,U+2248,math,phase1,,,,常用数学符号
+1113,≤,U+2264,math,phase1,,,,常用数学符号
+1114,≥,U+2265,math,phase1,,,,常用数学符号
+1115,±,U+00B1,math,phase1,,,,常用数学符号
+1116,%,U+0025,math,phase1,,,,常用数学符号
+1117,‰,U+2030,math,phase1,,,,常用数学符号
+1118,°,U+00B0,math,phase1,,,,常用数学符号
+1119,√,U+221A,math,phase1,,,,常用数学符号
+1120,∑,U+2211,math,phase1,,,,常用数学符号
+1121,∆,U+2206,math,phase1,,,,常用数学符号
+1122,Δ,U+0394,math,phase1,,,,常用数学符号
+1123,π,U+03C0,math,phase1,,,,常用数学符号
+1124,∞,U+221E,math,phase1,,,,常用数学符号
+1125,∠,U+2220,math,phase1,,,,常用数学符号
+1126,∥,U+2225,math,phase1,,,,常用数学符号
+1127,⊥,U+22A5,math,phase1,,,,常用数学符号
+1128,∵,U+2235,math,phase1,,,,常用数学符号
+1129,∴,U+2234,math,phase1,,,,常用数学符号
+1130,℃,U+2103,science,phase1,,,,常用理工科符号
+1131,Ω,U+03A9,science,phase1,,,,常用理工科符号
+1132,μ,U+03BC,science,phase1,,,,常用理工科符号
+1133,λ,U+03BB,science,phase1,,,,常用理工科符号
+1134,ρ,U+03C1,science,phase1,,,,常用理工科符号
+1135,σ,U+03C3,science,phase1,,,,常用理工科符号
+1136,φ,U+03C6,science,phase1,,,,常用理工科符号
+1137,θ,U+03B8,science,phase1,,,,常用理工科符号
+1138,α,U+03B1,science,phase1,,,,常用理工科符号
+1139,β,U+03B2,science,phase1,,,,常用理工科符号
+1140,γ,U+03B3,science,phase1,,,,常用理工科符号

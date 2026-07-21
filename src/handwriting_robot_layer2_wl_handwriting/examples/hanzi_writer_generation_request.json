@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "user_id": "synthetic_demo_user",
+  "text": "好世界",
+  "style_profile_path": "src/handwriting_robot_layer2_wl_handwriting/examples/demo_style_profile.json",
+  "hanzi_writer_package_dir": "runtime_data/external/hanzi-writer-data-2.0.1/package",
+  "page": {
+    "width_mm": 210.0,
+    "height_mm": 297.0
+  },
+  "origin_mm": [10.0, 10.0],
+  "options": {
+    "char_width_mm": 12.0,
+    "char_height_mm": 12.0,
+    "char_spacing_mm": 2.0,
+    "random_seed": 42,
+    "variation_strength": 0.35,
+    "curvature_strength": 1.0,
+    "glyph_occupancy": 0.78,
+    "skeleton_resample_spacing": 0.025
+  }
+}

@@ -58,6 +58,27 @@ class SampleStore:
     def manifest_path(self) -> Path:
         return self.writer_dir / "manifest.json"
 
+    def session_path(self, session_id: str) -> Path:
+        return self.writer_dir / "sessions" / f"{safe_identifier(session_id)}.json"
+
+    def save_session(
+        self, session_id: str, metadata: Optional[Dict[str, Any]] = None
+    ) -> Path:
+        path = self.session_path(session_id)
+        previous = read_json(path, {})
+        atomic_write_json(
+            path,
+            {
+                "schema_version": SAMPLE_SCHEMA_VERSION,
+                "session_id": safe_identifier(session_id),
+                "writer_id": self.writer_id,
+                "started_at": previous.get("started_at", utc_now()),
+                "updated_at": utc_now(),
+                "metadata": metadata or {},
+            },
+        )
+        return path
+
     def _save_profile(self) -> None:
         path = self.writer_dir / "profile.json"
         previous = read_json(path, {})
@@ -154,11 +175,16 @@ class SampleStore:
         variant: int,
         buffer: RecordingBuffer,
         capture_context: Optional[Dict[str, Any]] = None,
+        required_source: Optional[str] = None,
     ) -> Path:
         if buffer.active:
             raise ValueError("finish the current stroke before saving the sample")
         if not buffer.strokes or buffer.point_count < 2:
             raise ValueError("current sample does not contain a complete stroke")
+        if required_source and required_source not in buffer.sources():
+            raise ValueError(
+                f"current sample does not contain required source: {required_source}"
+            )
 
         document = self.build_document(
             entry, variant, buffer, "complete", capture_context=capture_context

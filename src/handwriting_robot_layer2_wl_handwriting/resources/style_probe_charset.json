@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "name": "tablet_style_probe_100",
+  "description": "用于数位板小规模试采和用户字体风格分析的100个代表汉字",
+  "recommended_variants": 1,
+  "groups": [
+    {
+      "id": "basic_strokes",
+      "label": "基础笔画",
+      "analysis_focus": "横、竖、撇、捺、点、折的长度、角度和收笔",
+      "characters": "一二三十人大小上下中"
+    },
+    {
+      "id": "simple_balance",
+      "label": "独体与重心",
+      "analysis_focus": "封闭形状、对称性、字面大小和重心位置",
+      "characters": "口日月山水火木土田王"
+    },
+    {
+      "id": "left_right",
+      "label": "左右结构",
+      "analysis_focus": "偏旁宽度、左右间距和部件高度关系",
+      "characters": "你他们明和体江河机林"
+    },
+    {
+      "id": "top_bottom",
+      "label": "上下结构",
+      "analysis_focus": "上下部件比例、纵向间距和整体高度",
+      "characters": "字学家安室草花思意想"
+    },
+    {
+      "id": "enclosure",
+      "label": "包围结构",
+      "analysis_focus": "外框形态、内部留白和封口习惯",
+      "characters": "国回因困园图团围问间"
+    },
+    {
+      "id": "semi_enclosure",
+      "label": "半包围与走之",
+      "analysis_focus": "包围方向、走之底形态和外部笔画伸展",
+      "characters": "这近远过进道建风医同"
+    },
+    {
+      "id": "complex_structure",
+      "label": "复杂组合",
+      "analysis_focus": "多部件压缩、笔画密度和复杂字整体稳定性",
+      "characters": "事重最解题器影谢数验"
+    },
+    {
+      "id": "experiment_common_1",
+      "label": "实验记录常用字一",
+      "analysis_focus": "项目常用语境下的自然书写和连贯速度",
+      "characters": "实报据果测量温度压力"
+    },
+    {
+      "id": "experiment_common_2",
+      "label": "实验记录常用字二",
+      "analysis_focus": "理工科高频偏旁和数字量词相关结构",
+      "characters": "电流阻功率频长质积材"
+    },
+    {
+      "id": "experiment_common_3",
+      "label": "实验记录常用字三",
+      "analysis_focus": "仪器、分析和图表相关字形的结构习惯",
+      "characters": "装置仪误差分析计表曲"
+    }
+  ]
+}

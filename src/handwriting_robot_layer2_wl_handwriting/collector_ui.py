@@ -75,13 +75,18 @@ class TabletCanvas(QWidget):
     changed = Signal()
     stroke_finished = Signal()
     device_changed = Signal(str)
+    tablet_identified = Signal(dict)
 
-    def __init__(self, parent: Optional[QWidget] = None) -> None:
+    def __init__(
+        self, parent: Optional[QWidget] = None, allow_mouse: bool = True
+    ) -> None:
         super().__init__(parent)
         self.buffer = RecordingBuffer()
         self._tablet_active = False
         self._mouse_active = False
         self._show_grid = True
+        self._allow_mouse = allow_mouse
+        self._reported_tablet = False
         self.setMinimumSize(520, 520)
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.setAttribute(Qt.WidgetAttribute.WA_OpaquePaintEvent)
@@ -163,6 +168,16 @@ class TabletCanvas(QWidget):
         event_type = event.type()
 
         if event_type == QEvent.Type.TabletPress and point:
+            if not self._reported_tablet:
+                device = event.pointingDevice()
+                self.tablet_identified.emit(
+                    {
+                        "qt_name": device.name(),
+                        "pointer_type": str(device.pointerType()).split(".")[-1],
+                        "capabilities": str(device.capabilities()),
+                    }
+                )
+                self._reported_tablet = True
             self._tablet_active = True
             self.buffer.begin_stroke(point)
             self.device_changed.emit("数位板")
@@ -179,7 +194,11 @@ class TabletCanvas(QWidget):
         event.accept()
 
     def mousePressEvent(self, event: QMouseEvent) -> None:  # noqa: N802
-        if self._tablet_active or event.button() != Qt.MouseButton.LeftButton:
+        if (
+            not self._allow_mouse
+            or self._tablet_active
+            or event.button() != Qt.MouseButton.LeftButton
+        ):
             return
         point = self._point(event.position(), 0.5, "mouse")
         if point:
@@ -263,11 +282,15 @@ class MainWindow(QMainWindow):
         entries: list[CharacterEntry],
         store: SampleStore,
         charset_path: Path,
+        capture_context: Optional[dict] = None,
+        require_tablet: bool = False,
     ) -> None:
         super().__init__()
         self.entries = entries
         self.store = store
         self.charset_path = Path(charset_path)
+        self.capture_context = dict(capture_context or {})
+        self.require_tablet = require_tablet
         self.current_index = max(0, store.next_incomplete_index(entries, -1))
         self.current_variant = 1
         self._loading = False
@@ -304,16 +327,21 @@ class MainWindow(QMainWindow):
         self.variant_spin.setRange(1, 5)
         self.variant_spin.valueChanged.connect(self._variant_changed)
 
-        self.canvas = TabletCanvas()
+        self.canvas = TabletCanvas(allow_mouse=not require_tablet)
         self.canvas.changed.connect(self._canvas_changed)
         self.canvas.stroke_finished.connect(self._save_draft)
         self.canvas.device_changed.connect(self._device_changed)
+        self.canvas.tablet_identified.connect(self._tablet_identified)
 
         self.grid_checkbox = QCheckBox("显示米字格")
         self.grid_checkbox.setChecked(True)
         self.grid_checkbox.toggled.connect(self.canvas.set_show_grid)
 
-        self.device_label = QLabel("输入设备：等待输入")
+        self.device_label = QLabel(
+            "输入设备：数位板必需，等待输入"
+            if require_tablet
+            else "输入设备：等待输入"
+        )
         self.sample_stats = QLabel("笔画：0　点数：0　时长：0 ms")
         self.sample_state = QLabel()
 
@@ -383,7 +411,10 @@ class MainWindow(QMainWindow):
         sidebar_layout.addWidget(save_next_button)
 
         canvas_panel = QVBoxLayout()
-        hint = QLabel("请在方框内书写；每次落笔到抬笔记录为一个笔画。")
+        hint_text = "请使用数位板在方框内书写；鼠标输入已禁用。"
+        if not self.require_tablet:
+            hint_text = "请在方框内书写；每次落笔到抬笔记录为一个笔画。"
+        hint = QLabel(hint_text)
         hint.setAlignment(Qt.AlignmentFlag.AlignCenter)
         canvas_panel.addWidget(hint)
         canvas_panel.addWidget(self.canvas, 1)
@@ -451,7 +482,12 @@ class MainWindow(QMainWindow):
             return
         entry = self.current_entry
         variant = self.current_variant
-        path = self.store.save_draft(entry, variant, self.canvas.buffer)
+        path = self.store.save_draft(
+            entry,
+            variant,
+            self.canvas.buffer,
+            capture_context=self.capture_context,
+        )
         if path:
             self.sample_state.setText(f"状态：草稿已自动保存　变体 {variant}")
         self._dirty = False
@@ -460,7 +496,11 @@ class MainWindow(QMainWindow):
     def _commit_current(self) -> bool:
         try:
             path = self.store.commit_sample(
-                self.current_entry, self.current_variant, self.canvas.buffer
+                self.current_entry,
+                self.current_variant,
+                self.canvas.buffer,
+                capture_context=self.capture_context,
+                required_source="tablet" if self.require_tablet else None,
             )
         except ValueError as error:
             QMessageBox.warning(self, "无法保存", str(error))
@@ -547,6 +587,13 @@ class MainWindow(QMainWindow):
 
     def _device_changed(self, name: str) -> None:
         self.device_label.setText(f"输入设备：{name}")
+
+    def _tablet_identified(self, value: dict) -> None:
+        device = self.capture_context.setdefault("device", {})
+        device.update(value)
+        session_id = self.capture_context.get("session_id")
+        if session_id:
+            self.store.save_session(session_id, self.capture_context)
 
     def closeEvent(self, event: QCloseEvent) -> None:  # noqa: N802
         self._save_draft()

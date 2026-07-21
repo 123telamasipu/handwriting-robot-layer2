@@ -16,7 +16,11 @@
 | `StrokeDocument` 导出 | 已完成 | 提供 Python API 和命令行接口 |
 | 手机浏览器采集 | 已完成 | 笔记本启动局域网服务，手机通过手指或触控笔采集并保存到同一用户字库 |
 | 多设备统一采集协议 | 已完成 | 统一 `touch`、`pen`、`mouse`、`tablet` 的坐标、时间、压力和倾角字段 |
-| 少样本风格学习与未录字符生成 | 待研究 | 当前随机种子不能生成未采集字符；需要引入标准字形骨架与风格迁移/轨迹生成模型 |
+| 数位板 100 字风格试采包 | 已完成 | `user_01` 已完成 100/100 个真实数位板样本，质量报告无缺失或待复核样本 |
+| 样本清洗与标准化 | 已完成 | 100/100 个样本完成非破坏性去重、时间归零、轻度平滑和等弧长重采样，并输出 `dynamics`/`canvas`/`glyph` 三套表示 |
+| 用户字体风格特征提取 | 已完成 | `user_01` 的 100/100 个样本已生成高可信度风格档案，包含布局、速度、停顿、压力、倾角、方向、倾斜和曲率特征 |
+| 标准骨架风格化生成 | 已完成基线 | 已接入 Hanzi Writer Data 2.0.1，1008/1008 个目标汉字可按需转换；字母和符号仍需独立骨架来源 |
+| 少样本生成模型 | 待研究 | 当前几何基线不能充分学习复杂偏旁比例和特定笔画写法，后续可在统一骨架接口上升级模型 |
 | 作文、笔记扫描图处理 | 延后 | 扫描图需要分割和人工校正，不纳入第一阶段 |
 
 当前方案与仓库的成员2边界一致，也满足 README、示例、测试和统一轨迹接口要求。与最初任务书相比，扫描/OCR 被明确延期；第一阶段聚焦一至两名书写者的数位轨迹，不采集大量人员样本。
@@ -32,6 +36,16 @@ handwriting_robot_layer2_wl_handwriting/
 ├── collector_ui.py     # 鼠标/数位板采集界面
 ├── mobile_server.py    # 手机局域网采集服务
 ├── capture_protocol.py # 多输入设备数据校验与归一化
+├── collection_report.py # 数位板试采进度与质量报告
+├── preprocessing.py    # 原始样本清洗与标准化算法
+├── preprocessing_cli.py # 清洗批处理命令行入口
+├── style_analysis.py  # 用户字体布局、动态和几何风格特征
+├── style_analysis_cli.py # 风格档案命令行入口
+├── skeleton.py         # 标准有序笔画骨架校验与覆盖率
+├── style_generator.py  # 标准骨架到用户风格 StrokeDocument
+├── style_generator_cli.py # 风格化轨迹命令行入口
+├── hanzi_writer_adapter.py # 第三方汉字中心线适配与覆盖报告
+├── hanzi_writer_cli.py # Hanzi Writer Data 校验和转换入口
 ├── web/                # 手机采集页面
 ├── renderer.py         # 覆盖率检查、随机变化和轨迹导出
 ├── export_cli.py       # 命令行导出入口
@@ -77,6 +91,68 @@ py -3 -m src.handwriting_robot_layer2_wl_handwriting.collector_app `
 ```powershell
 py -3 -m src.handwriting_robot_layer2_wl_handwriting.collector_app --help
 ```
+
+### 数位板 100 字试采
+
+当前采集主线使用数位板。第一轮只录入 100 个结构多样的代表汉字，每字 1 次，用于验证用户字体分析所需的数据质量：
+
+```powershell
+src\handwriting_robot_layer2_wl_handwriting\tools\run_tablet_probe.cmd `
+  --writer-id user_01 `
+  --device-model "数位板型号"
+```
+
+此入口会禁用鼠标绘制，并拒绝不包含 `tablet` 来源的正式样本。完整操作、字符选择和完成条件见 [`docs/tablet-style-probe.md`](docs/tablet-style-probe.md)。
+
+采集中途或完成后生成质量报告：
+
+```powershell
+src\handwriting_robot_layer2_wl_handwriting\tools\run_collection_report.cmd `
+  user_01 `
+  --output runtime_data/handwriting/reports/user_01-style-probe.json
+```
+
+### 清洗和标准化
+
+完成 100 字试采后运行：
+
+```powershell
+src\handwriting_robot_layer2_wl_handwriting\tools\run_preprocessing.cmd user_01
+```
+
+处理不会修改原始样本，输出位于 `runtime_data/handwriting/processed/user_01/style_probe_v1/`。详细算法、三套轨迹表示和参数说明见 [`docs/preprocessing.md`](docs/preprocessing.md)。
+
+### 用户字体风格分析
+
+完成清洗后运行：
+
+```powershell
+src\handwriting_robot_layer2_wl_handwriting\tools\run_style_analysis.cmd user_01
+```
+
+风格档案默认写入 `runtime_data/handwriting/style_profiles/user_01/style_profile_v1.json`。它为后续标准字形骨架个性化提供布局、动态、压力和几何参数，但不会单独生成未录字符。详见 [`docs/style-analysis.md`](docs/style-analysis.md)。
+
+### 未录字符风格化轨迹
+
+使用演示骨架和公开合成风格运行完整链路：
+
+```powershell
+src\handwriting_robot_layer2_wl_handwriting\tools\run_style_generator.cmd `
+  src\handwriting_robot_layer2_wl_handwriting\examples\style_generation_request.json `
+  runtime_data/output/style_generated_document.json
+```
+
+输出继续使用 `StrokeDocument` v0.1，并保留标准骨架的笔顺和笔画边界。演示骨架不适合正式书写；格式、算法、参数和数据源要求见 [`docs/ordered-skeleton-generation.md`](docs/ordered-skeleton-generation.md)。
+
+### 1008 汉字骨架数据
+
+下载并校验固定版本 Hanzi Writer Data：
+
+```powershell
+src\handwriting_robot_layer2_wl_handwriting\tools\download_hanzi_writer_data.cmd
+```
+
+该数据对本项目 1000 个常用汉字和 8 个领域补充汉字实现 100% 覆盖。第三方数据只存放在被 Git 忽略的 `runtime_data/external/`，生成器按请求字符即时转换，不提交整套数据。许可证、坐标转换、覆盖率检查和调用方法见 [`docs/hanzi-writer-data.md`](docs/hanzi-writer-data.md)。
 
 ## 手机浏览器采集
 

@@ -394,6 +394,40 @@ def _geometry_features(
     }
 
 
+def _script_behavior_features(document: Dict[str, Any]) -> Dict[str, Any]:
+    character = document.get("character", {})
+    raw_expected = character.get("expected_stroke_count")
+    expected: Optional[int] = None
+    if raw_expected not in (None, ""):
+        try:
+            expected = int(raw_expected)
+        except (TypeError, ValueError) as error:
+            raise ValueError("expected stroke count must be an integer") from error
+        if expected < 1:
+            expected = None
+
+    observed = len(_strokes(document, "glyph"))
+    if expected is None:
+        return {
+            "standard_kaishu_stroke_count": None,
+            "observed_pen_down_stroke_count": observed,
+            "observed_to_standard_stroke_ratio": None,
+            "pen_lift_reduction_ratio": None,
+            "extra_segmentation_ratio": None,
+            "joins_standard_strokes": None,
+            "splits_standard_strokes": None,
+        }
+    return {
+        "standard_kaishu_stroke_count": expected,
+        "observed_pen_down_stroke_count": observed,
+        "observed_to_standard_stroke_ratio": _round(observed / expected),
+        "pen_lift_reduction_ratio": _round(max(0, expected - observed) / expected),
+        "extra_segmentation_ratio": _round(max(0, observed - expected) / expected),
+        "joins_standard_strokes": 1.0 if observed < expected else 0.0,
+        "splits_standard_strokes": 1.0 if observed > expected else 0.0,
+    }
+
+
 def analyze_processed_sample(
     document: Dict[str, Any],
     options: Optional[StyleAnalysisOptions] = None,
@@ -419,6 +453,7 @@ def analyze_processed_sample(
         "layout": _layout_features(document),
         "dynamics": _dynamics_features(document),
         "geometry": _geometry_features(document, options),
+        "script_behavior": _script_behavior_features(document),
     }
 
 
@@ -507,6 +542,15 @@ def _aggregate_samples(samples: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
         "stroke_end_center_x",
         "stroke_end_center_y",
     )
+    script_behavior_metrics = (
+        "standard_kaishu_stroke_count",
+        "observed_pen_down_stroke_count",
+        "observed_to_standard_stroke_ratio",
+        "pen_lift_reduction_ratio",
+        "extra_segmentation_ratio",
+        "joins_standard_strokes",
+        "splits_standard_strokes",
+    )
     directions = {
         label: _round(
             sum(sample["geometry"]["direction_histogram"][label] for sample in samples)
@@ -537,6 +581,10 @@ def _aggregate_samples(samples: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
                 for metric in geometry_metrics
             },
             "direction_histogram": directions,
+        },
+        "script_behavior": {
+            metric: _metric_distribution(samples, "script_behavior", metric)
+            for metric in script_behavior_metrics
         },
     }
 
@@ -581,6 +629,25 @@ def _generation_priors(aggregates: Dict[str, Any]) -> Dict[str, Any]:
             "pen_up_pause_mean_ms": _median(
                 aggregates, "timing", "pen_up_pause_mean_ms"
             ),
+        },
+        "script_behavior": {
+            "reference_form": "natural_handwriting_relative_to_standard_kaishu",
+            "observed_to_standard_stroke_ratio": _median(
+                aggregates, "script_behavior", "observed_to_standard_stroke_ratio"
+            ),
+            "pen_lift_reduction_ratio": _median(
+                aggregates, "script_behavior", "pen_lift_reduction_ratio"
+            ),
+            "extra_segmentation_ratio": _median(
+                aggregates, "script_behavior", "extra_segmentation_ratio"
+            ),
+            "joined_stroke_character_share": aggregates["script_behavior"][
+                "joins_standard_strokes"
+            ]["mean"],
+            "split_stroke_character_share": aggregates["script_behavior"][
+                "splits_standard_strokes"
+            ]["mean"],
+            "ligature_generation_status": "analysis_only_not_applied",
         },
         "pressure": {
             "mean": _median(aggregates, "pressure", "pressure_mean"),
@@ -717,6 +784,8 @@ def build_style_profile(
         "limitations": [
             "This profile describes one writer but does not generate missing characters by itself.",
             "Applying the profile to unseen characters requires a standard ordered stroke skeleton.",
+            "Standard kaishu stroke counts are references; natural handwriting may join or split them.",
+            "Observed pen-lift reduction does not by itself define safe running-script connection paths.",
             "Generation quality must be evaluated separately from feature estimation coverage.",
         ],
     }

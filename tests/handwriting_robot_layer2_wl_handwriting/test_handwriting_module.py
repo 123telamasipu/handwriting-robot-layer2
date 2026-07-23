@@ -6,6 +6,10 @@ import unittest
 from pathlib import Path
 
 from src.handwriting_robot_layer2_wl_handwriting import (
+    AutomaticAlignmentOptions,
+    ConnectionAnalysisOptions,
+    MachineHandoffOptions,
+    PersonalFontEvaluationOptions,
     RecordingBuffer,
     RenderOptions,
     SampleStore,
@@ -14,13 +18,29 @@ from src.handwriting_robot_layer2_wl_handwriting import (
     StyleAnalysisOptions,
     StyleGenerationOptions,
     analyze_coverage,
+    analyze_sample_connections,
+    align_character_strokes,
+    build_alignment_review_package,
+    build_automatic_alignment_profile,
     analyze_processed_sample,
     build_style_profile,
     build_hanzi_writer_coverage_report,
     build_hanzi_writer_library,
+    build_machine_handoff_package,
+    build_personal_font_deployment,
+    build_personal_font_evaluation,
+    load_personal_font_profile,
+    build_connection_candidate_report,
+    build_report_diagnosis,
+    build_similarity_report,
+    compare_character_geometry,
+    diagnose_character_result,
     convert_hanzi_writer_character,
     extract_style_profile,
+    file_sha256,
     generate_styled_text,
+    load_personal_font_bundle,
+    load_personal_font_deployment_bundle,
     load_style_probe_charset,
     load_skeleton_library,
     load_target_charset,
@@ -28,6 +48,8 @@ from src.handwriting_robot_layer2_wl_handwriting import (
     preprocess_style_probe,
     render_text,
     validate_skeleton_library,
+    validate_alignment_review,
+    validate_stroke_document_preflight,
 )
 from src.handwriting_robot_layer2_wl_handwriting.export_cli import run as run_export
 from src.handwriting_robot_layer2_wl_handwriting.style_generator_cli import (
@@ -103,6 +125,227 @@ def make_style_profile() -> dict:
             },
         },
     }
+
+
+def add_personal_font_features(profile: dict) -> dict:
+    profile = json.loads(json.dumps(profile))
+    profile["source"]["sample_count"] = 2
+    profile["sample_features"] = [
+        {
+            "character": "永",
+            "layout": {
+                "width": 0.58,
+                "height": 0.81,
+                "bounding_box_center_x": 0.46,
+                "bounding_box_center_y": 0.55,
+            },
+            "geometry": {
+                "vertical_slant_deg": 8.0,
+                "horizontal_angle_deg": -8.0,
+                "straightness": 0.62,
+            },
+        },
+        {
+            "character": "文",
+            "layout": {
+                "width": 0.7,
+                "height": 0.68,
+                "bounding_box_center_x": 0.51,
+                "bounding_box_center_y": 0.48,
+            },
+            "geometry": {
+                "vertical_slant_deg": -2.0,
+                "horizontal_angle_deg": -3.0,
+                "straightness": 0.78,
+            },
+        },
+    ]
+    return profile
+
+
+def write_personal_font_fixture(
+    root: Path,
+    alignment_writer_id: str = "test_user",
+) -> Path:
+    root.mkdir(parents=True, exist_ok=True)
+    style_path = root / "style_profile_v1.json"
+    alignment_path = root / "automatic_alignment_v1.json"
+    manifest_path = root / "personal_font_profile_v1.json"
+    style = add_personal_font_features(make_style_profile())
+    alignment = {
+        "schema_version": "1.0",
+        "type": "automatic_running_script_alignment_profile",
+        "writer_id": alignment_writer_id,
+        "sample_count": 2,
+        "characters": [
+            {"character": "永", "confidence": "high", "alignment_groups": []},
+            {"character": "文", "confidence": "low", "alignment_groups": []},
+        ],
+    }
+    style_path.write_text(
+        json.dumps(style, ensure_ascii=False), encoding="utf-8"
+    )
+    alignment_path.write_text(
+        json.dumps(alignment, ensure_ascii=False), encoding="utf-8"
+    )
+    manifest = {
+        "schema_version": "1.0",
+        "type": "personal_handwriting_font_profile",
+        "writer_id": "test_user",
+        "status": "ready",
+        "source": {
+            "processed_sample_fingerprint_sha256": "synthetic-test"
+        },
+        "artifacts": {
+            "style_profile": {
+                "path": style_path.name,
+                "sha256": file_sha256(style_path),
+            },
+            "automatic_alignment": {
+                "path": alignment_path.name,
+                "sha256": file_sha256(alignment_path),
+            },
+        },
+        "readiness": {
+            "character_count": 2,
+            "ready_without_manual_review_count": 2,
+            "manual_review_required_count": 0,
+        },
+    }
+    manifest_path.write_text(
+        json.dumps(manifest, ensure_ascii=False), encoding="utf-8"
+    )
+    return manifest_path
+
+
+def write_personal_font_evaluation_fixture(
+    path: Path,
+    manifest_path: Path,
+    enhanced_characters: list[str],
+) -> Path:
+    enhanced = set(enhanced_characters)
+    strategies = {
+        "永": (
+            "automatic_correspondence_features"
+            if "永" in enhanced
+            else "safe_standard_skeleton_fallback"
+        ),
+        "文": "safe_standard_skeleton_fallback",
+    }
+    fallback_characters = [
+        character for character in ("永", "文") if character not in enhanced
+    ]
+    document = {
+        "schema_version": "1.0",
+        "type": "personal_font_generation_comparison_report",
+        "writer_id": "test_user",
+        "personal_font_manifest_sha256": file_sha256(manifest_path),
+        "evaluated_character_count": 2,
+        "skipped_characters": [],
+        "invariant_failures": [],
+        "deployment_recommendation": {
+            "status": "ready_with_per_character_fallback",
+            "enhanced_characters": enhanced_characters,
+            "safe_fallback_characters": fallback_characters,
+            "projected_running_script_score_mean": 0.8,
+            "projected_delta_mean": 0.01,
+            "manual_review_required": False,
+        },
+        "characters": [
+            {
+                "character": "永",
+                "alignment_confidence": "high",
+                "classification": "stable",
+                "delta": {"running_script_score": 0.0},
+                "recommended_strategy": strategies["永"],
+            },
+            {
+                "character": "文",
+                "alignment_confidence": "low",
+                "classification": "stable",
+                "delta": {"running_script_score": 0.0},
+                "recommended_strategy": strategies["文"],
+            },
+        ],
+    }
+    path.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
+    return path
+
+
+def write_machine_handoff_deployment_fixture(root: Path) -> Path:
+    manifest_path = write_personal_font_fixture(root)
+    style_path = root / "style_profile_v1.json"
+    alignment_path = root / "automatic_alignment_v1.json"
+    style = json.loads(style_path.read_text(encoding="utf-8"))
+    extra_sample = json.loads(json.dumps(style["sample_features"][1]))
+    extra_sample["character"] = "好"
+    style["sample_features"].append(extra_sample)
+    style["source"]["sample_count"] = 3
+    style_path.write_text(json.dumps(style, ensure_ascii=False), encoding="utf-8")
+    alignment = json.loads(alignment_path.read_text(encoding="utf-8"))
+    alignment["characters"][1]["confidence"] = "high"
+    alignment["characters"].append(
+        {"character": "好", "confidence": "low", "alignment_groups": []}
+    )
+    alignment["sample_count"] = 3
+    alignment_path.write_text(
+        json.dumps(alignment, ensure_ascii=False), encoding="utf-8"
+    )
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["artifacts"]["style_profile"]["sha256"] = file_sha256(style_path)
+    manifest["artifacts"]["automatic_alignment"]["sha256"] = file_sha256(
+        alignment_path
+    )
+    manifest["readiness"]["character_count"] = 3
+    manifest["readiness"]["ready_without_manual_review_count"] = 3
+    manifest_path.write_text(
+        json.dumps(manifest, ensure_ascii=False), encoding="utf-8"
+    )
+    report_path = root / "evaluation.json"
+    report = {
+        "schema_version": "1.0",
+        "type": "personal_font_generation_comparison_report",
+        "writer_id": "test_user",
+        "personal_font_manifest_sha256": file_sha256(manifest_path),
+        "evaluated_character_count": 3,
+        "skipped_characters": [],
+        "invariant_failures": [],
+        "deployment_recommendation": {
+            "status": "ready_with_per_character_fallback",
+            "enhanced_characters": ["永"],
+            "safe_fallback_characters": ["文", "好"],
+            "projected_running_script_score_mean": 0.8,
+            "projected_delta_mean": 0.01,
+            "manual_review_required": False,
+        },
+        "characters": [
+            {
+                "character": "永",
+                "alignment_confidence": "high",
+                "classification": "improved",
+                "delta": {"running_script_score": 0.02},
+                "recommended_strategy": "automatic_correspondence_features",
+            },
+            {
+                "character": "文",
+                "alignment_confidence": "high",
+                "classification": "regressed",
+                "delta": {"running_script_score": -0.02},
+                "recommended_strategy": "safe_standard_skeleton_fallback",
+            },
+            {
+                "character": "好",
+                "alignment_confidence": "low",
+                "classification": "stable",
+                "delta": {"running_script_score": 0.0},
+                "recommended_strategy": "safe_standard_skeleton_fallback",
+            },
+        ],
+    }
+    report_path.write_text(json.dumps(report, ensure_ascii=False), encoding="utf-8")
+    deployment_path = root / "personal_font_deployment_v1.json"
+    build_personal_font_deployment(manifest_path, report_path, deployment_path)
+    return deployment_path
 
 
 def write_hanzi_writer_fixture(root: Path, glyphs: dict[str, dict]) -> Path:
@@ -497,6 +740,240 @@ class StorageAndRendererTests(unittest.TestCase):
             )
         )
 
+    def test_personal_font_bundle_selects_enhanced_safe_and_unseen_strategies(
+        self,
+    ) -> None:
+        manifest_path = write_personal_font_fixture(self.data_dir / "profile")
+        bundle = load_personal_font_bundle(manifest_path)
+        library = load_skeleton_library()
+        unseen_glyph = json.loads(json.dumps(library["glyphs"][1]))
+        unseen_glyph["character"] = "好"
+        unseen_glyph["unicode"] = "U+597D"
+        library["glyphs"].append(unseen_glyph)
+        options = StyleGenerationOptions(random_seed=17)
+
+        first = generate_styled_text(
+            "永文好",
+            library,
+            bundle["style_profile"],
+            options,
+            personal_font_bundle=bundle,
+        )
+        second = generate_styled_text(
+            "永文好",
+            library,
+            bundle["style_profile"],
+            options,
+            personal_font_bundle=bundle,
+        )
+
+        self.assertEqual(first, second)
+        records = first["generation"]["characters"]
+        self.assertEqual(
+            "automatic_correspondence_features",
+            records[0]["personal_font_strategy"],
+        )
+        self.assertEqual(
+            "safe_standard_skeleton_fallback",
+            records[1]["personal_font_strategy"],
+        )
+        self.assertEqual(
+            "global_style_unseen_character_fallback",
+            records[2]["personal_font_strategy"],
+        )
+        self.assertTrue(all(not record["ligature_applied"] for record in records))
+        self.assertEqual(13, len(first["strokes"]))
+        self.assertEqual(
+            list(range(1, 14)),
+            [stroke["order"] for stroke in first["strokes"]],
+        )
+        self.assertTrue(
+            first["generation"]["personal_font"][
+                "preserves_standard_stroke_boundaries"
+            ]
+        )
+
+    def test_personal_font_bundle_rejects_artifact_hash_mismatch(self) -> None:
+        manifest_path = write_personal_font_fixture(self.data_dir / "profile")
+        style_path = manifest_path.parent / "style_profile_v1.json"
+        style_path.write_text("{}", encoding="utf-8")
+
+        with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
+            load_personal_font_bundle(manifest_path)
+
+    def test_personal_font_bundle_rejects_writer_mismatch(self) -> None:
+        manifest_path = write_personal_font_fixture(
+            self.data_dir / "profile",
+            alignment_writer_id="other_user",
+        )
+
+        with self.assertRaisesRegex(ValueError, "writer_id mismatch"):
+            load_personal_font_bundle(manifest_path)
+
+    def test_personal_font_evaluation_compares_multi_seed_generation(self) -> None:
+        manifest_path = write_personal_font_fixture(self.data_dir / "profile")
+        processed_dir = self.data_dir / "processed"
+        for character in ("永", "文"):
+            sample = self.store.build_document(
+                self.entries[character], 1, make_tablet_buffer(), "complete"
+            )
+            processed = preprocess_sample(sample)
+            path = processed_dir / f"U+{ord(character):04X}" / "v01.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(
+                json.dumps(processed, ensure_ascii=False), encoding="utf-8"
+            )
+        package_root = write_hanzi_writer_fixture(
+            self.data_dir / "hanzi-writer",
+            {
+                "永": {
+                    "strokes": ["outline"],
+                    "medians": [[[100, 900], [900, 100]]],
+                },
+                "文": {
+                    "strokes": ["outline"],
+                    "medians": [[[100, 100], [900, 900]]],
+                },
+            },
+        )
+        evaluation_options = PersonalFontEvaluationOptions(
+            random_seeds=(3, 5),
+            meaningful_delta=0.001,
+        )
+
+        first = build_personal_font_evaluation(
+            processed_dir,
+            manifest_path,
+            package_root,
+            evaluation_options=evaluation_options,
+        )
+        second = build_personal_font_evaluation(
+            processed_dir,
+            manifest_path,
+            package_root,
+            evaluation_options=evaluation_options,
+        )
+
+        self.assertEqual(first, second)
+        self.assertEqual(2, first["evaluated_character_count"])
+        self.assertEqual([], first["invariant_failures"])
+        self.assertEqual(
+            "safe_standard_skeleton_fallback",
+            first["characters"][1]["recommended_strategy"],
+        )
+        self.assertEqual(
+            0.0,
+            first["characters"][1]["delta"]["running_script_score"],
+        )
+        self.assertFalse(
+            first["deployment_recommendation"]["manual_review_required"]
+        )
+
+    def test_personal_font_deployment_forces_evaluated_character_fallback(
+        self,
+    ) -> None:
+        profile_dir = self.data_dir / "profile"
+        manifest_path = write_personal_font_fixture(profile_dir)
+        report_path = write_personal_font_evaluation_fixture(
+            profile_dir / "evaluation.json",
+            manifest_path,
+            enhanced_characters=[],
+        )
+        deployment_path = profile_dir / "personal_font_deployment_v1.json"
+        deployment = build_personal_font_deployment(
+            manifest_path, report_path, deployment_path
+        )
+        bundle = load_personal_font_deployment_bundle(deployment_path)
+
+        document = generate_styled_text(
+            "永文",
+            load_skeleton_library(),
+            bundle["style_profile"],
+            personal_font_bundle=bundle,
+        )
+
+        self.assertEqual(0, deployment["summary"]["enhanced_automatic_alignment_count"])
+        self.assertEqual(2, deployment["summary"]["safe_fallback_count"])
+        records = document["generation"]["characters"]
+        self.assertEqual(
+            ["safe_standard_skeleton_fallback"] * 2,
+            [record["personal_font_strategy"] for record in records],
+        )
+        self.assertTrue(
+            all(record["deployment_policy_applied"] for record in records)
+        )
+        self.assertIn(
+            "deployment", document["generation"]["personal_font"]
+        )
+
+    def test_personal_font_deployment_rejects_tampered_evaluation(self) -> None:
+        profile_dir = self.data_dir / "profile"
+        manifest_path = write_personal_font_fixture(profile_dir)
+        report_path = write_personal_font_evaluation_fixture(
+            profile_dir / "evaluation.json",
+            manifest_path,
+            enhanced_characters=[],
+        )
+        deployment_path = profile_dir / "personal_font_deployment_v1.json"
+        build_personal_font_deployment(
+            manifest_path, report_path, deployment_path
+        )
+        report_path.write_text("{}", encoding="utf-8")
+
+        with self.assertRaisesRegex(ValueError, "SHA-256 mismatch"):
+            load_personal_font_deployment_bundle(deployment_path)
+
+    def test_machine_handoff_builds_preflighted_non_device_package(self) -> None:
+        profile_dir = self.data_dir / "profile"
+        deployment_path = write_machine_handoff_deployment_fixture(profile_dir)
+        package_root = write_hanzi_writer_fixture(
+            self.data_dir / "hanzi-writer",
+            {
+                character: {
+                    "strokes": ["outline"],
+                    "medians": [[[100, 500], [900, 500]]],
+                }
+                for character in ("永", "文", "好", "世")
+            },
+        )
+        output_dir = self.data_dir / "handoff"
+
+        package = build_machine_handoff_package(
+            deployment_path,
+            package_root,
+            output_dir,
+            unseen_candidates="世",
+            handoff_options=MachineHandoffOptions(
+                characters_per_scenario=1,
+                max_point_spacing_mm=1.0,
+            ),
+        )
+
+        self.assertFalse(package["machine_ready"])
+        self.assertEqual(
+            "ready_for_layout_and_device_review", package["status"]
+        )
+        self.assertEqual("pass", package["software_preflight_summary"]["status"])
+        self.assertEqual(5, package["software_preflight_summary"]["artifact_count"])
+        self.assertFalse(package["safety_boundary"]["controls_device"])
+        self.assertFalse(package["safety_boundary"]["contains_device_commands"])
+        self.assertEqual(
+            "pending", package["required_external_review"]["status"]
+        )
+        self.assertTrue((output_dir / "handoff_manifest.json").exists())
+        for artifact in package["artifacts"].values():
+            self.assertEqual("pass", artifact["software_preflight"]["status"])
+            self.assertTrue((output_dir / artifact["path"]).exists())
+
+    def test_machine_handoff_preflight_rejects_out_of_page_point(self) -> None:
+        document = generate_styled_text(
+            "永", load_skeleton_library(), make_style_profile()
+        )
+        document["strokes"][0]["points"][0][0] = 999.0
+
+        with self.assertRaisesRegex(ValueError, "outside page bounds"):
+            validate_stroke_document_preflight(document)
+
     def test_style_generator_rejects_missing_skeletons(self) -> None:
         with self.assertRaisesRegex(ValueError, "missing ordered stroke skeletons"):
             generate_styled_text(
@@ -576,6 +1053,126 @@ class StorageAndRendererTests(unittest.TestCase):
             document["generation"]["skeleton_library"]["license"]["name"],
         )
 
+    def test_style_generator_cli_auto_detects_personal_font_profile(self) -> None:
+        data_dir = self.data_dir / "handwriting"
+        manifest_path = write_personal_font_fixture(
+            data_dir / "style_profiles" / "test_user"
+        )
+        self.assertTrue(manifest_path.exists())
+        request_path = self.data_dir / "request.json"
+        output_path = self.data_dir / "generated.json"
+        request_path.write_text(
+            json.dumps(
+                {
+                    "schema_version": "1.0",
+                    "user_id": "test_user",
+                    "text": "永文",
+                    "options": {"random_seed": 9},
+                },
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+
+        exit_code = run_style_generator(
+            [
+                str(request_path),
+                str(output_path),
+                "--data-dir",
+                str(data_dir),
+            ]
+        )
+
+        self.assertEqual(0, exit_code)
+        document = json.loads(output_path.read_text(encoding="utf-8"))
+        self.assertIn("personal_font", document["generation"])
+        self.assertEqual(
+            "automatic_correspondence_features",
+            document["generation"]["characters"][0][
+                "personal_font_strategy"
+            ],
+        )
+
+    def test_style_generator_cli_prefers_auto_detected_deployment_policy(
+        self,
+    ) -> None:
+        data_dir = self.data_dir / "handwriting"
+        profile_dir = data_dir / "style_profiles" / "test_user"
+        manifest_path = write_personal_font_fixture(profile_dir)
+        report_path = write_personal_font_evaluation_fixture(
+            profile_dir / "evaluation.json",
+            manifest_path,
+            enhanced_characters=[],
+        )
+        build_personal_font_deployment(
+            manifest_path,
+            report_path,
+            profile_dir / "personal_font_deployment_v1.json",
+        )
+        request_path = self.data_dir / "request.json"
+        output_path = self.data_dir / "generated.json"
+        request_path.write_text(
+            json.dumps(
+                {
+                    "schema_version": "1.0",
+                    "user_id": "test_user",
+                    "text": "永",
+                },
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+
+        exit_code = run_style_generator(
+            [
+                str(request_path),
+                str(output_path),
+                "--data-dir",
+                str(data_dir),
+            ]
+        )
+
+        self.assertEqual(0, exit_code)
+        document = json.loads(output_path.read_text(encoding="utf-8"))
+        record = document["generation"]["characters"][0]
+        self.assertEqual(
+            "safe_standard_skeleton_fallback",
+            record["personal_font_strategy"],
+        )
+        self.assertTrue(record["deployment_policy_applied"])
+        self.assertEqual(
+            "deployment_policy_per_character",
+            document["generation"]["personal_font"][
+                "captured_high_medium_strategy"
+            ],
+        )
+
+    def test_style_generator_cli_explicit_style_profile_stays_compatible(self) -> None:
+        profile_dir = self.data_dir / "profile"
+        manifest_path = write_personal_font_fixture(profile_dir)
+        profile_path = profile_dir / "style_profile_v1.json"
+        request_path = self.data_dir / "request.json"
+        output_path = self.data_dir / "generated.json"
+        request_path.write_text(
+            json.dumps(
+                {
+                    "schema_version": "1.0",
+                    "user_id": "test_user",
+                    "text": "永",
+                    "style_profile_path": str(profile_path),
+                },
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+
+        exit_code = run_style_generator([str(request_path), str(output_path)])
+
+        self.assertTrue(manifest_path.exists())
+        self.assertEqual(0, exit_code)
+        document = json.loads(output_path.read_text(encoding="utf-8"))
+        self.assertNotIn("personal_font", document["generation"])
+
     def test_style_generator_supports_single_axis_glyphs(self) -> None:
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
@@ -594,6 +1191,341 @@ class StorageAndRendererTests(unittest.TestCase):
 
         self.assertEqual(1, len(document["strokes"]))
         self.assertGreater(len(document["strokes"][0]["points"]), 2)
+
+    def test_geometry_similarity_scores_matching_trajectories(self) -> None:
+        sample = self.store.build_document(
+            self.entries["一"], 1, make_tablet_buffer(), "complete"
+        )
+        processed = preprocess_sample(
+            sample, PreprocessingOptions(resample_spacing=0.05)
+        )
+        glyph_points = processed["representations"]["glyph"]["strokes"][0][
+            "points"
+        ]
+        document = {
+            "type": "stroke_document",
+            "user_id": "test_user",
+            "strokes": [
+                {
+                    "order": 1,
+                    "pen_down": True,
+                    "points": [[point["x"] * 8.0, point["y"] * 8.0] for point in glyph_points],
+                }
+            ],
+            "generation": {
+                "characters": [
+                    {"character": "一", "unicode": "U+4E00", "stroke_orders": [1]}
+                ]
+            },
+        }
+
+        result = compare_character_geometry(
+            processed, document, document["generation"]["characters"][0]
+        )
+
+        self.assertEqual(1.0, result["overall_score"])
+        self.assertEqual(1.0, result["scores"]["global_shape_score"])
+        self.assertEqual(1.0, result["scores"]["ordered_stroke_score"])
+
+    def test_similarity_report_evaluates_common_characters_and_skips_missing(self) -> None:
+        processed_dir = self.data_dir / "processed"
+        sample = self.store.build_document(
+            self.entries["一"], 1, make_tablet_buffer(), "complete"
+        )
+        processed = preprocess_sample(sample)
+        path = processed_dir / "U+4E00" / "v01.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(processed, ensure_ascii=False), encoding="utf-8")
+        document = {
+            "type": "stroke_document",
+            "user_id": "test_user",
+            "strokes": [
+                {"order": 1, "pen_down": True, "points": [[0.0, 0.0], [1.0, 1.0]]},
+                {"order": 2, "pen_down": True, "points": [[2.0, 0.0], [3.0, 1.0]]},
+            ],
+            "generation": {
+                "characters": [
+                    {"character": "一", "stroke_orders": [1]},
+                    {"character": "二", "stroke_orders": [2]},
+                ]
+            },
+        }
+
+        first = build_similarity_report(processed_dir, document)
+        second = build_similarity_report(processed_dir, document)
+
+        self.assertEqual(first, second)
+        self.assertEqual(1, first["evaluated_character_count"])
+        self.assertEqual(1, first["skipped_character_count"])
+        self.assertEqual("二", first["skipped"][0]["character"])
+        self.assertIsNotNone(first["summary"]["overall_score_mean"])
+        self.assertIn("diagnosis", first)
+
+    def test_similarity_diagnosis_separates_segmentation_and_shape_issues(self) -> None:
+        segmentation = diagnose_character_result(
+            {
+                "reference_stroke_count": 5,
+                "generated_stroke_count": 6,
+                "scores": {
+                    "global_shape_score": 0.86,
+                    "ordered_stroke_score": 0.0,
+                    "aspect_ratio_score": 0.9,
+                    "direction_score": 0.84,
+                },
+            }
+        )
+        shape_issue = diagnose_character_result(
+            {
+                "reference_stroke_count": 5,
+                "generated_stroke_count": 5,
+                "scores": {
+                    "global_shape_score": 0.65,
+                    "ordered_stroke_score": 0.62,
+                    "aspect_ratio_score": 0.65,
+                    "direction_score": 0.61,
+                },
+            }
+        )
+
+        self.assertEqual(
+            "likely_running_script_variant",
+            segmentation["primary_category"],
+        )
+        self.assertEqual("low", segmentation["review_priority"])
+        self.assertEqual("shape_difference", shape_issue["primary_category"])
+        self.assertEqual("high", shape_issue["review_priority"])
+
+        report = build_report_diagnosis(
+            [
+                {"character": "字", "overall_score": 0.6, **{
+                    "reference_stroke_count": 5,
+                    "generated_stroke_count": 6,
+                    "scores": {
+                        "global_shape_score": 0.86,
+                        "ordered_stroke_score": 0.0,
+                        "aspect_ratio_score": 0.9,
+                        "direction_score": 0.84,
+                    },
+                }},
+                {"character": "计", "overall_score": 0.7, **{
+                    "reference_stroke_count": 4,
+                    "generated_stroke_count": 4,
+                    "scores": {
+                        "global_shape_score": 0.65,
+                        "ordered_stroke_score": 0.62,
+                        "aspect_ratio_score": 0.65,
+                        "direction_score": 0.61,
+                    },
+                }},
+            ]
+        )
+        self.assertEqual("计", report["review_queue"][0]["character"])
+
+    def test_style_analysis_records_natural_handwriting_stroke_behavior(self) -> None:
+        sample = self.store.build_document(
+            self.entries["一"], 1, make_tablet_buffer(), "complete"
+        )
+        sample["character"]["expected_stroke_count"] = 2
+        processed = preprocess_sample(sample)
+
+        features = analyze_processed_sample(processed)
+
+        behavior = features["script_behavior"]
+        self.assertEqual(2, behavior["standard_kaishu_stroke_count"])
+        self.assertEqual(1, behavior["observed_pen_down_stroke_count"])
+        self.assertEqual(0.5, behavior["observed_to_standard_stroke_ratio"])
+        self.assertEqual(1.0, behavior["joins_standard_strokes"])
+
+    def test_connection_analysis_finds_close_quick_smooth_boundary(self) -> None:
+        sample = self.store.build_document(
+            self.entries["二"], 1, make_tablet_buffer(), "complete"
+        )
+        sample["strokes"].append(
+            {
+                "points": [
+                    StrokePoint(
+                        0.84, 0.86, 170, pressure=0.3, source="tablet"
+                    ).to_dict(),
+                    StrokePoint(
+                        0.88, 0.90, 190, pressure=0.5, source="tablet"
+                    ).to_dict(),
+                ]
+            }
+        )
+        sample["stroke_count"] = 2
+        sample["point_count"] += 2
+        sample["duration_ms"] = 190
+        processed = preprocess_sample(
+            sample, PreprocessingOptions(resample_spacing=0.05)
+        )
+
+        result = analyze_sample_connections(
+            processed,
+            ConnectionAnalysisOptions(
+                maximum_endpoint_distance=0.2,
+                maximum_pen_up_pause_ms=50,
+                maximum_exit_turn_deg=90.0,
+                maximum_entry_turn_deg=90.0,
+            ),
+        )
+
+        self.assertEqual(1, result["boundary_count"])
+        self.assertEqual(1, result["candidate_count"])
+        self.assertTrue(result["boundaries"][0]["candidate"])
+        self.assertEqual(
+            "analysis_only_no_pen_down_path",
+            result["boundaries"][0]["safety_status"],
+        )
+
+    def test_connection_report_is_deterministic_and_analysis_only(self) -> None:
+        processed_dir = self.data_dir / "processed"
+        sample = self.store.build_document(
+            self.entries["一"], 1, make_tablet_buffer(), "complete"
+        )
+        processed = preprocess_sample(sample)
+        path = processed_dir / "U+4E00" / "v01.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(processed, ensure_ascii=False), encoding="utf-8")
+
+        first = build_connection_candidate_report(processed_dir)
+        second = build_connection_candidate_report(processed_dir)
+
+        self.assertEqual(first, second)
+        self.assertEqual(1, first["sample_count"])
+        self.assertFalse(first["safety"]["generates_pen_down_connections"])
+
+    def test_alignment_review_validator_supports_joined_standard_strokes(self) -> None:
+        document = {
+            "schema_version": "1.0",
+            "type": "running_script_alignment_review",
+            "writer_id": "test_user",
+            "characters": [
+                {
+                    "character": "字",
+                    "observed_stroke_count": 2,
+                    "standard_kaishu_stroke_count": 3,
+                    "connection_candidates": [
+                        {
+                            "from_observed_stroke_order": 1,
+                            "to_observed_stroke_order": 2,
+                            "review_decision": "reject_ligature",
+                        }
+                    ],
+                    "alignment_groups": [
+                        {
+                            "observed_stroke_orders": [1],
+                            "standard_kaishu_stroke_orders": [1, 2],
+                            "relation": "observed_joins_standard",
+                        },
+                        {
+                            "observed_stroke_orders": [2],
+                            "standard_kaishu_stroke_orders": [3],
+                            "relation": "one_to_one",
+                        },
+                    ],
+                    "review": {"status": "approved"},
+                }
+            ],
+        }
+
+        self.assertEqual(document, validate_alignment_review(document))
+
+    def test_alignment_review_rejects_incomplete_approved_mapping(self) -> None:
+        document = {
+            "schema_version": "1.0",
+            "type": "running_script_alignment_review",
+            "writer_id": "test_user",
+            "characters": [
+                {
+                    "character": "字",
+                    "observed_stroke_count": 2,
+                    "standard_kaishu_stroke_count": 3,
+                    "connection_candidates": [],
+                    "alignment_groups": [
+                        {
+                            "observed_stroke_orders": [1],
+                            "standard_kaishu_stroke_orders": [1, 2],
+                            "relation": "observed_joins_standard",
+                        }
+                    ],
+                    "review": {"status": "approved"},
+                }
+            ],
+        }
+
+        with self.assertRaisesRegex(ValueError, "cover all observed strokes"):
+            validate_alignment_review(document)
+
+    def test_automatic_alignment_supports_one_observed_to_two_standard(self) -> None:
+        observed = [[(0.0, 0.0), (0.5, 0.0), (1.0, 0.0)]]
+        standard = [
+            [(0.0, 0.0), (0.5, 0.0)],
+            [(0.5, 0.0), (1.0, 0.0)],
+        ]
+
+        result = align_character_strokes(
+            observed,
+            standard,
+            AutomaticAlignmentOptions(
+                merge_gap_penalty=0.0,
+                relation_complexity_penalty=0.0,
+            ),
+        )
+
+        self.assertEqual(1, len(result["alignment_groups"]))
+        self.assertEqual(
+            "observed_joins_standard",
+            result["alignment_groups"][0]["relation"],
+        )
+        self.assertEqual(
+            [1, 2],
+            result["alignment_groups"][0]["standard_kaishu_stroke_orders"],
+        )
+
+    def test_automatic_alignment_uses_optional_review_only_for_low_confidence(self) -> None:
+        result = align_character_strokes(
+            [[(0.0, 0.0), (1.0, 0.0)]],
+            [[(0.0, 0.0), (1.0, 0.0)]],
+        )
+
+        self.assertEqual("high", result["confidence"])
+        self.assertFalse(result["requires_optional_review"])
+        self.assertTrue(result["unique_order_preserving_path"])
+
+    def test_automatic_alignment_avoids_ambiguous_many_to_many_groups(self) -> None:
+        result = align_character_strokes(
+            [
+                [(0.0, 0.0), (1.0, 0.0)],
+                [(0.0, 1.0), (1.0, 1.0)],
+            ],
+            [
+                [(0.0, 0.0), (1.0, 0.0)],
+                [(0.0, 1.0), (1.0, 1.0)],
+            ],
+        )
+
+        self.assertEqual(
+            ["one_to_one", "one_to_one"],
+            [group["relation"] for group in result["alignment_groups"]],
+        )
+        self.assertTrue(result["unique_order_preserving_path"])
+
+    def test_personal_font_profile_loader_accepts_review_free_ready_profile(self) -> None:
+        path = self.data_dir / "personal_font_profile_v1.json"
+        document = {
+            "schema_version": "1.0",
+            "type": "personal_handwriting_font_profile",
+            "writer_id": "test_user",
+            "status": "ready",
+            "readiness": {
+                "character_count": 100,
+                "ready_without_manual_review_count": 100,
+                "manual_review_required_count": 0,
+            },
+        }
+        path.write_text(json.dumps(document), encoding="utf-8")
+
+        self.assertEqual(document, load_personal_font_profile(path))
 
     def test_coverage_reports_missing_characters(self) -> None:
         self.store.commit_sample(self.entries["你"], 1, make_buffer())

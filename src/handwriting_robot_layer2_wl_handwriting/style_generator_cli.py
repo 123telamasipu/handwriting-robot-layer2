@@ -6,6 +6,8 @@ from pathlib import Path
 from typing import Any, Dict, Optional
 
 from .hanzi_writer_adapter import build_hanzi_writer_library
+from .personal_font_profile import load_personal_font_bundle
+from .personal_font_deployment import load_personal_font_deployment_bundle
 from .skeleton import load_skeleton_library
 from .storage import atomic_write_json
 from .style_generator import (
@@ -51,6 +53,29 @@ def run(argv: Optional[list[str]] = None) -> int:
             / writer_id
             / "style_profile_v1.json"
         )
+        explicit_manifest_path = request.get("personal_font_profile_path")
+        explicit_deployment_path = request.get("personal_font_deployment_path")
+        if explicit_deployment_path and (
+            explicit_manifest_path or request.get("style_profile_path")
+        ):
+            raise ValueError(
+                "request.personal_font_deployment_path cannot be combined with "
+                "personal_font_profile_path or style_profile_path"
+            )
+        if explicit_manifest_path and request.get("style_profile_path"):
+            raise ValueError(
+                "request must not set both personal_font_profile_path and "
+                "style_profile_path"
+            )
+        auto_detect_manifest = not request.get("style_profile_path")
+        manifest_path = Path(
+            explicit_manifest_path
+            or profile_path.parent / "personal_font_profile_v1.json"
+        )
+        deployment_path = Path(
+            explicit_deployment_path
+            or profile_path.parent / "personal_font_deployment_v1.json"
+        )
         skeleton_path = request.get("skeleton_library_path")
         hanzi_writer_package_dir = request.get("hanzi_writer_package_dir")
         if skeleton_path and hanzi_writer_package_dir:
@@ -58,7 +83,21 @@ def run(argv: Optional[list[str]] = None) -> int:
                 "request must not set both skeleton_library_path and "
                 "hanzi_writer_package_dir"
             )
-        profile = load_style_profile(profile_path)
+        personal_font_bundle = None
+        if explicit_deployment_path or (
+            auto_detect_manifest and deployment_path.is_file()
+        ):
+            personal_font_bundle = load_personal_font_deployment_bundle(
+                deployment_path
+            )
+            profile = personal_font_bundle["style_profile"]
+        elif explicit_manifest_path or (
+            auto_detect_manifest and manifest_path.is_file()
+        ):
+            personal_font_bundle = load_personal_font_bundle(manifest_path)
+            profile = personal_font_bundle["style_profile"]
+        else:
+            profile = load_style_profile(profile_path)
         if profile["writer_id"] != writer_id:
             raise ValueError("request.user_id does not match the style profile")
         if hanzi_writer_package_dir:
@@ -102,6 +141,7 @@ def run(argv: Optional[list[str]] = None) -> int:
             page_width_mm=float(page.get("width_mm", 210.0)),
             page_height_mm=float(page.get("height_mm", 297.0)),
             origin_mm=request.get("origin_mm", [10.0, 10.0]),
+            personal_font_bundle=personal_font_bundle,
         )
         atomic_write_json(args.output, document)
     except (OSError, ValueError, json.JSONDecodeError) as error:

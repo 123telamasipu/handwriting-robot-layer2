@@ -11,7 +11,7 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 from .skeleton import analyze_skeleton_coverage, skeleton_by_character
 
 
-STYLE_GENERATOR_VERSION = "1.0"
+STYLE_GENERATOR_VERSION = "1.1"
 
 
 @dataclass(frozen=True)
@@ -225,6 +225,7 @@ def _styled_stroke(
     target_center_y: float,
     vertical_slant_deg: float,
     horizontal_angle_deg: float,
+    straightness: Optional[float] = None,
 ) -> List[Tuple[float, float]]:
     resampled = _resample_polyline(points, options.skeleton_resample_spacing)
     normalized = [
@@ -241,7 +242,9 @@ def _styled_stroke(
     ]
 
     straightness = _clamp(
-        _profile_value(profile, "deformation", "straightness", 0.75),
+        straightness
+        if straightness is not None
+        else _profile_value(profile, "deformation", "straightness", 0.75),
         0.0,
         1.0,
     )
@@ -351,6 +354,11 @@ def _character_style_parameters(
             -25.0,
             25.0,
         ),
+        "straightness": _clamp(
+            _profile_value(profile, "deformation", "straightness", 0.75),
+            0.0,
+            1.0,
+        ),
     }
     half_width = parameters["width"] / 2.0
     half_height = parameters["height"] / 2.0
@@ -363,6 +371,146 @@ def _character_style_parameters(
     return parameters
 
 
+def _personal_font_maps(
+    profile: Dict[str, Any],
+    personal_font_bundle: Optional[Dict[str, Any]],
+) -> tuple[Dict[str, Dict[str, Any]], Dict[str, Dict[str, Any]]]:
+    if personal_font_bundle is None:
+        return {}, {}
+    bundle_profile = personal_font_bundle.get("style_profile")
+    manifest = personal_font_bundle.get("manifest")
+    alignment = personal_font_bundle.get("automatic_alignment")
+    if not isinstance(bundle_profile, dict) or not isinstance(manifest, dict):
+        raise ValueError("personal font bundle is incomplete")
+    if not isinstance(alignment, dict):
+        raise ValueError("personal font automatic alignment is required")
+    if bundle_profile != profile:
+        raise ValueError("personal font bundle style profile does not match generation")
+    writer_id = profile["writer_id"]
+    if manifest.get("writer_id") != writer_id or alignment.get("writer_id") != writer_id:
+        raise ValueError("personal font bundle writer_id does not match generation")
+    sample_map = {
+        str(sample.get("character", "")): sample
+        for sample in profile.get("sample_features", [])
+        if isinstance(sample, dict) and len(str(sample.get("character", ""))) == 1
+    }
+    alignment_map = {
+        str(record.get("character", "")): record
+        for record in alignment.get("characters", [])
+        if isinstance(record, dict) and len(str(record.get("character", ""))) == 1
+    }
+    return sample_map, alignment_map
+
+
+def _deployment_strategy_map(
+    profile: Dict[str, Any],
+    personal_font_bundle: Optional[Dict[str, Any]],
+) -> Dict[str, str]:
+    if personal_font_bundle is None:
+        return {}
+    deployment = personal_font_bundle.get("deployment")
+    if deployment is None:
+        return {}
+    if not isinstance(deployment, dict):
+        raise ValueError("personal font deployment policy is invalid")
+    if deployment.get("writer_id") != profile["writer_id"]:
+        raise ValueError("personal font deployment writer_id does not match generation")
+    strategy_map = {
+        str(record.get("character", "")): str(record.get("strategy", ""))
+        for record in deployment.get("characters", [])
+        if isinstance(record, dict)
+    }
+    if not strategy_map:
+        raise ValueError("personal font deployment strategies are required")
+    return strategy_map
+
+
+def _apply_character_features(
+    parameters: Dict[str, float],
+    profile: Dict[str, Any],
+    sample: Dict[str, Any],
+    confidence: str,
+) -> Dict[str, float]:
+    blend = 0.7 if confidence == "high" else 0.45
+    layout = sample.get("layout", {})
+    geometry = sample.get("geometry", {})
+    capture_width = _profile_value(profile, "layout", "canvas_width", 0.7)
+    capture_height = _profile_value(profile, "layout", "canvas_height", 0.7)
+    global_center_x = _profile_value(profile, "layout", "center_x", 0.5)
+    global_center_y = _profile_value(profile, "layout", "center_y", 0.5)
+    global_slant = _profile_value(
+        profile, "deformation", "vertical_slant_deg", 0.0
+    )
+    global_horizontal = _profile_value(
+        profile, "deformation", "horizontal_angle_deg", 0.0
+    )
+    global_straightness = _profile_value(
+        profile, "deformation", "straightness", 0.75
+    )
+
+    sample_width = _finite_float(layout.get("width"), "sample.layout.width")
+    sample_height = _finite_float(layout.get("height"), "sample.layout.height")
+    sample_center_x = _finite_float(
+        layout.get("bounding_box_center_x"),
+        "sample.layout.bounding_box_center_x",
+    )
+    sample_center_y = _finite_float(
+        layout.get("bounding_box_center_y"),
+        "sample.layout.bounding_box_center_y",
+    )
+    sample_slant = _finite_float(
+        geometry.get("vertical_slant_deg"),
+        "sample.geometry.vertical_slant_deg",
+    )
+    sample_horizontal = _finite_float(
+        geometry.get("horizontal_angle_deg"),
+        "sample.geometry.horizontal_angle_deg",
+    )
+    sample_straightness = _finite_float(
+        geometry.get("straightness"),
+        "sample.geometry.straightness",
+    )
+    result = dict(parameters)
+    width_ratio = _clamp(sample_width / max(capture_width, 1e-6), 0.65, 1.35)
+    height_ratio = _clamp(sample_height / max(capture_height, 1e-6), 0.65, 1.35)
+    result["width"] = _clamp(
+        result["width"] * (1.0 + blend * (width_ratio - 1.0)), 0.04, 0.96
+    )
+    result["height"] = _clamp(
+        result["height"] * (1.0 + blend * (height_ratio - 1.0)), 0.04, 0.96
+    )
+    result["center_x"] = result["center_x"] + blend * (
+        sample_center_x - global_center_x
+    )
+    result["center_y"] = result["center_y"] + blend * (
+        sample_center_y - global_center_y
+    )
+    result["vertical_slant_deg"] = _clamp(
+        result["vertical_slant_deg"] + blend * (sample_slant - global_slant),
+        -25.0,
+        25.0,
+    )
+    result["horizontal_angle_deg"] = _clamp(
+        result["horizontal_angle_deg"]
+        + blend * (sample_horizontal - global_horizontal),
+        -25.0,
+        25.0,
+    )
+    result["straightness"] = _clamp(
+        result["straightness"]
+        + blend * (sample_straightness - global_straightness),
+        0.0,
+        1.0,
+    )
+    half_width = result["width"] / 2.0
+    half_height = result["height"] / 2.0
+    result["center_x"] = _clamp(result["center_x"], half_width, 1.0 - half_width)
+    result["center_y"] = _clamp(
+        result["center_y"], half_height, 1.0 - half_height
+    )
+    return result
+
+
 def generate_styled_text(
     text: str,
     skeleton_library: Dict[str, Any],
@@ -371,10 +519,17 @@ def generate_styled_text(
     page_width_mm: float = 210.0,
     page_height_mm: float = 297.0,
     origin_mm: Iterable[float] = (10.0, 10.0),
+    personal_font_bundle: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     options = options or StyleGenerationOptions()
     options.validate()
     profile = validate_style_profile(style_profile)
+    sample_map, alignment_map = _personal_font_maps(
+        profile, personal_font_bundle
+    )
+    deployment_strategy_map = _deployment_strategy_map(
+        profile, personal_font_bundle
+    )
     if not isinstance(text, str) or not text:
         raise ValueError("text must not be empty")
     origin = list(origin_mm)
@@ -415,6 +570,30 @@ def generate_styled_text(
         parameters = _character_style_parameters(
             profile, options, character, non_space_index
         )
+        alignment = alignment_map.get(character)
+        confidence = str(alignment.get("confidence", "")) if alignment else None
+        sample = sample_map.get(character)
+        deployed_strategy = deployment_strategy_map.get(character)
+        if deployed_strategy == "safe_standard_skeleton_fallback":
+            strategy = "safe_standard_skeleton_fallback"
+        elif deployed_strategy == "automatic_correspondence_features":
+            if confidence not in {"high", "medium"} or sample is None:
+                raise ValueError(
+                    f"deployment cannot enable character features: {character}"
+                )
+            strategy = "automatic_correspondence_features"
+            parameters = _apply_character_features(
+                parameters, profile, sample, confidence
+            )
+        elif confidence in {"high", "medium"} and sample is not None:
+            strategy = "automatic_correspondence_features"
+            parameters = _apply_character_features(
+                parameters, profile, sample, confidence
+            )
+        elif confidence == "low":
+            strategy = "safe_standard_skeleton_fallback"
+        else:
+            strategy = "global_style_unseen_character_fallback"
         bounding_box = _glyph_bounding_box(glyph)
         character_orders = []
         for stroke_index, skeleton_stroke in enumerate(glyph["strokes"]):
@@ -436,6 +615,7 @@ def generate_styled_text(
                 parameters["center_y"],
                 parameters["vertical_slant_deg"],
                 parameters["horizontal_angle_deg"],
+                parameters["straightness"],
             )
             millimeter_points = [
                 [
@@ -467,17 +647,27 @@ def generate_styled_text(
             )
             character_orders.append(order)
             order += 1
-        character_records.append(
-            {
-                "text_index": text_index,
-                "character": character,
-                "unicode": glyph["unicode"],
-                "stroke_orders": character_orders,
-                "style_parameters": {
-                    key: round(value, 6) for key, value in parameters.items()
-                },
-            }
-        )
+        character_record = {
+            "text_index": text_index,
+            "character": character,
+            "unicode": glyph["unicode"],
+            "stroke_orders": character_orders,
+            "style_parameters": {
+                key: round(value, 6) for key, value in parameters.items()
+            },
+        }
+        if personal_font_bundle is not None:
+            character_record.update(
+                {
+                    "personal_font_strategy": strategy,
+                    "alignment_confidence": confidence,
+                    "ligature_applied": False,
+                    "deployment_policy_applied": bool(
+                        deployed_strategy is not None
+                    ),
+                }
+            )
+        character_records.append(character_record)
         cursor_x += options.char_width_mm + options.char_spacing_mm
         non_space_index += 1
 
@@ -495,6 +685,75 @@ def generate_styled_text(
     if maximum_x > page_width or maximum_y > page_height:
         warnings.append("trajectory_exceeds_page_bounds")
 
+    generation = {
+        "method": "ordered_skeleton_style_transform",
+        "method_version": STYLE_GENERATOR_VERSION,
+        "writing_form": {
+            "skeleton_reference": "standard_kaishu_ordered_medians",
+            "target": "user_natural_handwriting",
+            "running_script_ligatures": "not_applied",
+        },
+        "style_profile_fingerprint_sha256": profile["source"][
+            "processed_sample_fingerprint_sha256"
+        ],
+        "skeleton_library": {
+            "name": skeleton_library.get("name"),
+            "quality_level": skeleton_library.get("quality_level"),
+            "authoritative": bool(skeleton_library.get("authoritative", False)),
+            "source": skeleton_library.get("source", {}),
+            "license": skeleton_library.get("license", {}),
+        },
+        "options": asdict(options),
+        "characters": character_records,
+        "motion_hints": {
+            "unit": "milliseconds",
+            "notes": "Advisory only; the device module must enforce machine limits.",
+            "strokes": timings,
+        },
+        "warnings": warnings,
+        "limitations": [
+            "This is a deterministic geometric baseline, not a trained handwriting generation model.",
+            "Output quality depends on ordered stroke skeleton quality and coverage.",
+            "Standard kaishu stroke boundaries are preserved; user-specific running-script ligatures are not synthesized yet.",
+            "Motion hints are normalized writer-style estimates, not direct machine commands.",
+        ],
+    }
+    if personal_font_bundle is not None:
+        generation["personal_font"] = {
+            "manifest_fingerprint_sha256": personal_font_bundle.get(
+                "manifest_sha256"
+            ),
+            "captured_high_medium_strategy": (
+                "deployment_policy_per_character"
+                if personal_font_bundle.get("deployment") is not None
+                else "automatic_correspondence_features"
+            ),
+            "captured_low_strategy": "safe_standard_skeleton_fallback",
+            "unseen_character_strategy": "global_style_unseen_character_fallback",
+            "preserves_standard_stroke_boundaries": True,
+            "ligature_path_generation_enabled": False,
+        }
+        deployment = personal_font_bundle.get("deployment")
+        if deployment is not None:
+            generation["personal_font"]["deployment"] = {
+                "policy_fingerprint_sha256": personal_font_bundle.get(
+                    "deployment_sha256"
+                ),
+                "evaluation_report_fingerprint_sha256": personal_font_bundle.get(
+                    "evaluation_report_sha256"
+                ),
+                "selection_method": deployment.get(
+                    "selection_policy", {}
+                ).get("method"),
+                "enhanced_automatic_alignment_count": deployment.get(
+                    "summary", {}
+                ).get("enhanced_automatic_alignment_count"),
+                "safe_fallback_count": deployment.get("summary", {}).get(
+                    "safe_fallback_count"
+                ),
+                "manual_review_required": False,
+            }
+
     return {
         "schema_version": "0.1",
         "type": "stroke_document",
@@ -502,31 +761,5 @@ def generate_styled_text(
         "user_id": profile["writer_id"],
         "page": {"width_mm": page_width, "height_mm": page_height},
         "strokes": strokes,
-        "generation": {
-            "method": "ordered_skeleton_style_transform",
-            "method_version": STYLE_GENERATOR_VERSION,
-            "style_profile_fingerprint_sha256": profile["source"][
-                "processed_sample_fingerprint_sha256"
-            ],
-            "skeleton_library": {
-                "name": skeleton_library.get("name"),
-                "quality_level": skeleton_library.get("quality_level"),
-                "authoritative": bool(skeleton_library.get("authoritative", False)),
-                "source": skeleton_library.get("source", {}),
-                "license": skeleton_library.get("license", {}),
-            },
-            "options": asdict(options),
-            "characters": character_records,
-            "motion_hints": {
-                "unit": "milliseconds",
-                "notes": "Advisory only; the device module must enforce machine limits.",
-                "strokes": timings,
-            },
-            "warnings": warnings,
-            "limitations": [
-                "This is a deterministic geometric baseline, not a trained handwriting generation model.",
-                "Output quality depends on ordered stroke skeleton quality and coverage.",
-                "Motion hints are normalized writer-style estimates, not direct machine commands.",
-            ],
-        },
+        "generation": generation,
     }

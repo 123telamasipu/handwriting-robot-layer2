@@ -253,3 +253,35 @@ py -3 -m unittest discover `
 ```
 
 测试使用临时目录和合成轨迹，不包含真实用户样本。
+
+## 几何相似度评估
+
+风格生成轨迹可与同一字符的预处理数位板样本进行归一化几何比较。工具输出整体形状、逐笔形状、笔画数、宽高比和方向分布分数，供生成器版本间做相对比较。运行方式、指标解释和限制见 [`docs/geometry-similarity.md`](docs/geometry-similarity.md)。
+
+用户自然行书中的相邻落笔段可以进行只读连接候选分析，提取端点距离、离笔停顿和方向连续性，但不会生成连笔路径。使用方法和安全边界见 [`docs/running-script-connection-analysis.md`](docs/running-script-connection-analysis.md)。
+
+高置信候选可生成私有人工审核包，将用户实际落笔段与规范楷书骨架笔画进行有序映射。标注格式、SVG 预览和校验方法见 [`docs/running-script-alignment-review.md`](docs/running-script-alignment-review.md)。
+
+个人字体库的默认主流程使用有序动态规划自动完成行书落笔段与楷书骨架的匹配，高、中置信结果自动接受，低置信结果只进入可选复核，不阻塞建库。见 [`docs/automatic-running-script-alignment.md`](docs/automatic-running-script-alignment.md)。
+
+一键建立个人字体档案：
+
+```powershell
+src\handwriting_robot_layer2_wl_handwriting\tools\run_personal_font_profile.cmd `
+  user_01 `
+  --hanzi-writer-package-dir runtime_data\external\hanzi-writer-data-2.0.1
+```
+
+该命令不会要求逐字审核；低置信字符自动回退到明确抬笔的安全骨架轨迹。
+
+建立档案后，轨迹生成请求只需提供 `user_id`、文字和正式骨架来源；程序会自动查找并校验 `personal_font_profile_v1.json`。高/中置信已采字符使用字符级实测布局与倾斜特征，低置信字符安全回退，未采字符使用用户整体风格迁移。详细请求字段和输出策略见 [`docs/ordered-skeleton-generation.md`](docs/ordered-skeleton-generation.md)。
+
+字符级增强上线前可运行多随机种子批量对照评估，自动识别改善、稳定和退化字符，并给出无需逐字人工审核的安全回退名单。见 [`docs/personal-font-evaluation.md`](docs/personal-font-evaluation.md)。
+
+评估完成后生成 `personal_font_deployment_v1.json`。轨迹生成器会优先加载该带哈希策略，实际执行 55/45 的逐字增强与回退；任何个人字体清单或评估报告变更都会使旧策略校验失败，避免静默使用过期名单。
+
+最终部署策略可以生成写字机联调轨迹交付包，自动覆盖增强、评估回退、低置信回退、未采字符和混合文本，并执行软件预检。交付包不会控制设备，始终等待成员1完成页面任务组织、成员5完成机械安全审核。见 [`docs/machine-integration-handoff.md`](docs/machine-integration-handoff.md)。
+
+## 其他成员配合
+
+成员1需要完成正式页面 `region` 变换和有序设备任务组织；成员5需要完成坐标标定、机械限位、速度/加速度、空跑、急停和低速落笔审核；成员4通过集成层调用用户档案，不能直接操作私有样本或设备。各成员需要接收和回传的字段、测试顺序与当前阻塞项见 [`docs/team-integration-checklist.md`](docs/team-integration-checklist.md)。

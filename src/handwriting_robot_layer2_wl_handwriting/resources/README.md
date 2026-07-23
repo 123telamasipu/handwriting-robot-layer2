@@ -9,6 +9,8 @@
 - `common_hanzi_top1000.txt`：第一阶段 1000 个现代汉语常用汉字参考表。
 - `letters_symbols.json`：字母、数字、标点、数学符号和理工科符号分类。
 - `charset_summary.json`：数量与去重结果。
+- `style_probe_charset.json`：数位板用户字体分析第一轮使用的 100 个结构代表汉字，分为 10 组。
+- `demo_ordered_stroke_skeletons.json`：仅用于生成链路联调的“永”“文”手工骨架；非权威数据，正式使用前必须替换。
 
 ## 选取规则
 
